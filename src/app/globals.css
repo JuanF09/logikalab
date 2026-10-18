@@ -1,0 +1,124 @@
+@import "@fontsource/open-sauce-sans/400.css";
+@import "@fontsource/open-sauce-sans/500.css";
+@import "@fontsource/open-sauce-sans/600.css";
+@import "@fontsource/open-sauce-sans/700.css";
+@import "@fontsource/open-sauce-sans/800.css";
+@import "@fontsource/open-sauce-sans/900.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-open-sauce: "Open Sauce Sans", "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  
+  --accent-primary: #1154FF;
+  --accent-light: #3B75FF;
+  --accent-glow: rgba(17, 84, 255, 0.55);
+  
+  --bg-base: #01040F;
+  --bg-secondary: #030A1C;
+  --surface-card: rgba(6, 16, 46, 0.7);
+  --surface-border: rgba(17, 84, 255, 0.35);
+  --surface-border-active: #1154FF;
+  
+  --text-primary: #FFFFFF;
+  --text-secondary: #D9D9D9;
+  --text-muted: rgba(217, 217, 217, 0.65);
+}
+
+html {
+  color-scheme: dark;
+  background-color: #01040F;
+  color: #FFFFFF;
+  font-family: var(--font-open-sauce);
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: #01040F;
+  background-image: 
+    radial-gradient(at 15% 15%, rgba(17, 84, 255, 0.22) 0px, transparent 55%),
+    radial-gradient(at 85% 35%, rgba(17, 84, 255, 0.18) 0px, transparent 50%),
+    radial-gradient(at 50% 70%, rgba(17, 84, 255, 0.25) 0px, transparent 60%),
+    radial-gradient(at 20% 90%, rgba(17, 84, 255, 0.18) 0px, transparent 50%);
+  background-attachment: fixed;
+  color: #FFFFFF;
+  overflow-x: hidden;
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Custom Selection in vivid brand blue */
+::selection {
+  background-color: #1154FF;
+  color: #FFFFFF;
+}
+
+/* Accessible Focus States with glowing blue ring */
+:focus-visible {
+  outline: 2px solid #1154FF;
+  outline-offset: 3px;
+  box-shadow: 0 0 15px rgba(17, 84, 255, 0.8);
+}
+
+/* Scrollbar with electric blue thumb */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #01040F;
+}
+::-webkit-scrollbar-thumb {
+  background: #0D2B82;
+  border-radius: 4px;
+  border: 2px solid #01040F;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #1154FF;
+  box-shadow: 0 0 10px #1154FF;
+}
+
+/* High-tech Blue Grid with ambient illumination */
+.bg-tech-grid-blue {
+  background-image: 
+    linear-gradient(to right, rgba(17, 84, 255, 0.12) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(17, 84, 255, 0.12) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+
+/* Glowing Border Utilities */
+.border-blue-glow {
+  border: 1px solid rgba(17, 84, 255, 0.4);
+  box-shadow: 0 0 20px -3px rgba(17, 84, 255, 0.35);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.border-blue-glow:hover {
+  border-color: #1154FF;
+  box-shadow: 0 0 35px 0px rgba(17, 84, 255, 0.65);
+  transform: translateY(-2px);
+}
+
+/* High-tech Glass Card with blue tint */
+.card-blue-glass {
+  background: linear-gradient(180deg, rgba(8, 22, 64, 0.75) 0%, rgba(3, 10, 31, 0.85) 100%);
+  border: 1px solid rgba(17, 84, 255, 0.35);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4), inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
+}
+
+/* Reduced Motion Override */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
