@@ -25,6 +25,12 @@
   --text-primary: #FFFFFF;
   --text-secondary: #D9D9D9;
   --text-muted: rgba(217, 217, 217, 0.65);
+
+  /* Mobile Safe Area Insets */
+  --sat: env(safe-area-inset-top, 0px);
+  --sab: env(safe-area-inset-bottom, 0px);
+  --sal: env(safe-area-inset-left, 0px);
+  --sar: env(safe-area-inset-right, 0px);
 }
 
 html {
@@ -36,6 +42,9 @@ html {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 body {
@@ -48,8 +57,32 @@ body {
   background-attachment: fixed;
   color: #FFFFFF;
   overflow-x: hidden;
+  width: 100%;
   position: relative;
   min-height: 100vh;
+  min-height: 100dvh;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Prevent double-tap zoom delay on interactive elements */
+button,
+a,
+input,
+select,
+textarea {
+  touch-action: manipulation;
+}
+
+/* Eliminate iOS Safari auto-zoom on input focus by enforcing 16px minimum font size */
+@media screen and (max-width: 768px) {
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="number"],
+  textarea,
+  select {
+    font-size: 16px !important;
+  }
 }
 
 /* Custom Selection in vivid brand blue */
@@ -109,6 +142,12 @@ body {
   border: 1px solid rgba(17, 84, 255, 0.35);
   backdrop-filter: blur(12px);
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4), inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
+}
+
+/* Smooth mobile touch momentum scrolling */
+.touch-scroll-container {
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
 }
 
 /* Reduced Motion Override */

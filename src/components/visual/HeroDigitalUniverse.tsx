@@ -93,11 +93,14 @@ export const HeroDigitalUniverse: React.FC = () => {
     }
 
     // 2. Generate Floating Isometric Wireframe Cubes (Representing Modular Code & DB Units)
+    const isMobile = width < 768;
+    const cubeScale = isMobile ? 0.65 : 1;
+
     const cubes: GeometricNode[] = [
-      { x: -width * 0.32, y: -height * 0.15, z: 120, size: 55, rotX: 0.4, rotY: 0.5, rotZ: 0, speed: 0.008 },
-      { x: width * 0.34, y: height * 0.18, z: 80, size: 48, rotX: 0.2, rotY: -0.3, rotZ: 0.1, speed: 0.006 },
-      { x: width * 0.38, y: -height * 0.25, z: 220, size: 68, rotX: -0.5, rotY: 0.2, rotZ: 0.3, speed: 0.005 },
-      { x: -width * 0.35, y: height * 0.22, z: 150, size: 42, rotX: 0.3, rotY: 0.6, rotZ: -0.2, speed: 0.007 },
+      { x: -width * (isMobile ? 0.25 : 0.32), y: -height * 0.15, z: 120, size: 55 * cubeScale, rotX: 0.4, rotY: 0.5, rotZ: 0, speed: 0.008 },
+      { x: width * (isMobile ? 0.28 : 0.34), y: height * 0.18, z: 80, size: 48 * cubeScale, rotX: 0.2, rotY: -0.3, rotZ: 0.1, speed: 0.006 },
+      { x: width * (isMobile ? 0.30 : 0.38), y: -height * 0.25, z: 220, size: 68 * cubeScale, rotX: -0.5, rotY: 0.2, rotZ: 0.3, speed: 0.005 },
+      { x: -width * (isMobile ? 0.26 : 0.35), y: height * 0.22, z: 150, size: 42 * cubeScale, rotX: 0.3, rotY: 0.6, rotZ: -0.2, speed: 0.007 },
     ];
 
     // Resize handler
@@ -109,7 +112,7 @@ export const HeroDigitalUniverse: React.FC = () => {
       center.y = height / 2;
     };
 
-    // Mouse handlers with smooth interpolation
+    // Mouse & Touch handlers with smooth interpolation
     const handleMouseMove = (e: MouseEvent) => {
       const rect = canvas.getBoundingClientRect();
       const clientX = e.clientX - rect.left;
@@ -125,8 +128,28 @@ export const HeroDigitalUniverse: React.FC = () => {
       mouse.active = false;
     };
 
+    const handleTouchMove = (e: TouchEvent) => {
+      if (e.touches.length > 0) {
+        const touch = e.touches[0];
+        const rect = canvas.getBoundingClientRect();
+        const clientX = touch.clientX - rect.left;
+        const clientY = touch.clientY - rect.top;
+        mouse.targetX = ((clientX - center.x) / center.x) * 1.4;
+        mouse.targetY = ((clientY - center.y) / center.y) * 1.4;
+        mouse.active = true;
+      }
+    };
+
+    const handleTouchEnd = () => {
+      mouse.targetX = 0;
+      mouse.targetY = 0;
+      mouse.active = false;
+    };
+
     window.addEventListener("resize", handleResize);
-    window.addEventListener("mousemove", handleMouseMove);
+    window.addEventListener("mousemove", handleMouseMove, { passive: true });
+    window.addEventListener("touchmove", handleTouchMove, { passive: true });
+    window.addEventListener("touchend", handleTouchEnd, { passive: true });
     document.addEventListener("mouseleave", handleMouseLeave);
 
     // Cube vertices in normalized unit coordinates
@@ -362,6 +385,8 @@ export const HeroDigitalUniverse: React.FC = () => {
     return () => {
       window.removeEventListener("resize", handleResize);
       window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("touchmove", handleTouchMove);
+      window.removeEventListener("touchend", handleTouchEnd);
       document.removeEventListener("mouseleave", handleMouseLeave);
       cancelAnimationFrame(animId);
     };

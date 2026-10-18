@@ -82,7 +82,7 @@ export const Method: React.FC = () => {
             className="hidden lg:block absolute left-1/2 top-4 bottom-4 w-[3px] bg-gradient-to-b from-[#1154FF] via-[#7BA6FF] to-white shadow-[0_0_20px_#1154FF] origin-top -translate-x-1/2 z-0"
           />
 
-          <div className="space-y-12 lg:space-y-16">
+          <div className="space-y-8 sm:space-y-12 lg:space-y-16">
             {STEPS.map((item, idx) => {
               const isEven = idx % 2 === 0;
 
@@ -109,7 +109,7 @@ export const Method: React.FC = () => {
 
                   {/* Content Card */}
                   <div
-                    className="w-full lg:w-[calc(50%-45px)] p-8 rounded-2xl border border-[#1154FF]/40 bg-gradient-to-b from-[#061442]/80 via-[#030A24]/90 to-[#01040F] hover:border-[#1154FF] shadow-[0_0_35px_-5px_rgba(17,84,255,0.3)] transition-all duration-300"
+                    className="w-full lg:w-[calc(50%-45px)] p-5 sm:p-8 rounded-2xl border border-[#1154FF]/40 bg-gradient-to-b from-[#061442]/80 via-[#030A24]/90 to-[#01040F] hover:border-[#1154FF] shadow-[0_0_35px_-5px_rgba(17,84,255,0.3)] transition-all duration-300"
                   >
                     <div className="flex items-center justify-between mb-4">
                       <div className="flex items-center gap-2.5">

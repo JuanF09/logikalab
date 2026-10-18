@@ -98,7 +98,7 @@ export const Footer: React.FC = () => {
               href={getWhatsAppUrl()}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#1154FF] text-white text-xs font-mono font-bold shadow-[0_0_20px_#1154FF] hover:bg-[#2B68FF] transition-all"
+              className="flex sm:inline-flex w-full sm:w-auto items-center justify-center gap-2 px-5 py-3 rounded-xl bg-[#1154FF] text-white text-xs font-mono font-bold shadow-[0_0_20px_#1154FF] hover:bg-[#2B68FF] transition-all min-h-[44px]"
             >
               <MessageSquare className="w-3.5 h-3.5" />
               <span>Chatear por WhatsApp ({SITE_CONFIG.contact.whatsappDisplay})</span>
@@ -112,7 +112,7 @@ export const Footer: React.FC = () => {
         </div>
 
         {/* Bottom Bar: Copyright & Back to Top */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-[#D9D9D9]/60">
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-[#D9D9D9]/60 text-center sm:text-left">
           <div>
             &copy; {year} {brandName} &mdash; {tagline}. Todos los derechos reservados.
           </div>
@@ -120,7 +120,7 @@ export const Footer: React.FC = () => {
           <a
             href="#hero"
             aria-label="Volver arriba"
-            className="flex items-center gap-1.5 text-[#D9D9D9]/80 hover:text-white transition-colors"
+            className="flex items-center gap-1.5 text-[#D9D9D9]/80 hover:text-white transition-colors min-h-[44px]"
           >
             <span>SUBIR</span>
             <ArrowUp className="w-3.5 h-3.5 text-[#1154FF]" />

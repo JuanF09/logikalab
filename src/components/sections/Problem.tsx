@@ -56,7 +56,7 @@ export const Problem: React.FC = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: idx * 0.12 }}
             >
-              <CardSpotlight className="p-8 h-full flex flex-col justify-between border-[#1154FF]/30 bg-gradient-to-b from-[#061238]/70 via-[#030922]/80 to-[#01040F] hover:border-[#1154FF] shadow-[0_4px_25px_-5px_rgba(17,84,255,0.25)]">
+              <CardSpotlight className="p-5 sm:p-8 h-full flex flex-col justify-between border-[#1154FF]/30 bg-gradient-to-b from-[#061238]/70 via-[#030922]/80 to-[#01040F] hover:border-[#1154FF] shadow-[0_4px_25px_-5px_rgba(17,84,255,0.25)]">
                 <div>
                   <div className="flex items-center justify-between mb-6">
                     <div className="p-3 rounded-xl bg-[#1154FF]/20 border border-[#1154FF]/40 text-[#1154FF] shadow-[0_0_15px_rgba(17,84,255,0.4)]">

@@ -173,19 +173,19 @@ Me gustaría coordinar una llamada de diagnóstico técnico para evaluar mi caso
   };
 
   return (
-    <div className="relative w-full text-white">
+    <div className="relative w-full text-white flex flex-col h-full">
       {/* Header Bar */}
-      <div className="p-5 sm:p-7 border-b border-[#1154FF]/30 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 bg-[#01040F]/80">
+      <div className="p-4 sm:p-7 border-b border-[#1154FF]/30 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-4 bg-[#01040F]/80 shrink-0">
         <div>
           <div className="flex items-center gap-2">
             <span className="font-mono text-xs text-[#1154FF] font-bold tracking-widest uppercase">
               // LOGIKA LAB &bull; SOFTWARE ENGINEERING
             </span>
-            <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-[#1154FF]/20 text-white border border-[#1154FF]/40">
+            <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-[#1154FF]/20 text-white border border-[#1154FF]/40 font-bold">
               VALIDACIÓN 2026
             </span>
           </div>
-          <h2 className="text-xl sm:text-2xl font-black text-white mt-1">
+          <h2 className="text-lg sm:text-2xl font-black text-white mt-1">
             Encuesta de Validación Operativa
           </h2>
           <p className="text-xs text-[#D9D9D9]/75 mt-0.5">
@@ -194,11 +194,11 @@ Me gustaría coordinar una llamada de diagnóstico técnico para evaluar mi caso
         </div>
 
         {/* Top Actions: Tabs + Share + Close */}
-        <div className="flex flex-wrap items-center gap-2.5 w-full sm:w-auto justify-between sm:justify-end">
+        <div className="flex flex-wrap items-center gap-2 sm:gap-2.5 w-full sm:w-auto justify-between sm:justify-end">
           {/* Share Survey Link Button */}
           <button
             onClick={handleShareSurvey}
-            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-xl border text-xs font-mono font-bold transition-all active:scale-95 ${
+            className={`flex items-center gap-1.5 px-3 py-2 rounded-xl border text-xs font-mono font-bold transition-all active:scale-95 min-h-[38px] ${
               copiedLink
                 ? "bg-emerald-500/20 border-emerald-400 text-emerald-300 shadow-[0_0_15px_rgba(16,185,129,0.4)]"
                 : "bg-[#040C2B] border-[#1154FF]/50 text-white hover:bg-[#1154FF]/20 hover:border-[#1154FF]"
@@ -208,7 +208,7 @@ Me gustaría coordinar una llamada de diagnóstico técnico para evaluar mi caso
             {copiedLink ? (
               <>
                 <Check className="w-3.5 h-3.5 text-emerald-400" />
-                <span>¡Enlace Copiado!</span>
+                <span>¡Copiado!</span>
               </>
             ) : (
               <>
@@ -223,7 +223,7 @@ Me gustaría coordinar una llamada de diagnóstico técnico para evaluar mi caso
           <div className="flex items-center rounded-xl bg-[#020719] p-1 border border-[#1154FF]/30 text-xs font-mono">
             <button
               onClick={() => setActiveTab("survey")}
-              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg transition-all ${
+              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg transition-all min-h-[36px] ${
                 activeTab === "survey"
                   ? "bg-[#1154FF] text-white font-bold shadow-[0_0_12px_#1154FF]"
                   : "text-[#D9D9D9]/70 hover:text-white"
@@ -234,7 +234,7 @@ Me gustaría coordinar una llamada de diagnóstico técnico para evaluar mi caso
             </button>
             <button
               onClick={() => setActiveTab("stats")}
-              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg transition-all ${
+              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg transition-all min-h-[36px] ${
                 activeTab === "stats"
                   ? "bg-[#1154FF] text-white font-bold shadow-[0_0_12px_#1154FF]"
                   : "text-[#D9D9D9]/70 hover:text-white"
@@ -248,7 +248,7 @@ Me gustaría coordinar una llamada de diagnóstico técnico para evaluar mi caso
           {onClose && (
             <button
               onClick={onClose}
-              className="w-9 h-9 flex items-center justify-center rounded-xl bg-white/5 border border-white/10 hover:border-[#1154FF] hover:bg-[#1154FF]/20 text-white transition-all"
+              className="w-10 h-10 min-h-[40px] min-w-[40px] flex items-center justify-center rounded-xl bg-white/5 border border-white/10 hover:border-[#1154FF] hover:bg-[#1154FF]/20 text-white transition-all active:scale-95"
               aria-label="Cerrar ventana"
             >
               <X className="w-4 h-4" />
@@ -258,7 +258,7 @@ Me gustaría coordinar una llamada de diagnóstico técnico para evaluar mi caso
       </div>
 
       {/* Body Area */}
-      <div className={`p-5 sm:p-8 space-y-6 ${standalone ? "" : "max-h-[75vh] overflow-y-auto"}`}>
+      <div className={`p-4 sm:p-8 space-y-6 touch-scroll-container ${standalone ? "" : "max-h-[calc(100dvh-130px)] sm:max-h-[75vh] overflow-y-auto"}`}>
         {activeTab === "survey" ? (
           isSubmitted ? (
             /* Success / Results Screen */
@@ -350,9 +350,9 @@ Me gustaría coordinar una llamada de diagnóstico técnico para evaluar mi caso
                 {sectionQuestions.map((q) => (
                   <div
                     key={q.id}
-                    className="p-6 rounded-2xl border border-[#1154FF]/25 bg-[#020719]/80 shadow-[0_4px_20px_rgba(0,0,0,0.4)]"
+                    className="p-4 sm:p-6 rounded-xl sm:rounded-2xl border border-[#1154FF]/25 bg-[#020719]/80 shadow-[0_4px_20px_rgba(0,0,0,0.4)]"
                   >
-                    <h4 className="text-base sm:text-lg font-bold text-white mb-4 leading-snug">
+                    <h4 className="text-base sm:text-lg font-bold text-white mb-3 sm:mb-4 leading-snug">
                       {q.question}
                     </h4>
 
@@ -363,7 +363,7 @@ Me gustaría coordinar una llamada de diagnóstico técnico para evaluar mi caso
                         value={answers[q.id] || ""}
                         onChange={(e) => handleSelectOption(q.id, e.target.value)}
                         placeholder="Escribe tu respuesta aquí..."
-                        className="w-full px-4 py-3 rounded-xl bg-[#040C2B] border border-[#1154FF]/40 text-white placeholder-white/20 text-sm focus:border-[#1154FF] focus:ring-2 focus:ring-[#1154FF]/50 outline-none transition-all"
+                        className="w-full px-4 py-3 rounded-xl bg-[#040C2B] border border-[#1154FF]/40 text-white placeholder-white/20 text-base focus:border-[#1154FF] focus:ring-2 focus:ring-[#1154FF]/50 outline-none transition-all"
                       />
                     )}
 
@@ -506,7 +506,7 @@ Me gustaría coordinar una llamada de diagnóstico técnico para evaluar mi caso
                                 handleSelectOption(q.id, `Otro: ${e.target.value}`);
                               }}
                               placeholder="Describe brevemente tu situación..."
-                              className="w-full px-4 py-2.5 rounded-xl bg-[#040C2B] border border-[#1154FF]/30 text-white placeholder-white/20 text-xs focus:border-[#1154FF] outline-none"
+                              className="w-full px-4 py-3 rounded-xl bg-[#040C2B] border border-[#1154FF]/30 text-white placeholder-white/20 text-base focus:border-[#1154FF] outline-none"
                             />
                           </div>
                         )}
@@ -517,12 +517,12 @@ Me gustaría coordinar una llamada de diagnóstico técnico para evaluar mi caso
               </div>
 
               {/* Section Navigation Buttons */}
-              <div className="pt-6 border-t border-[#1154FF]/30 flex items-center justify-between gap-4">
+              <div className="pt-6 border-t border-[#1154FF]/30 flex flex-col-reverse xs:flex-row items-center justify-between gap-3 sm:gap-4">
                 <button
                   type="button"
                   disabled={currentSectionIdx === 0}
                   onClick={handlePrevSection}
-                  className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-xl bg-white/5 border border-white/10 hover:border-white/30 text-[#D9D9D9] text-xs font-mono font-bold disabled:opacity-30 disabled:cursor-not-allowed transition-all"
+                  className="w-full xs:w-auto inline-flex items-center justify-center gap-1.5 px-5 py-3 rounded-xl bg-white/5 border border-white/10 hover:border-white/30 text-[#D9D9D9] text-xs font-mono font-bold disabled:opacity-30 disabled:cursor-not-allowed transition-all min-h-[44px]"
                 >
                   <ChevronLeft className="w-4 h-4" />
                   <span>Anterior</span>
@@ -531,7 +531,7 @@ Me gustaría coordinar una llamada de diagnóstico técnico para evaluar mi caso
                 <button
                   type="button"
                   onClick={handleNextSection}
-                  className="inline-flex items-center gap-1.5 px-6 py-3 rounded-xl bg-[#1154FF] hover:bg-[#2B68FF] text-white text-xs font-mono font-bold shadow-[0_0_25px_#1154FF] transition-all"
+                  className="w-full xs:w-auto inline-flex items-center justify-center gap-1.5 px-6 py-3 rounded-xl bg-[#1154FF] hover:bg-[#2B68FF] text-white text-xs font-mono font-bold shadow-[0_0_25px_#1154FF] transition-all min-h-[44px]"
                 >
                   <span>
                     {currentSectionIdx === SURVEY_SECTIONS.length - 1

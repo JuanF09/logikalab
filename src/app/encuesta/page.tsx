@@ -40,23 +40,23 @@ export default function EncuestaPage() {
       <div className="fixed bottom-0 right-0 w-[500px] h-[400px] bg-[#1154FF]/10 blur-[150px] rounded-full pointer-events-none" />
 
       {/* Top Standalone Navigation Bar */}
-      <header className="sticky top-0 z-40 bg-[#01040F]/90 backdrop-blur-xl border-b border-[#1154FF]/30 py-4 px-4 sm:px-8">
-        <div className="max-w-5xl mx-auto flex items-center justify-between gap-4">
+      <header className="sticky top-0 z-40 bg-[#01040F]/90 backdrop-blur-xl border-b border-[#1154FF]/30 py-3 sm:py-4 px-3 sm:px-8">
+        <div className="max-w-5xl mx-auto flex items-center justify-between gap-2 sm:gap-4">
           <Link
             href="/"
-            className="group flex items-center gap-3 focus-visible:ring-2 focus-visible:ring-[#1154FF] rounded-md outline-none"
+            className="group flex items-center gap-2 sm:gap-3 focus-visible:ring-2 focus-visible:ring-[#1154FF] rounded-md outline-none"
             title="Volver a la página principal de LOGIKA LAB"
           >
             <div className="relative">
               <div className="absolute -inset-1.5 bg-[#1154FF]/30 blur-md rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
-              <Logo height={32} priority />
+              <Logo height={28} priority />
             </div>
           </Link>
 
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2 sm:gap-3">
             <Link
               href="/"
-              className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-white/5 hover:bg-[#1154FF]/20 border border-white/10 hover:border-[#1154FF] text-[#D9D9D9] hover:text-white text-xs font-mono font-semibold transition-all"
+              className="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-white/5 hover:bg-[#1154FF]/20 border border-white/10 hover:border-[#1154FF] text-[#D9D9D9] hover:text-white text-xs font-mono font-semibold transition-all min-h-[38px]"
             >
               <ArrowLeft className="w-3.5 h-3.5 text-[#1154FF]" />
               <span className="hidden sm:inline">Volver a</span>
@@ -67,7 +67,7 @@ export default function EncuestaPage() {
               href={getWhatsAppUrl("Hola Juan David, tengo dudas sobre la encuesta de validación operativa.")}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-[#1154FF] hover:bg-[#2B68FF] text-white text-xs font-mono font-bold shadow-[0_0_20px_#1154FF] transition-all"
+              className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-[#1154FF] hover:bg-[#2B68FF] text-white text-xs font-mono font-bold shadow-[0_0_20px_#1154FF] transition-all min-h-[38px]"
             >
               <MessageSquare className="w-3.5 h-3.5" />
               <span className="hidden sm:inline">WhatsApp</span>
@@ -77,24 +77,24 @@ export default function EncuestaPage() {
       </header>
 
       {/* Main Questionnaire Container */}
-      <main className="flex-1 max-w-5xl w-full mx-auto px-4 sm:px-6 py-8 sm:py-12 relative z-10 flex flex-col justify-center">
+      <main className="flex-1 max-w-5xl w-full mx-auto px-3 sm:px-6 py-6 sm:py-12 relative z-10 flex flex-col justify-center">
         {/* Intro Banner */}
         <div className="mb-6 text-center max-w-2xl mx-auto">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#1154FF]/20 border border-[#1154FF]/40 text-[#6095FF] text-xs font-mono font-bold mb-3">
             <Shield className="w-3.5 h-3.5 text-[#1154FF]" />
             <span>ESTUDIO TÉCNICO OFICIAL 2026 &bull; HABEAS DATA</span>
           </div>
-          <h1 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight leading-tight">
+          <h1 className="text-2xl sm:text-4xl font-extrabold text-white tracking-tight leading-tight">
             Encuesta de Validación Operativa
           </h1>
-          <p className="text-sm text-[#D9D9D9]/80 mt-2">
+          <p className="text-xs sm:text-sm text-[#D9D9D9]/80 mt-2 px-2 sm:px-0">
             Identificamos los cuellos de botella de tu modelo de negocio y evaluamos la viabilidad
             de construir un sistema de software 100% adaptado a tus operaciones.
           </p>
         </div>
 
         {/* Survey Component Card */}
-        <div className="w-full rounded-3xl border-2 border-[#1154FF]/40 bg-gradient-to-b from-[#061442] via-[#030A24] to-[#01040F] shadow-[0_0_80px_rgba(17,84,255,0.4)] overflow-hidden">
+        <div className="w-full rounded-2xl sm:rounded-3xl border sm:border-2 border-[#1154FF]/40 bg-gradient-to-b from-[#061442] via-[#030A24] to-[#01040F] shadow-[0_0_80px_rgba(17,84,255,0.4)] overflow-hidden">
           <SurveyContainer standalone={true} />
         </div>
       </main>

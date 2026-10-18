@@ -43,52 +43,52 @@ export const Solution: React.FC = () => {
           </div>
 
           {/* Quick Architecture Bar */}
-          <div className="p-6 sm:p-8 bg-gradient-to-r from-[#061442] via-[#040C2B] to-[#061442] border-t border-[#1154FF]/40 grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="p-4 sm:p-8 bg-gradient-to-r from-[#061442] via-[#040C2B] to-[#061442] border-t border-[#1154FF]/40 grid grid-cols-1 xs:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
             <div className="flex items-center gap-3">
               <Database className="w-5 h-5 text-[#1154FF] shrink-0" />
               <div>
-                <div className="text-[11px] font-mono text-[#6095FF] uppercase font-bold">BASE DE DATOS</div>
-                <div className="text-sm font-bold text-white">PostgreSQL &bull; Supabase</div>
+                <div className="text-[10px] sm:text-[11px] font-mono text-[#6095FF] uppercase font-bold">BASE DE DATOS</div>
+                <div className="text-xs sm:text-sm font-bold text-white">PostgreSQL &bull; Supabase</div>
               </div>
             </div>
 
             <div className="flex items-center gap-3">
               <Zap className="w-5 h-5 text-[#1154FF] shrink-0" />
               <div>
-                <div className="text-[11px] font-mono text-[#6095FF] uppercase font-bold">RENDIMIENTO</div>
-                <div className="text-sm font-bold text-white">&lt; 100ms Respuesta</div>
+                <div className="text-[10px] sm:text-[11px] font-mono text-[#6095FF] uppercase font-bold">RENDIMIENTO</div>
+                <div className="text-xs sm:text-sm font-bold text-white">&lt; 100ms Respuesta</div>
               </div>
             </div>
 
             <div className="flex items-center gap-3">
               <ShieldCheck className="w-5 h-5 text-[#1154FF] shrink-0" />
               <div>
-                <div className="text-[11px] font-mono text-[#6095FF] uppercase font-bold">SEGURIDAD</div>
-                <div className="text-sm font-bold text-white">Cifrado &amp; Respaldo Continuo</div>
+                <div className="text-[10px] sm:text-[11px] font-mono text-[#6095FF] uppercase font-bold">SEGURIDAD</div>
+                <div className="text-xs sm:text-sm font-bold text-white">Cifrado &amp; Respaldo</div>
               </div>
             </div>
 
             <div className="flex items-center gap-3">
               <Cpu className="w-5 h-5 text-[#1154FF] shrink-0" />
               <div>
-                <div className="text-[11px] font-mono text-[#6095FF] uppercase font-bold">DESPLIEGUE</div>
-                <div className="text-sm font-bold text-white">Vercel Edge Cloud</div>
+                <div className="text-[10px] sm:text-[11px] font-mono text-[#6095FF] uppercase font-bold">DESPLIEGUE</div>
+                <div className="text-xs sm:text-sm font-bold text-white">Vercel Edge Cloud</div>
               </div>
             </div>
           </div>
         </motion.div>
 
         {/* Before vs After Minimal Contrast */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
           {/* Box 1: Caos Operativo */}
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 25 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="p-8 sm:p-10 rounded-2xl border border-red-500/30 bg-[#0C050B]/80 relative overflow-hidden"
+            className="p-5 sm:p-8 md:p-10 rounded-2xl border border-red-500/30 bg-[#0C050B]/80 relative overflow-hidden"
           >
-            <div className="flex items-center justify-between mb-6 pb-4 border-b border-white/10">
+            <div className="flex items-center justify-between mb-5 sm:mb-6 pb-3 sm:pb-4 border-b border-white/10">
               <span className="font-mono text-xs text-red-400 font-bold tracking-widest uppercase">
                 // ANTES &bull; CAOS OPERATIVO
               </span>
@@ -97,7 +97,7 @@ export const Solution: React.FC = () => {
               </span>
             </div>
 
-            <ul className="space-y-4">
+            <ul className="space-y-3.5 sm:space-y-4">
               {[
                 "Procesos atados a hojas de cálculo frágiles.",
                 "WhatsApp como canal improvisado de pedidos.",
@@ -105,7 +105,7 @@ export const Solution: React.FC = () => {
                 "El dueño vive apagando incendios diarios.",
                 "Temor constante a perder información crítica.",
               ].map((text, idx) => (
-                <li key={idx} className="flex items-center gap-3 text-sm text-[#D9D9D9]/80 font-medium">
+                <li key={idx} className="flex items-center gap-3 text-xs sm:text-sm text-[#D9D9D9]/80 font-medium">
                   <div className="p-1 rounded-full bg-red-500/15 text-red-400 shrink-0">
                     <X className="w-3.5 h-3.5" />
                   </div>
@@ -117,17 +117,17 @@ export const Solution: React.FC = () => {
 
           {/* Box 2: Ecosistema a Medida */}
           <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 25 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="p-8 sm:p-10 rounded-2xl border-2 border-[#1154FF] bg-gradient-to-br from-[#07174A]/90 via-[#040C2B]/95 to-[#01040F] relative overflow-hidden shadow-[0_0_50px_rgba(17,84,255,0.4)]"
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="p-5 sm:p-8 md:p-10 rounded-2xl border-2 border-[#1154FF] bg-gradient-to-br from-[#07174A]/90 via-[#040C2B]/95 to-[#01040F] relative overflow-hidden shadow-[0_0_50px_rgba(17,84,255,0.4)]"
           >
             <div className="absolute top-0 left-0 right-0 h-1 bg-[#1154FF] shadow-[0_0_15px_#1154FF]" />
 
-            <div className="flex items-center justify-between mb-6 pb-4 border-b border-[#1154FF]/30">
+            <div className="flex items-center justify-between mb-5 sm:mb-6 pb-3 sm:pb-4 border-b border-[#1154FF]/30">
               <span className="font-mono text-xs text-[#1154FF] font-bold tracking-widest uppercase">
-                // DESPUÉS &bull; ECOSISTEMA LOGIKA LAB
+                // DESPUÉS &bull; LOGIKA LAB
               </span>
               <span className="text-xs px-3 py-1 rounded-full bg-[#1154FF] text-white font-mono font-bold shadow-[0_0_10px_#1154FF]">
                 100% A LA MEDIDA

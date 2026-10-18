@@ -124,7 +124,7 @@ export const Stack: React.FC = () => {
           </div>
           <div className="flex items-center gap-2 text-[#D9D9D9]/80">
             <Terminal className="w-3.5 h-3.5 text-[#1154FF]" />
-            <span>Pasa el cursor sobre cada tarjeta para interactuar con la telemetría 3D</span>
+            <span>Toca o pasa el cursor sobre cada tarjeta para activar la telemetría 3D</span>
           </div>
         </div>
 

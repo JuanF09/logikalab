@@ -30,7 +30,7 @@ export const SurveyModal: React.FC<SurveyModalProps> = ({ isOpen, onClose }) => 
 
   return (
     <div
-      className="fixed inset-0 z-[100] flex items-center justify-center p-3 sm:p-6 overflow-y-auto"
+      className="fixed inset-0 z-[100] flex items-center justify-center p-0 sm:p-6 overflow-y-auto touch-scroll-container"
       role="dialog"
       aria-modal="true"
       aria-labelledby="modal-title"
@@ -45,7 +45,7 @@ export const SurveyModal: React.FC<SurveyModalProps> = ({ isOpen, onClose }) => 
       <div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[750px] h-[550px] bg-[#1154FF]/25 blur-[170px] rounded-full pointer-events-none" />
 
       {/* Main Modal Card */}
-      <div className="relative w-full max-w-4xl max-h-[92vh] flex flex-col rounded-3xl border-2 border-[#1154FF]/40 bg-gradient-to-b from-[#061442] via-[#030A24] to-[#01040F] shadow-[0_0_80px_rgba(17,84,255,0.45)] overflow-hidden z-10 text-white">
+      <div className="relative w-full max-w-4xl h-full sm:h-auto sm:max-h-[92vh] flex flex-col rounded-none sm:rounded-3xl border-0 sm:border-2 border-[#1154FF]/40 bg-gradient-to-b from-[#061442] via-[#030A24] to-[#01040F] shadow-[0_0_80px_rgba(17,84,255,0.45)] overflow-hidden z-10 text-white">
         <SurveyContainer onClose={onClose} />
       </div>
     </div>

@@ -47,6 +47,24 @@ export const InteractiveTechCard: React.FC<InteractiveTechCardProps> = ({
     setMousePos({ x, y });
   };
 
+  const handleTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
+    setIsHovered(true);
+    if (e.touches.length > 0 && cardRef.current) {
+      const rect = cardRef.current.getBoundingClientRect();
+      const x = e.touches[0].clientX - rect.left;
+      const y = e.touches[0].clientY - rect.top;
+      setMousePos({ x, y });
+    }
+  };
+
+  const handleTouchEnd = () => {
+    setTimeout(() => {
+      setIsHovered(false);
+      setRotateX(0);
+      setRotateY(0);
+    }, 1200);
+  };
+
   const handleMouseEnter = () => {
     setIsHovered(true);
   };
@@ -70,13 +88,15 @@ export const InteractiveTechCard: React.FC<InteractiveTechCardProps> = ({
         onMouseMove={handleMouseMove}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
+        onTouchStart={handleTouchStart}
+        onTouchEnd={handleTouchEnd}
         style={{
           transform: isHovered
             ? `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-8px) scale3d(1.02, 1.02, 1.02)`
             : "perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0px) scale3d(1, 1, 1)",
           transition: isHovered ? "transform 0.1s ease-out" : "transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1)",
         }}
-        className="relative h-full p-6 sm:p-7 rounded-2xl border-2 transition-colors duration-300 flex flex-col justify-between overflow-hidden cursor-pointer select-none group bg-gradient-to-b from-[#061442]/90 via-[#030924]/95 to-[#01040F]"
+        className="relative h-full p-5 sm:p-7 rounded-2xl border-2 transition-colors duration-300 flex flex-col justify-between overflow-hidden cursor-pointer select-none group bg-gradient-to-b from-[#061442]/90 via-[#030924]/95 to-[#01040F]"
       >
         {/* Border Glow with Brand Color on Hover */}
         <div

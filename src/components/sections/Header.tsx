@@ -103,13 +103,15 @@ export const Header: React.FC = () => {
         </div>
 
         {/* Mobile Hamburger Toggle & Encuesta */}
-        <div className="flex md:hidden items-center gap-2">
+        <div className="flex md:hidden items-center gap-1.5 sm:gap-2">
           <button
             onClick={() => setIsSurveyOpen(true)}
-            className="sm:hidden min-h-[44px] px-3 py-2 text-xs font-semibold rounded-xl border border-[#1154FF]/50 bg-[#061442]/80 text-white flex items-center gap-1 active:scale-95 transition-all"
+            className="min-h-[44px] min-w-[44px] px-2.5 py-2 text-xs font-semibold rounded-xl border border-[#1154FF]/50 bg-[#061442]/80 text-white flex items-center justify-center gap-1 active:scale-95 transition-all shadow-sm"
+            aria-label="Abrir encuesta de validación"
+            title="Encuesta de Validación"
           >
-            <ClipboardList className="w-3.5 h-3.5 text-[#1154FF]" />
-            <span>Encuesta</span>
+            <ClipboardList className="w-4 h-4 text-[#1154FF]" />
+            <span className="hidden xs:inline text-[11px]">Encuesta</span>
           </button>
 
           <Button
@@ -117,13 +119,14 @@ export const Header: React.FC = () => {
             isExternal
             variant="primary"
             size="sm"
-            className="sm:hidden min-h-[44px] px-3 py-2 text-xs font-semibold shadow-[0_0_15px_#1154FF]"
+            className="min-h-[44px] px-3 py-2 text-xs font-semibold shadow-[0_0_15px_#1154FF]"
           >
             Hablemos
           </Button>
+
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="w-11 h-11 flex items-center justify-center text-[#D9D9D9] hover:text-white rounded-xl border border-[#1154FF]/40 bg-[#061442]/60 hover:bg-[#1154FF]/20 active:scale-95 transition-all"
+            className="w-11 h-11 min-h-[44px] min-w-[44px] flex items-center justify-center text-[#D9D9D9] hover:text-white rounded-xl border border-[#1154FF]/40 bg-[#061442]/60 hover:bg-[#1154FF]/20 active:scale-95 transition-all"
             aria-label={mobileMenuOpen ? "Cerrar menú" : "Abrir menú"}
             aria-expanded={mobileMenuOpen}
           >
@@ -138,8 +141,20 @@ export const Header: React.FC = () => {
 
       {/* Mobile Drawer Menu with AnimatePresence */}
       {mobileMenuOpen && (
-        <div className="md:hidden fixed inset-0 top-[68px] bg-[#01040F]/95 backdrop-blur-3xl z-40 border-t border-[#1154FF]/30 flex flex-col justify-between p-6 overflow-y-auto">
-          <div className="flex flex-col gap-5 pt-4">
+        <div className="md:hidden fixed inset-0 top-0 h-[100dvh] bg-[#01040F]/98 backdrop-blur-3xl z-50 flex flex-col justify-between p-6 pt-20 overflow-y-auto touch-scroll-container">
+          {/* Top Close bar inside full-height drawer */}
+          <div className="absolute top-4 left-6 right-6 flex items-center justify-between pb-3 border-b border-[#1154FF]/25">
+            <Logo height={30} />
+            <button
+              onClick={() => setMobileMenuOpen(false)}
+              className="w-11 h-11 min-h-[44px] min-w-[44px] flex items-center justify-center text-white rounded-xl border border-[#1154FF]/40 bg-[#061442]/80 active:scale-95 transition-all"
+              aria-label="Cerrar menú"
+            >
+              <X className="w-5 h-5 text-white" />
+            </button>
+          </div>
+
+          <div className="flex flex-col gap-4 pt-4">
             <span className="font-mono text-xs text-[#1154FF] font-bold tracking-widest uppercase">
               // MENÚ &bull; LOGIKA LAB
             </span>
@@ -148,14 +163,14 @@ export const Header: React.FC = () => {
                 key={link.href}
                 href={link.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className="text-2xl font-extrabold text-white hover:text-[#1154FF] active:text-[#1154FF] transition-colors py-2 tracking-tight min-h-[44px] flex items-center"
+                className="text-xl sm:text-2xl font-extrabold text-white hover:text-[#1154FF] active:text-[#1154FF] transition-colors py-2 tracking-tight min-h-[44px] flex items-center border-b border-white/5"
               >
                 {link.label}
               </a>
             ))}
           </div>
 
-          <div className="flex flex-col gap-3 pb-8 border-t border-white/10 pt-6">
+          <div className="flex flex-col gap-3 pb-8 border-t border-white/10 pt-5">
             <Button
               onClick={() => {
                 setMobileMenuOpen(false);

@@ -55,11 +55,12 @@ export const ScrollJourneyExperience: React.FC = () => {
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ delay: 1 }}
-        className="fixed bottom-6 right-6 z-40"
+        className="fixed bottom-[calc(1.25rem+var(--sab,0px))] right-4 sm:bottom-6 sm:right-6 z-40"
       >
+        {/* Desktop / Tablet Full Pill */}
         <button
           onClick={() => setIsSurveyOpen(true)}
-          className="group flex items-center gap-2.5 px-4 py-2.5 rounded-full bg-gradient-to-r from-[#061442] to-[#01040F] border-2 border-[#1154FF] text-white font-mono text-xs font-bold shadow-[0_0_25px_rgba(17,84,255,0.6)] hover:shadow-[0_0_35px_#1154FF] hover:border-white transition-all active:scale-95"
+          className="hidden sm:flex group items-center gap-2.5 px-4 py-2.5 rounded-full bg-gradient-to-r from-[#061442] to-[#01040F] border-2 border-[#1154FF] text-white font-mono text-xs font-bold shadow-[0_0_25px_rgba(17,84,255,0.6)] hover:shadow-[0_0_35px_#1154FF] hover:border-white transition-all active:scale-95"
           aria-label="Abrir encuesta de validación operativa"
         >
           <span className="w-2 h-2 rounded-full bg-[#1154FF] group-hover:bg-white animate-ping" />
@@ -68,6 +69,19 @@ export const ScrollJourneyExperience: React.FC = () => {
           <span className="text-[10px] px-1.5 py-0.5 rounded bg-[#1154FF] text-white font-black">
             NUEVO
           </span>
+        </button>
+
+        {/* Mobile Circular High-Tech FAB */}
+        <button
+          onClick={() => setIsSurveyOpen(true)}
+          className="sm:hidden relative w-12 h-12 rounded-full bg-gradient-to-br from-[#061442] via-[#020719] to-[#01040F] border-2 border-[#1154FF] text-white flex items-center justify-center shadow-[0_0_25px_rgba(17,84,255,0.7)] active:scale-90 transition-transform"
+          aria-label="Abrir encuesta de validación operativa"
+          title="Encuesta de Validación"
+        >
+          <span className="absolute -top-1 -right-1 w-3.5 h-3.5 rounded-full bg-[#1154FF] border-2 border-[#01040F] flex items-center justify-center animate-pulse">
+            <span className="w-1.5 h-1.5 rounded-full bg-white" />
+          </span>
+          <ClipboardList className="w-5 h-5 text-[#1154FF]" />
         </button>
       </motion.div>
 

@@ -60,7 +60,7 @@ export const Hero: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tightest text-white leading-[1.04] max-w-4xl"
+          className="text-3xl xs:text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tightest text-white leading-[1.08] sm:leading-[1.04] max-w-4xl"
         >
           Tu operación, en un sistema{" "}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-[#7BA6FF] to-[#1154FF] filter drop-shadow-[0_0_35px_rgba(17,84,255,0.8)]">
@@ -73,7 +73,7 @@ export const Hero: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="mt-6 sm:mt-8 text-lg sm:text-xl md:text-2xl text-[#D9D9D9] max-w-2xl font-normal leading-snug"
+          className="mt-5 sm:mt-8 text-base sm:text-xl md:text-2xl text-[#D9D9D9] max-w-2xl font-normal leading-snug px-2 sm:px-0"
         >
           Ingeniería full-stack para empresas consolidadas.
           <br className="hidden sm:inline" />
@@ -85,7 +85,7 @@ export const Hero: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="mt-10 sm:mt-12 flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto"
+          className="mt-8 sm:mt-12 flex flex-col sm:flex-row items-center gap-3.5 sm:gap-4 w-full sm:w-auto"
         >
           <Button
             href={getWhatsAppUrl()}
@@ -93,7 +93,7 @@ export const Hero: React.FC = () => {
             variant="primary"
             size="lg"
             icon={<ArrowRight className="w-4 h-4" />}
-            className="w-full sm:w-auto text-base py-4 px-8 shadow-[0_0_35px_rgba(17,84,255,0.8)] hover:shadow-[0_0_50px_rgba(17,84,255,1)]"
+            className="w-full sm:w-auto text-base py-4 px-8 min-h-[48px] shadow-[0_0_35px_rgba(17,84,255,0.8)] hover:shadow-[0_0_50px_rgba(17,84,255,1)]"
           >
             Agendar diagnóstico
           </Button>
@@ -104,7 +104,7 @@ export const Hero: React.FC = () => {
             size="lg"
             icon={<Film className="w-4 h-4 text-[#1154FF]" />}
             iconPosition="left"
-            className="w-full sm:w-auto text-base py-4 px-8 border-[#1154FF]/50 bg-[#061545]/40 hover:bg-[#1154FF]/20 hover:border-[#1154FF]"
+            className="w-full sm:w-auto text-base py-4 px-8 min-h-[48px] border-[#1154FF]/50 bg-[#061545]/40 hover:bg-[#1154FF]/20 hover:border-[#1154FF]"
           >
             Ver Video &bull; Marca
           </Button>
@@ -115,7 +115,7 @@ export const Hero: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="mt-16 sm:mt-20 pt-8 border-t border-[#1154FF]/25 w-full grid grid-cols-1 sm:grid-cols-3 gap-6 text-left"
+          className="mt-12 sm:mt-20 pt-6 sm:pt-8 border-t border-[#1154FF]/25 w-full grid grid-cols-1 sm:grid-cols-3 gap-3.5 sm:gap-6 text-left"
         >
           <div className="p-4 rounded-xl bg-[#061442]/40 border border-[#1154FF]/30">
             <div className="text-xs font-mono text-[#1154FF] font-bold uppercase tracking-wider">

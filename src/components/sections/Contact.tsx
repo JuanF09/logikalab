@@ -83,22 +83,22 @@ export const Contact: React.FC = () => {
             className="lg:col-span-5 flex flex-col gap-6"
           >
             {/* Primary Action: Direct WhatsApp */}
-            <div className="p-8 rounded-3xl border-2 border-[#1154FF] bg-gradient-to-br from-[#07184D] via-[#040D2B] to-[#01040F] shadow-[0_0_50px_rgba(17,84,255,0.4)] relative overflow-hidden">
+            <div className="p-5 sm:p-8 rounded-2xl sm:rounded-3xl border-2 border-[#1154FF] bg-gradient-to-br from-[#07184D] via-[#040D2B] to-[#01040F] shadow-[0_0_50px_rgba(17,84,255,0.4)] relative overflow-hidden">
               <div className="absolute top-0 left-0 right-0 h-1.5 bg-[#1154FF] shadow-[0_0_20px_#1154FF]" />
 
-              <span className="font-mono text-xs text-[#1154FF] font-bold tracking-widest uppercase mb-3 block">
+              <span className="font-mono text-xs text-[#1154FF] font-bold tracking-widest uppercase mb-2 sm:mb-3 block">
                 // CANAL DIRECTO INMEDIATO
               </span>
 
-              <h3 className="text-3xl font-extrabold text-white tracking-tight mb-2">
+              <h3 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight mb-2">
                 WhatsApp Directo
               </h3>
 
-              <div className="text-sm font-mono text-[#6095FF] mb-4">
+              <div className="text-xs sm:text-sm font-mono text-[#6095FF] mb-3 sm:mb-4">
                 {contact.whatsappDisplay} &bull; Juan David Figueroa
               </div>
 
-              <p className="text-sm text-[#D9D9D9]/85 leading-relaxed font-normal mb-6">
+              <p className="text-xs sm:text-sm text-[#D9D9D9]/85 leading-relaxed font-normal mb-6">
                 Chatea directamente con nuestro CEO. Cuéntanos qué proceso operativo te quita
                 tiempo y recibe una respuesta técnica en minutos.
               </p>
@@ -110,7 +110,7 @@ export const Contact: React.FC = () => {
                 size="lg"
                 icon={<MessageSquare className="w-5 h-5" />}
                 iconPosition="left"
-                className="w-full justify-center text-base py-4 shadow-[0_0_30px_#1154FF]"
+                className="w-full justify-center text-base py-4 min-h-[48px] shadow-[0_0_30px_#1154FF]"
               >
                 Abrir WhatsApp Oficial
               </Button>
@@ -185,19 +185,19 @@ export const Contact: React.FC = () => {
 
           {/* Right Column: Diagnostic Request Form */}
           <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 25 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
             className="lg:col-span-7"
           >
-            <CardSpotlight className="p-8 sm:p-10 rounded-3xl border border-[#1154FF]/40 bg-gradient-to-b from-[#061442]/90 via-[#030A24]/95 to-[#01040F] shadow-[0_0_50px_-5px_rgba(17,84,255,0.3)]">
-              <div className="flex items-center justify-between mb-8 pb-4 border-b border-[#1154FF]/25">
+            <CardSpotlight className="p-5 sm:p-10 rounded-2xl sm:rounded-3xl border border-[#1154FF]/40 bg-gradient-to-b from-[#061442]/90 via-[#030A24]/95 to-[#01040F] shadow-[0_0_50px_-5px_rgba(17,84,255,0.3)]">
+              <div className="flex items-center justify-between mb-6 sm:mb-8 pb-3 sm:pb-4 border-b border-[#1154FF]/25">
                 <div>
-                  <h3 className="text-2xl font-extrabold text-white tracking-tight">
+                  <h3 className="text-xl sm:text-2xl font-extrabold text-white tracking-tight">
                     Solicitud de Diagnóstico
                   </h3>
-                  <p className="text-xs text-[#6095FF] font-mono mt-1 font-semibold">
+                  <p className="text-[11px] sm:text-xs text-[#6095FF] font-mono mt-1 font-semibold">
                     // Comunicación directa con Juan David Figueroa Jiménez
                   </p>
                 </div>
@@ -207,12 +207,12 @@ export const Contact: React.FC = () => {
               </div>
 
               {isSuccess ? (
-                <div className="p-8 rounded-2xl bg-[#1154FF]/15 border-2 border-[#1154FF] text-center animate-in fade-in duration-300">
-                  <CheckCircle2 className="w-14 h-14 text-[#1154FF] mx-auto mb-4 animate-bounce" />
-                  <h4 className="text-2xl font-black text-white mb-2">
+                <div className="p-6 sm:p-8 rounded-2xl bg-[#1154FF]/15 border-2 border-[#1154FF] text-center animate-in fade-in duration-300">
+                  <CheckCircle2 className="w-12 h-12 sm:w-14 sm:h-14 text-[#1154FF] mx-auto mb-4 animate-bounce" />
+                  <h4 className="text-xl sm:text-2xl font-black text-white mb-2">
                     Solicitud Enviada con Éxito
                   </h4>
-                  <p className="text-base text-[#D9D9D9] max-w-md mx-auto mb-6">
+                  <p className="text-sm text-[#D9D9D9] max-w-md mx-auto mb-6">
                     Se ha abierto la conexión directa a WhatsApp con Juan David Figueroa para
                     revisar tu caso de inmediato.
                   </p>
@@ -226,8 +226,8 @@ export const Contact: React.FC = () => {
                   </Button>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <form onSubmit={handleSubmit} className="space-y-5 sm:space-y-6">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                     <div>
                       <label
                         htmlFor="name"
@@ -245,7 +245,7 @@ export const Contact: React.FC = () => {
                           setFormData({ ...formData, name: e.target.value })
                         }
                         placeholder="Ej: Carlos Mendoza"
-                        className="w-full px-4 py-3.5 rounded-xl bg-[#020719] border border-[#1154FF]/30 text-white placeholder-white/20 text-sm focus:border-[#1154FF] focus:ring-2 focus:ring-[#1154FF]/50 outline-none transition-all"
+                        className="w-full px-4 py-3 sm:py-3.5 rounded-xl bg-[#020719] border border-[#1154FF]/30 text-white placeholder-white/20 text-base focus:border-[#1154FF] focus:ring-2 focus:ring-[#1154FF]/50 outline-none transition-all"
                       />
                     </div>
 
@@ -266,7 +266,7 @@ export const Contact: React.FC = () => {
                           setFormData({ ...formData, company: e.target.value })
                         }
                         placeholder="Ej: Logística Andina"
-                        className="w-full px-4 py-3.5 rounded-xl bg-[#020719] border border-[#1154FF]/30 text-white placeholder-white/20 text-sm focus:border-[#1154FF] focus:ring-2 focus:ring-[#1154FF]/50 outline-none transition-all"
+                        className="w-full px-4 py-3 sm:py-3.5 rounded-xl bg-[#020719] border border-[#1154FF]/30 text-white placeholder-white/20 text-base focus:border-[#1154FF] focus:ring-2 focus:ring-[#1154FF]/50 outline-none transition-all"
                       />
                     </div>
                   </div>
@@ -289,7 +289,7 @@ export const Contact: React.FC = () => {
                         setFormData({ ...formData, emailOrPhone: e.target.value })
                       }
                       placeholder="Ej: 310 000 0000 o correo"
-                      className="w-full px-4 py-3.5 rounded-xl bg-[#020719] border border-[#1154FF]/30 text-white placeholder-white/20 text-sm focus:border-[#1154FF] focus:ring-2 focus:ring-[#1154FF]/50 outline-none transition-all"
+                      className="w-full px-4 py-3 sm:py-3.5 rounded-xl bg-[#020719] border border-[#1154FF]/30 text-white placeholder-white/20 text-base focus:border-[#1154FF] focus:ring-2 focus:ring-[#1154FF]/50 outline-none transition-all"
                     />
                   </div>
 
@@ -310,7 +310,7 @@ export const Contact: React.FC = () => {
                         setFormData({ ...formData, bottleneck: e.target.value })
                       }
                       placeholder="Ej: Control de despachos en varias hojas de Excel y confirmaciones por WhatsApp que causan retrasos."
-                      className="w-full px-4 py-3.5 rounded-xl bg-[#020719] border border-[#1154FF]/30 text-white placeholder-white/20 text-sm focus:border-[#1154FF] focus:ring-2 focus:ring-[#1154FF]/50 outline-none transition-all resize-none"
+                      className="w-full px-4 py-3 sm:py-3.5 rounded-xl bg-[#020719] border border-[#1154FF]/30 text-white placeholder-white/20 text-base focus:border-[#1154FF] focus:ring-2 focus:ring-[#1154FF]/50 outline-none transition-all resize-none"
                     />
                   </div>
 
@@ -320,7 +320,7 @@ export const Contact: React.FC = () => {
                     size="lg"
                     disabled={isSubmitting}
                     icon={<Send className="w-4 h-4" />}
-                    className="w-full justify-center text-base py-4 shadow-[0_0_35px_#1154FF]"
+                    className="w-full justify-center text-base py-4 min-h-[48px] shadow-[0_0_35px_#1154FF]"
                   >
                     {isSubmitting ? "Conectando..." : "Enviar y Chatear con Juan David"}
                   </Button>

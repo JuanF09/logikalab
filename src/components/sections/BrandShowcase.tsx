@@ -102,31 +102,31 @@ export const BrandShowcase: React.FC = () => {
         </motion.div>
 
         {/* Master Brand Cards Grid: Vector Anatomy & Isotype */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch mb-12">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-stretch mb-12">
           {/* Card 1: Official Logo on Electric Brand Blue Backdrop */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="lg:col-span-7 rounded-3xl border-2 border-white/30 bg-gradient-to-br from-[#1154FF] via-[#0D40C9] to-[#051A61] p-8 sm:p-12 flex flex-col justify-between shadow-[0_0_70px_rgba(17,84,255,0.65)] relative overflow-hidden group"
+            className="lg:col-span-7 rounded-2xl sm:rounded-3xl border-2 border-white/30 bg-gradient-to-br from-[#1154FF] via-[#0D40C9] to-[#051A61] p-5 sm:p-8 md:p-12 flex flex-col justify-between shadow-[0_0_70px_rgba(17,84,255,0.65)] relative overflow-hidden group"
           >
             {/* Background geometric accents */}
             <div className="absolute -top-10 -right-10 w-60 h-60 bg-white/10 rounded-full blur-2xl pointer-events-none" />
             <div className="absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-t from-black/40 to-transparent pointer-events-none" />
 
             {/* Top Tag */}
-            <div className="flex items-center justify-between mb-8 relative z-10">
-              <span className="font-mono text-xs text-white font-black tracking-widest uppercase bg-black/30 px-3 py-1 rounded-full border border-white/20">
-                // LOGOTIPO OFICIAL &bull; IDENTIDAD PRINCIPAL
+            <div className="flex flex-wrap items-center justify-between gap-2 mb-6 sm:mb-8 relative z-10">
+              <span className="font-mono text-[11px] sm:text-xs text-white font-black tracking-widest uppercase bg-black/30 px-3 py-1 rounded-full border border-white/20">
+                // LOGOTIPO OFICIAL &bull; IDENTIDAD
               </span>
-              <span className="text-[11px] font-mono px-3 py-1 rounded-full bg-white text-[#1154FF] font-black shadow-lg">
+              <span className="text-[10px] sm:text-[11px] font-mono px-3 py-1 rounded-full bg-white text-[#1154FF] font-black shadow-lg">
                 #1154FF AZUL VÍVIDO
               </span>
             </div>
 
             {/* Giant Logo Representation on Blue Background */}
-            <div className="py-10 flex items-center justify-center relative z-10">
+            <div className="py-6 sm:py-10 flex items-center justify-center relative z-10">
               <div className="relative w-full max-w-lg aspect-[3.67/1] transition-transform duration-500 group-hover:scale-105 filter drop-shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
                 <Image
                   src="/brand/logo.png"
@@ -138,7 +138,7 @@ export const BrandShowcase: React.FC = () => {
             </div>
 
             {/* Details breakdown */}
-            <div className="pt-6 border-t border-white/20 grid grid-cols-3 gap-4 text-xs font-mono text-white/90 relative z-10">
+            <div className="pt-5 sm:pt-6 border-t border-white/20 grid grid-cols-1 xs:grid-cols-3 gap-2.5 sm:gap-4 text-xs font-mono text-white/90 relative z-10">
               <div className="bg-black/20 p-3 rounded-xl border border-white/10">
                 <span className="text-white font-extrabold text-sm">&#123; &#125;</span>
                 <span className="block text-white font-bold mt-0.5">Corchetes</span>
@@ -163,7 +163,7 @@ export const BrandShowcase: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="lg:col-span-5 rounded-3xl border-2 border-[#1154FF] bg-gradient-to-br from-[#082069] via-[#041240] to-[#010617] p-8 sm:p-12 flex flex-col justify-between shadow-[0_0_50px_rgba(17,84,255,0.4)] relative overflow-hidden group"
+            className="lg:col-span-5 rounded-2xl sm:rounded-3xl border-2 border-[#1154FF] bg-gradient-to-br from-[#082069] via-[#041240] to-[#010617] p-5 sm:p-8 md:p-12 flex flex-col justify-between shadow-[0_0_50px_rgba(17,84,255,0.4)] relative overflow-hidden group"
           >
             <div className="flex items-center justify-between mb-6">
               <span className="font-mono text-xs text-[#1154FF] font-bold tracking-widest uppercase">

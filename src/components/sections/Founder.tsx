@@ -31,18 +31,18 @@ export const Founder: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="p-8 sm:p-12 lg:p-14 rounded-3xl border border-[#1154FF]/40 bg-gradient-to-br from-[#061442]/90 via-[#030A24]/95 to-[#01040F] max-w-5xl mx-auto shadow-[0_0_60px_-10px_rgba(17,84,255,0.4)] relative overflow-hidden"
+          className="p-5 sm:p-10 lg:p-14 rounded-2xl sm:rounded-3xl border border-[#1154FF]/40 bg-gradient-to-br from-[#061442]/90 via-[#030A24]/95 to-[#01040F] max-w-5xl mx-auto shadow-[0_0_60px_-10px_rgba(17,84,255,0.4)] relative overflow-hidden"
         >
           {/* Subtle corner light beam */}
           <div className="absolute top-0 right-0 w-80 h-80 bg-gradient-to-bl from-[#1154FF]/30 to-transparent pointer-events-none" />
 
-          <div className="flex flex-col md:flex-row items-center gap-10 lg:gap-14">
+          <div className="flex flex-col md:flex-row items-center gap-8 sm:gap-10 lg:gap-14">
             {/* Real Founder Photo with electric blue aura */}
             <div className="relative shrink-0 group">
               {/* Pulsing blue aura behind the portrait */}
               <div className="absolute -inset-2 bg-gradient-to-r from-[#1154FF] to-[#3B75FF] rounded-2xl blur-xl opacity-60 group-hover:opacity-100 transition-opacity duration-500 animate-pulse-glow" />
 
-              <div className="relative w-56 h-72 sm:w-64 sm:h-80 rounded-2xl overflow-hidden border-2 border-[#1154FF] bg-[#020719] shadow-2xl">
+              <div className="relative w-44 h-60 xs:w-56 xs:h-72 sm:w-64 sm:h-80 rounded-2xl overflow-hidden border-2 border-[#1154FF] bg-[#020719] shadow-2xl">
                 <Image
                   src={founder.photo}
                   alt={founder.name}
@@ -61,7 +61,7 @@ export const Founder: React.FC = () => {
                 </div>
               </div>
 
-              <div className="mt-4 flex items-center justify-center gap-1.5 text-xs text-[#D9D9D9]/80 font-mono">
+              <div className="mt-3 sm:mt-4 flex items-center justify-center gap-1.5 text-xs text-[#D9D9D9]/80 font-mono">
                 <MapPin className="w-3.5 h-3.5 text-[#1154FF]" />
                 <span>{location.city}, {location.country}</span>
               </div>
@@ -70,33 +70,33 @@ export const Founder: React.FC = () => {
             {/* Profile Content: punchy, minimal, high-impact */}
             <div className="flex-1 text-center md:text-left">
               {/* Badges Bar */}
-              <div className="flex flex-wrap items-center justify-center md:justify-start gap-2.5 mb-3">
-                <span className="text-xs font-mono px-3 py-1 rounded-full bg-[#1154FF] text-white font-bold tracking-wider shadow-[0_0_15px_rgba(17,84,255,0.7)]">
+              <div className="flex flex-wrap items-center justify-center md:justify-start gap-2 sm:gap-2.5 mb-3">
+                <span className="text-[11px] sm:text-xs font-mono px-3 py-1 rounded-full bg-[#1154FF] text-white font-bold tracking-wider shadow-[0_0_15px_rgba(17,84,255,0.7)]">
                   CEO &amp; FUNDADOR
                 </span>
-                <span className="text-xs font-mono px-3 py-1 rounded-full bg-[#1154FF]/20 text-[#6095FF] border border-[#1154FF]/40 font-semibold tracking-wider">
+                <span className="text-[11px] sm:text-xs font-mono px-3 py-1 rounded-full bg-[#1154FF]/20 text-[#6095FF] border border-[#1154FF]/40 font-semibold tracking-wider">
                   {founder.profession.toUpperCase()}
                 </span>
               </div>
 
               {/* Founder Name */}
-              <h3 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight leading-tight mb-2">
+              <h3 className="text-2xl sm:text-4xl font-extrabold text-white tracking-tight leading-tight mb-2">
                 {founder.name}
               </h3>
 
               {/* Quote / Punchy Statement */}
-              <blockquote className="my-5 border-l-2 border-[#1154FF] pl-4 py-1 text-base sm:text-lg text-white font-medium leading-snug bg-[#1154FF]/10 rounded-r-xl">
+              <blockquote className="my-4 sm:my-5 border-l-2 border-[#1154FF] pl-4 py-1 text-sm sm:text-base md:text-lg text-white font-medium leading-snug bg-[#1154FF]/10 rounded-r-xl text-left">
                 &ldquo;{founder.quote}&rdquo;
               </blockquote>
 
-              <p className="text-sm sm:text-base text-[#D9D9D9]/85 leading-relaxed font-normal mb-8 max-w-xl">
+              <p className="text-xs sm:text-base text-[#D9D9D9]/85 leading-relaxed font-normal mb-6 sm:mb-8 max-w-xl">
                 Lidero el diseño técnico y la ejecución de cada ecosistema en LOGIKA LAB.
                 Combinamos arquitectura de software moderna con experiencia interactiva para
                 que tu empresa opere en piloto automático y multiplique su rentabilidad.
               </p>
 
               {/* Direct WhatsApp Call to Action */}
-              <div className="flex flex-col sm:flex-row items-center gap-4 justify-center md:justify-start">
+              <div className="flex flex-col sm:flex-row items-center gap-3.5 sm:gap-4 justify-center md:justify-start w-full">
                 <Button
                   href={getWhatsAppUrl()}
                   isExternal
@@ -104,6 +104,7 @@ export const Founder: React.FC = () => {
                   size="md"
                   icon={<MessageSquare className="w-4 h-4" />}
                   iconPosition="left"
+                  className="w-full sm:w-auto min-h-[48px] justify-center text-sm"
                 >
                   Hablar con Juan David por WhatsApp
                 </Button>
@@ -123,9 +124,9 @@ export const Founder: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.15 }}
-          className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto mt-8"
+          className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 max-w-5xl mx-auto mt-6 sm:mt-8"
         >
-          <div className="p-6 rounded-2xl border border-[#1154FF]/30 bg-[#040C2B]/80 hover:border-[#1154FF] hover:shadow-[0_0_30px_rgba(17,84,255,0.3)] transition-all">
+          <div className="p-5 sm:p-6 rounded-2xl border border-[#1154FF]/30 bg-[#040C2B]/80 hover:border-[#1154FF] hover:shadow-[0_0_30px_rgba(17,84,255,0.3)] transition-all">
             <div className="text-xs font-mono text-[#1154FF] font-bold uppercase tracking-wider mb-2">
               // ATENCIÓN EJECUTIVA 1 A 1
             </div>

@@ -114,12 +114,30 @@ export const BrandVideoPlayer: React.FC = () => {
   };
 
   const toggleFullscreen = () => {
-    if (!containerRef.current) return;
-    if (!document.fullscreenElement) {
-      containerRef.current.requestFullscreen().catch(() => {});
+    if (!containerRef.current && !videoRef.current) return;
+    const isFs = document.fullscreenElement || (document as any).webkitFullscreenElement;
+    if (!isFs) {
+      if (containerRef.current?.requestFullscreen) {
+        containerRef.current.requestFullscreen().catch(() => {
+          (videoRef.current as any)?.webkitEnterFullscreen?.();
+        });
+      } else if ((videoRef.current as any)?.webkitEnterFullscreen) {
+        (videoRef.current as any).webkitEnterFullscreen();
+      }
     } else {
-      document.exitFullscreen().catch(() => {});
+      if (document.exitFullscreen) {
+        document.exitFullscreen().catch(() => {});
+      } else if ((document as any).webkitExitFullscreen) {
+        (document as any).webkitExitFullscreen();
+      }
     }
+  };
+
+  const handleTimelineInteraction = (clientX: number, target: HTMLDivElement) => {
+    const rect = target.getBoundingClientRect();
+    const clickX = Math.max(0, Math.min(clientX - rect.left, rect.width));
+    const newTime = (clickX / rect.width) * duration;
+    handleSeek(newTime);
   };
 
   const formatTime = (secs: number) => {
@@ -131,13 +149,14 @@ export const BrandVideoPlayer: React.FC = () => {
   const progressPercent = duration > 0 ? (currentTime / duration) * 100 : 0;
 
   return (
-    <div className="w-full space-y-6">
+    <div className="w-full space-y-4 sm:space-y-6">
       {/* Cinematic Frame Container */}
       <div
         ref={containerRef}
         onMouseEnter={() => setShowControls(true)}
         onMouseLeave={() => setShowControls(true)}
-        className="relative w-full rounded-3xl border-2 border-[#1154FF]/60 bg-[#020719] shadow-[0_0_80px_rgba(17,84,255,0.45)] overflow-hidden group select-none"
+        onTouchStart={() => setShowControls(true)}
+        className="relative w-full rounded-2xl sm:rounded-3xl border-2 border-[#1154FF]/60 bg-[#020719] shadow-[0_0_80px_rgba(17,84,255,0.45)] overflow-hidden group select-none"
       >
         {/* Dynamic Backlight Ambient Glow */}
         <div className="absolute inset-0 bg-gradient-to-r from-[#1154FF]/20 via-[#003BDE]/30 to-[#1154FF]/20 blur-3xl opacity-70 pointer-events-none" />
@@ -158,20 +177,20 @@ export const BrandVideoPlayer: React.FC = () => {
           />
 
           {/* Top HUD Telemetry Overlay */}
-          <div className="absolute top-0 left-0 right-0 p-4 sm:p-6 bg-gradient-to-b from-black/80 via-black/30 to-transparent flex items-center justify-between text-xs font-mono pointer-events-none z-20">
-            <div className="flex items-center gap-2">
-              <span className="flex h-2.5 w-2.5 relative">
+          <div className="absolute top-0 left-0 right-0 p-3 sm:p-6 bg-gradient-to-b from-black/80 via-black/30 to-transparent flex items-center justify-between text-[11px] sm:text-xs font-mono pointer-events-none z-20">
+            <div className="flex items-center gap-1.5 sm:gap-2 truncate max-w-[65%]">
+              <span className="flex h-2 w-2 relative shrink-0">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#1154FF] opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#1154FF]"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-[#1154FF]"></span>
               </span>
-              <span className="text-white font-bold tracking-wider">
-                LOGIKA LAB // REEL DE IDENTIDAD OFICIAL
+              <span className="text-white font-bold tracking-wider truncate">
+                LOGIKA LAB // REEL OFICIAL
               </span>
             </div>
 
-            <div className="flex items-center gap-2">
-              <span className="px-2.5 py-1 rounded-full bg-[#1154FF]/30 border border-[#1154FF] text-[#6095FF] text-[10px] font-bold">
-                FORMATO 16:9 &bull; HD
+            <div className="flex items-center gap-1.5 sm:gap-2 shrink-0">
+              <span className="px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-full bg-[#1154FF]/30 border border-[#1154FF] text-[#6095FF] text-[9px] sm:text-[10px] font-bold">
+                16:9 &bull; HD
               </span>
               <span className="hidden sm:inline-block px-2.5 py-1 rounded-full bg-white/10 text-white text-[10px] font-semibold border border-white/20">
                 #1154FF AZUL VÍVIDO
@@ -183,28 +202,28 @@ export const BrandVideoPlayer: React.FC = () => {
           {!isPlaying && (
             <button
               onClick={togglePlay}
-              className="absolute inset-0 m-auto w-20 h-20 rounded-full bg-[#1154FF]/90 hover:bg-[#1154FF] text-white flex items-center justify-center shadow-[0_0_50px_#1154FF] transition-all transform hover:scale-110 z-20"
+              className="absolute inset-0 m-auto w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-[#1154FF]/90 hover:bg-[#1154FF] text-white flex items-center justify-center shadow-[0_0_50px_#1154FF] transition-all transform hover:scale-110 z-20"
               aria-label="Reproducir video"
             >
-              <Play className="w-8 h-8 fill-white ml-1" />
+              <Play className="w-6 h-6 sm:w-8 sm:h-8 fill-white ml-1" />
             </button>
           )}
 
           {/* Bottom Custom Futuristic Controls Bar */}
           <div
-            className={`absolute bottom-0 left-0 right-0 p-4 sm:p-6 bg-gradient-to-t from-black/90 via-black/60 to-transparent z-20 transition-opacity duration-300 ${
+            className={`absolute bottom-0 left-0 right-0 p-3 sm:p-6 bg-gradient-to-t from-black/90 via-black/60 to-transparent z-20 transition-opacity duration-300 ${
               showControls ? "opacity-100" : "opacity-0 group-hover:opacity-100"
             }`}
           >
-            {/* Timeline Progress Bar (Clickable) */}
+            {/* Timeline Progress Bar (Clickable & Touch Scrubber) */}
             <div
-              onClick={(e) => {
-                const rect = e.currentTarget.getBoundingClientRect();
-                const clickX = e.clientX - rect.left;
-                const newTime = (clickX / rect.width) * duration;
-                handleSeek(newTime);
+              onClick={(e) => handleTimelineInteraction(e.clientX, e.currentTarget)}
+              onTouchMove={(e) => {
+                if (e.touches.length > 0) {
+                  handleTimelineInteraction(e.touches[0].clientX, e.currentTarget);
+                }
               }}
-              className="relative w-full h-2.5 rounded-full bg-white/20 hover:h-3.5 transition-all cursor-pointer overflow-hidden border border-white/20 mb-3"
+              className="relative w-full h-3 sm:h-2.5 rounded-full bg-white/20 hover:h-3.5 transition-all cursor-pointer overflow-hidden border border-white/20 mb-3"
             >
               <div
                 className="h-full bg-gradient-to-r from-[#1154FF] via-[#5C8DFF] to-white rounded-full shadow-[0_0_15px_#1154FF] transition-all"
@@ -215,10 +234,10 @@ export const BrandVideoPlayer: React.FC = () => {
             {/* Bottom Actions Row */}
             <div className="flex items-center justify-between text-white font-mono text-xs">
               {/* Left: Play/Pause, Restart, Time */}
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-2 sm:gap-3">
                 <button
                   onClick={togglePlay}
-                  className="p-2 rounded-xl bg-white/10 hover:bg-[#1154FF] border border-white/20 text-white transition-all active:scale-95"
+                  className="p-2 sm:p-2 rounded-xl bg-white/10 hover:bg-[#1154FF] border border-white/20 text-white transition-all active:scale-95 min-w-[36px] min-h-[36px] flex items-center justify-center"
                   aria-label={isPlaying ? "Pausar" : "Reproducir"}
                 >
                   {isPlaying ? (
@@ -230,14 +249,14 @@ export const BrandVideoPlayer: React.FC = () => {
 
                 <button
                   onClick={handleRestart}
-                  className="p-2 rounded-xl bg-white/10 hover:bg-[#1154FF] border border-white/20 text-white transition-all active:scale-95"
+                  className="p-2 sm:p-2 rounded-xl bg-white/10 hover:bg-[#1154FF] border border-white/20 text-white transition-all active:scale-95 min-w-[36px] min-h-[36px] flex items-center justify-center"
                   title="Reiniciar reproducción"
                   aria-label="Reiniciar video"
                 >
                   <RotateCcw className="w-4 h-4" />
                 </button>
 
-                <div className="text-xs text-[#D9D9D9] font-bold tracking-wider pl-1">
+                <div className="text-[11px] sm:text-xs text-[#D9D9D9] font-bold tracking-wider pl-1">
                   <span className="text-white">{formatTime(currentTime)}</span>
                   <span className="text-white/40"> / </span>
                   <span className="text-[#6095FF]">00:09.0</span>

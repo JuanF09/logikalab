@@ -84,7 +84,7 @@ export const WhatWeBuild: React.FC = () => {
               className={cap.cols}
             >
               <CardSpotlight
-                className="p-8 h-full flex flex-col justify-between border-[#1154FF]/30 bg-gradient-to-b from-[#061442]/70 via-[#030B24]/85 to-[#01040F] hover:border-[#1154FF] shadow-[0_4px_30px_-5px_rgba(17,84,255,0.25)] group"
+                className="p-5 sm:p-8 h-full flex flex-col justify-between border-[#1154FF]/30 bg-gradient-to-b from-[#061442]/70 via-[#030B24]/85 to-[#01040F] hover:border-[#1154FF] shadow-[0_4px_30px_-5px_rgba(17,84,255,0.25)] group"
               >
                 <div>
                   <div className="flex items-center justify-between mb-6">
