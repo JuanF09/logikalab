@@ -44,6 +44,8 @@ export const SurveyContainer: React.FC<SurveyContainerProps> = ({
   const [answers, setAnswers] = useState<Record<number, string>>({});
   const [otherText, setOtherText] = useState("");
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showCompletionPopup, setShowCompletionPopup] = useState(false);
   const [statsData, setStatsData] = useState<StatsBreakdown>(ZERO_STATS);
   const [copiedLink, setCopiedLink] = useState(false);
 
@@ -102,6 +104,7 @@ export const SurveyContainer: React.FC<SurveyContainerProps> = ({
   };
 
   const handleSubmit = async () => {
+    setIsSubmitting(true);
     const submission: SurveySubmission = {
       timestamp: new Date().toISOString(),
       answers,
@@ -109,7 +112,11 @@ export const SurveyContainer: React.FC<SurveyContainerProps> = ({
     };
 
     // 1. Save to Supabase Cloud Database asynchronously
-    saveSurveyToSupabase(submission).catch(() => {});
+    try {
+      await saveSurveyToSupabase(submission);
+    } catch {
+      // Ignore Supabase network failure
+    }
 
     // 2. Save to localStorage for instant client persistence
     try {
@@ -122,23 +129,9 @@ export const SurveyContainer: React.FC<SurveyContainerProps> = ({
       // Ignore localStorage failure
     }
 
+    setIsSubmitting(false);
     setIsSubmitted(true);
-  };
-
-  // Build WhatsApp pre-filled text with the respondent's key data
-  const generateWhatsAppMessage = () => {
-    const name = answers[13] || "Empresario";
-    const company = answers[15] || "Mi empresa";
-    const pain = answers[1] || "Optimización operativa";
-    const model = answers[4] || "100% a la medida";
-
-    const msg = `Hola Juan David, acabo de completar la Encuesta de Validación Operativa de LOGIKA LAB.
-Soy ${name} de ${company}.
-- Reto prioritario: ${pain}
-- Preferencia de plataforma: ${model}
-Me gustaría coordinar una llamada de diagnóstico técnico para evaluar mi caso.`;
-
-    return getWhatsAppUrl(msg);
+    setShowCompletionPopup(true);
   };
 
   // Copy or share the standalone survey link
@@ -273,8 +266,7 @@ Me gustaría coordinar una llamada de diagnóstico técnico para evaluar mi caso
                 </h3>
                 <p className="text-sm text-[#D9D9D9]/85 mt-2 leading-relaxed">
                   Tus datos fueron procesados para el estudio de validación de LOGIKA LAB.
-                  Puedes enviar tus respuestas directamente a Juan David Figueroa vía WhatsApp
-                  para agilizar el diagnóstico técnico.
+                  Agradecemos tu tiempo y contribución al análisis técnico de ingeniería de software.
                 </p>
               </div>
 
@@ -298,24 +290,23 @@ Me gustaría coordinar una llamada de diagnóstico técnico para evaluar mi caso
                 </button>
               </div>
 
-              <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4 max-w-md mx-auto">
-                <a
-                  href={generateWhatsAppMessage()}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-[#1154FF] hover:bg-[#2B68FF] text-white font-bold text-sm shadow-[0_0_25px_#1154FF] transition-all"
-                >
-                  <MessageSquare className="w-4 h-4" />
-                  <span>Enviar a Juan David por WhatsApp</span>
-                </a>
-
-                <button
-                  onClick={() => setActiveTab("stats")}
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-white/10 hover:bg-[#1154FF]/20 border border-white/20 text-white font-bold text-sm transition-all"
-                >
-                  <BarChart3 className="w-4 h-4 text-[#1154FF]" />
-                  <span>Ver Métricas en Vivo</span>
-                </button>
+              {/* Simple action to close or return to home */}
+              <div className="pt-2 flex items-center justify-center gap-3 max-w-xs mx-auto">
+                {onClose ? (
+                  <button
+                    onClick={onClose}
+                    className="w-full inline-flex items-center justify-center px-6 py-3.5 rounded-xl bg-[#1154FF] hover:bg-[#2B68FF] text-white font-bold text-sm shadow-[0_0_20px_#1154FF] transition-all min-h-[44px]"
+                  >
+                    <span>Cerrar</span>
+                  </button>
+                ) : (
+                  <a
+                    href="/"
+                    className="w-full inline-flex items-center justify-center px-6 py-3.5 rounded-xl bg-[#1154FF] hover:bg-[#2B68FF] text-white font-bold text-sm shadow-[0_0_20px_#1154FF] transition-all min-h-[44px]"
+                  >
+                    <span>Volver a LOGIKA LAB</span>
+                  </a>
+                )}
               </div>
             </div>
           ) : (
@@ -530,12 +521,15 @@ Me gustaría coordinar una llamada de diagnóstico técnico para evaluar mi caso
 
                 <button
                   type="button"
+                  disabled={isSubmitting}
                   onClick={handleNextSection}
-                  className="w-full xs:w-auto inline-flex items-center justify-center gap-1.5 px-6 py-3 rounded-xl bg-[#1154FF] hover:bg-[#2B68FF] text-white text-xs font-mono font-bold shadow-[0_0_25px_#1154FF] transition-all min-h-[44px]"
+                  className="w-full xs:w-auto inline-flex items-center justify-center gap-1.5 px-6 py-3 rounded-xl bg-[#1154FF] hover:bg-[#2B68FF] disabled:opacity-50 disabled:cursor-not-allowed text-white text-xs font-mono font-bold shadow-[0_0_25px_#1154FF] transition-all min-h-[44px]"
                 >
                   <span>
-                    {currentSectionIdx === SURVEY_SECTIONS.length - 1
-                      ? "Finalizar y Guardar Encuesta"
+                    {isSubmitting
+                      ? "Finalizando..."
+                      : currentSectionIdx === SURVEY_SECTIONS.length - 1
+                      ? "Finalizar"
                       : "Siguiente Fase"}
                   </span>
                   <ChevronRight className="w-4 h-4" />
@@ -706,6 +700,49 @@ Me gustaría coordinar una llamada de diagnóstico técnico para evaluar mi caso
           </div>
         )}
       </div>
+
+      {/* Emerging Confirmation Popup Modal */}
+      {showCompletionPopup && (
+        <div className="fixed inset-0 z-[120] flex items-center justify-center p-4 bg-black/85 backdrop-blur-md animate-in fade-in duration-200">
+          <div className="relative w-full max-w-md rounded-3xl bg-[#020719] border-2 border-[#1154FF] p-6 sm:p-8 text-center shadow-[0_0_60px_rgba(17,84,255,0.6)] overflow-hidden">
+            {/* Ambient Background Glows */}
+            <div className="absolute -top-24 -right-24 w-48 h-48 bg-[#1154FF]/25 rounded-full blur-3xl pointer-events-none" />
+            <div className="absolute -bottom-24 -left-24 w-48 h-48 bg-[#1154FF]/20 rounded-full blur-3xl pointer-events-none" />
+
+            {/* Glowing Animated Icon */}
+            <div className="relative w-20 h-20 mx-auto rounded-full bg-[#1154FF]/20 border-2 border-[#1154FF] flex items-center justify-center shadow-[0_0_35px_#1154FF] mb-5">
+              <CheckCircle2 className="w-10 h-10 text-white animate-pulse" />
+            </div>
+
+            {/* Status Badge */}
+            <div className="inline-block px-3 py-1 rounded-full bg-[#1154FF]/20 border border-[#1154FF]/40 text-[#6095FF] font-mono text-[11px] font-bold uppercase tracking-wider mb-3">
+              // REGISTRO CONFIRMADO
+            </div>
+
+            <h3 className="text-2xl sm:text-3xl font-black text-white tracking-tight mb-2">
+              ¡Encuesta Finalizada con Éxito!
+            </h3>
+
+            <p className="text-sm text-[#D9D9D9]/85 leading-relaxed mb-6">
+              Tu respuesta ha sido registrada y guardada exitosamente en el sistema de LOGIKA LAB. Agradecemos tu tiempo y contribución a nuestro estudio de ingeniería de software.
+            </p>
+
+            {/* Action Button */}
+            <button
+              type="button"
+              onClick={() => {
+                setShowCompletionPopup(false);
+                if (onClose) {
+                  onClose();
+                }
+              }}
+              className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-[#1154FF] hover:bg-[#2B68FF] text-white font-bold text-sm shadow-[0_0_25px_#1154FF] transition-all active:scale-95 min-h-[46px]"
+            >
+              <span>Aceptar</span>
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
