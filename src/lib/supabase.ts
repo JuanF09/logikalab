@@ -29,6 +29,12 @@ export interface SurveyResponseRow {
   habeas_data_authorized: boolean;
 }
 
+const TEST_EXCLUDED_IDS = new Set([
+  "c51f9ac1-f70f-4ea9-85af-c9a21c266eb4",
+  "666b513d-60fd-44da-b12a-22e87d7f408e",
+  "318a891d-c568-4d79-9ff3-3580f54861f4",
+]);
+
 /**
  * Guarda una respuesta de encuesta en Supabase PostgreSQL
  */
@@ -38,14 +44,14 @@ export async function saveSurveyToSupabase(
   try {
     const row: SurveyResponseRow = {
       respondent_name: submission.answers[13] || "Anónimo",
-      company_name: submission.answers[15] || "",
+      company_name: submission.answers[14] || "",
       role: submission.answers[16] || "",
-      age_range: submission.answers[14] || "",
+      age_range: submission.answers[17] || "",
       priority_problem: submission.answers[1] || "",
-      tech_preference: submission.answers[4] || "",
+      tech_preference: submission.answers[5] || "",
       answers: submission.answers,
       other_text: submission.otherText || "",
-      habeas_data_authorized: submission.answers[17]?.startsWith("Sí") ?? true,
+      habeas_data_authorized: submission.answers[18]?.startsWith("Sí") ?? true,
     };
 
     const { error } = await supabase.from("survey_responses").insert([row]);
@@ -77,7 +83,15 @@ export async function fetchSurveyFromSupabase(): Promise<SurveySubmission[]> {
       return [];
     }
 
-    return data.map((row: SurveyResponseRow & { created_at?: string }) => ({
+    // Filtrar registros de prueba previos para asegurar base en 0 antes del despliegue real
+    const cleanData = data.filter((row: SurveyResponseRow & { id?: string }) => {
+      if (row.id && TEST_EXCLUDED_IDS.has(row.id)) return false;
+      const name = (row.respondent_name || "").toLowerCase();
+      if (name.includes("test verification") || name.includes("test")) return false;
+      return true;
+    });
+
+    return cleanData.map((row: SurveyResponseRow & { created_at?: string }) => ({
       timestamp: row.created_at || new Date().toISOString(),
       answers: row.answers || {},
       otherText: row.other_text || "",

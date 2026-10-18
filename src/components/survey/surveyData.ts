@@ -3,39 +3,39 @@ export interface SurveyQuestion {
   section: string;
   sectionNumber: string;
   question: string;
-  type: "single" | "text" | "role" | "age" | "legal";
+  type: "single" | "text" | "role" | "age" | "legal" | "industry";
   options?: string[];
   allowOther?: boolean;
 }
 
 export const SURVEY_SECTIONS = [
-  { id: 1, title: "El Reto de tu Proyecto o Negocio", range: "Preguntas 1 - 3" },
-  { id: 2, title: "Preferencias Tecnológicas y de Ejecución", range: "Preguntas 4 - 10" },
-  { id: 3, title: "Intereses y Contenido de Valor", range: "Preguntas 11 - 12" },
-  { id: 4, title: "Datos del Perfil (Cierre y Legal)", range: "Preguntas 13 - 17" },
+  { id: 1, title: "Diagnóstico del Dolor Operativo", range: "Preguntas 1 - 4" },
+  { id: 2, title: "Preferencias Tecnológicas y de Ejecución", range: "Preguntas 5 - 9" },
+  { id: 3, title: "Modelo de Negocio y Presupuesto", range: "Preguntas 10 - 12" },
+  { id: 4, title: "Perfil de la Empresa y Legal", range: "Preguntas 13 - 18" },
 ];
 
 export const SURVEY_QUESTIONS: SurveyQuestion[] = [
-  // SECCIÓN I
+  // SECCIÓN I: DIAGNÓSTICO DEL DOLOR OPERATIVO
   {
     id: 1,
     sectionNumber: "I",
-    section: "EL RETO DE TU PROYECTO O NEGOCIO",
-    question: "1. Si pudieras resolver un problema en tu negocio o proyecto hoy mismo, ¿cuál sería?",
+    section: "DIAGNÓSTICO DEL DOLOR OPERATIVO",
+    question: "1. Si pudieras resolver un problema crítico en tu negocio o proyecto hoy mismo, ¿cuál sería?",
     type: "single",
     allowOther: true,
     options: [
       "El desorden en los inventarios, entregas o logística.",
       "La gestión manual de citas, clientes y ventas.",
-      "La coordinación de un equipo de trabajo o tareas diarias.",
       "El manejo de la facturación y la información financiera.",
-      "Darle estructura y vida a una idea de negocio que tengo en mente.",
+      "La coordinación de un equipo de trabajo o tareas diarias.",
+      "Darle estructura técnica y vida a una idea de negocio en mente.",
     ],
   },
   {
     id: 2,
     sectionNumber: "I",
-    section: "EL RETO DE TU PROYECTO O NEGOCIO",
+    section: "DIAGNÓSTICO DEL DOLOR OPERATIVO",
     question: "2. ¿Cuál ha sido tu mayor frustración con la tecnología hasta ahora?",
     type: "single",
     options: [
@@ -48,46 +48,60 @@ export const SURVEY_QUESTIONS: SurveyQuestion[] = [
   {
     id: 3,
     sectionNumber: "I",
-    section: "EL RETO DE TU PROYECTO O NEGOCIO",
-    question: "3. Pensando a 2 años, ¿cómo proyectas tu iniciativa?",
+    section: "DIAGNÓSTICO DEL DOLOR OPERATIVO",
+    question: "3. ¿En qué herramientas apoyas principalmente la operación diaria de tu negocio actualmente?",
     type: "single",
     options: [
-      "Lanzando mi proyecto oficialmente al mercado con bases sólidas.",
-      "Manteniendo el mismo tamaño, pero operando de forma 100% organizada y sin estrés.",
-      "Escalando y abriendo nuevas áreas (necesitaré conectar datos en tiempo real).",
-      "Ofreciendo nuevos servicios (necesitaré que el software se adapte constantemente).",
+      "Hojas de cálculo aisladas (Excel / Google Sheets).",
+      "Chats de WhatsApp y notas personales.",
+      "Software comercial genérico / ERP prefabricado.",
+      "Registro manual físico (Cuadernos, papel, carpetas).",
+      "Sistema propio desarrollado a la medida.",
+    ],
+  },
+  {
+    id: 4,
+    sectionNumber: "I",
+    section: "DIAGNÓSTICO DEL DOLOR OPERATIVO",
+    question: "4. ¿Cuántas horas a la semana calcula tu equipo que pierde en tareas operativas manuales y repetitivas?",
+    type: "single",
+    options: [
+      "Menos de 5 horas a la semana.",
+      "Entre 5 y 15 horas a la semana.",
+      "Entre 15 y 30 horas a la semana.",
+      "Más de 30 horas a la semana.",
     ],
   },
 
-  // SECCIÓN II
-  {
-    id: 4,
-    sectionNumber: "II",
-    section: "PREFERENCIAS TECNOLÓGICAS Y DE EJECUCIÓN",
-    question: "4. Al buscar un sistema o plataforma digital, ¿qué prefieres?",
-    type: "single",
-    options: [
-      "Algo rápido y genérico (aunque tenga que adaptar mi forma de trabajar al sistema).",
-      "Algo 100% a la medida (que el sistema se adapte exactamente a mi idea, aunque tome tiempo).",
-    ],
-  },
+  // SECCIÓN II: PREFERENCIAS TECNOLÓGICAS Y DE EJECUCIÓN
   {
     id: 5,
     sectionNumber: "II",
     section: "PREFERENCIAS TECNOLÓGICAS Y DE EJECUCIÓN",
-    question: "5. Si tuvieras que elegir la prioridad número uno para un software, ¿cuál sería?",
+    question: "5. Al buscar un sistema o plataforma digital, ¿qué prefieres?",
     type: "single",
     options: [
-      "Que sea extremadamente fácil e intuitivo de usar para cualquier persona.",
-      "Que la información (datos, pagos, clientes) sea 100% exacta, rápida y segura.",
-      "Que el diseño visual sea espectacular y eleve el estatus de mi marca.",
+      "Algo 100% a la medida (que el sistema se adapte exactamente a mi operación real).",
+      "Algo rápido y genérico (aunque tenga que adaptar mi forma de trabajar al sistema).",
     ],
   },
   {
     id: 6,
     sectionNumber: "II",
     section: "PREFERENCIAS TECNOLÓGICAS Y DE EJECUCIÓN",
-    question: "6. Para construir un software robusto y a la medida, ¿cuánto tiempo estás dispuesto a esperar?",
+    question: "6. Si tuvieras que elegir la prioridad número uno para un software, ¿cuál sería?",
+    type: "single",
+    options: [
+      "Que sea extremadamente fácil e intuitivo de usar para cualquier persona (UX).",
+      "Que la información (datos, pagos, clientes) sea 100% exacta, rápida y segura.",
+      "Que el diseño visual sea espectacular y eleve el estatus de mi marca.",
+    ],
+  },
+  {
+    id: 7,
+    sectionNumber: "II",
+    section: "PREFERENCIAS TECNOLÓGICAS Y DE EJECUCIÓN",
+    question: "7. Para construir un software robusto y a la medida, ¿cuánto tiempo estás dispuesto a esperar?",
     type: "single",
     options: [
       "Menos de 1 mes (Busco un Producto Mínimo Viable para probar rápido).",
@@ -96,45 +110,60 @@ export const SURVEY_QUESTIONS: SurveyQuestion[] = [
     ],
   },
   {
-    id: 7,
-    sectionNumber: "II",
-    section: "PREFERENCIAS TECNOLÓGICAS Y DE EJECUCIÓN",
-    question: "7. Durante el desarrollo del proyecto, ¿cómo te gusta recibir los avances?",
-    type: "single",
-    options: [
-      "Reuniones semanales de 15 minutos en videollamada.",
-      "Videos cortos por WhatsApp mostrando la pantalla y el progreso real.",
-      "No me muestren el proceso, solo avísenme cuando esté listo para probarlo.",
-    ],
-  },
-  {
     id: 8,
     sectionNumber: "II",
     section: "PREFERENCIAS TECNOLÓGICAS Y DE EJECUCIÓN",
-    question: "8. Después de que te entreguemos el sistema funcionando, ¿qué tipo de acompañamiento prefieres?",
+    question: "8. Durante el desarrollo del proyecto, ¿cómo te gusta recibir los avances?",
     type: "single",
     options: [
-      "Una capacitación inicial y yo me encargo del resto.",
-      "Soporte técnico mensual para resolver dudas, asegurar que nada falle y hacer ajustes.",
-      "Un equipo que me acompañe todo el año para ir agregando nuevas funciones al crecer.",
+      "Videos cortos por WhatsApp mostrando la pantalla y el progreso real.",
+      "Reuniones semanales de 15 minutos en videollamada.",
+      "No me muestren el proceso técnico, solo avísenme cuando esté listo para probar.",
     ],
   },
   {
     id: 9,
     sectionNumber: "II",
     section: "PREFERENCIAS TECNOLÓGICAS Y DE EJECUCIÓN",
-    question: "9. Si este software te ahorra tiempo y optimiza tu trabajo, ¿cómo prefieres pagarlo?",
+    question: "9. Después de que te entreguemos el sistema funcionando, ¿qué tipo de acompañamiento prefieres?",
     type: "single",
     options: [
-      "Un pago único por la creación + un costo mínimo mensual por mantenerlo en la nube.",
-      "Una suscripción mensual fija (SaaS) sin tener que pagar un gran costo inicial de desarrollo.",
+      "Soporte técnico mensual para resolver dudas, asegurar que nada falle y hacer ajustes.",
+      "Un equipo permanente que me acompañe todo el año agregando nuevas funciones al crecer.",
+      "Una capacitación inicial y mi equipo se encarga del resto.",
+    ],
+  },
+
+  // SECCIÓN III: MODELO DE NEGOCIO Y PRESUPUESTO
+  {
+    id: 10,
+    sectionNumber: "III",
+    section: "MODELO DE NEGOCIO Y PRESUPUESTO",
+    question: "10. Si este software te ahorra tiempo y optimiza tu trabajo, ¿cómo prefieres pagarlo?",
+    type: "single",
+    options: [
+      "Un pago único por el desarrollo + un costo mínimo mensual por infraestructura en la nube.",
+      "Una suscripción mensual fija (SaaS recurrente) sin costo inicial de desarrollo.",
     ],
   },
   {
-    id: 10,
-    sectionNumber: "II",
-    section: "PREFERENCIAS TECNOLÓGICAS Y DE EJECUCIÓN",
-    question: "10. Siendo muy honesto, ¿qué te detendría de invertir en desarrollo tecnológico hoy mismo?",
+    id: 11,
+    sectionNumber: "III",
+    section: "MODELO DE NEGOCIO Y PRESUPUESTO",
+    question: "11. Si una solución de software a la medida resuelve tus cuellos de botella y automatiza tu operación, ¿qué rango de inversión consideras razonable para tu negocio?",
+    type: "single",
+    options: [
+      "Menos de $2’000.000 COP (~$500 USD) - Automatización puntual o inicio.",
+      "Entre $2’000.000 y $5’000.000 COP (~$500 - $1.300 USD) - Módulo clave (CRM / Cotizador).",
+      "Entre $5’000.000 y $12’000.000 COP (~$1.300 - $3.000 USD) - Ecosistema integral (ERP a medida).",
+      "Más de $12’000.000 COP (> $3.000 USD) - Plataforma empresarial multiárea.",
+    ],
+  },
+  {
+    id: 12,
+    sectionNumber: "III",
+    section: "MODELO DE NEGOCIO Y PRESUPUESTO",
+    question: "12. Siendo muy honesto, ¿qué te detendría de invertir en desarrollo tecnológico hoy mismo?",
     type: "single",
     options: [
       "El presupuesto (siento que debe ser una inversión muy alta de golpe).",
@@ -143,76 +172,67 @@ export const SURVEY_QUESTIONS: SurveyQuestion[] = [
     ],
   },
 
-  // SECCIÓN III
-  {
-    id: 11,
-    sectionNumber: "III",
-    section: "INTERESES Y CONTENIDO DE VALOR",
-    question: "11. ¿Qué tipo de contenido te resultaría más útil ver en redes sociales para potenciar tu idea?",
-    type: "single",
-    options: [
-      "Casos de éxito (Cómo un software le ahorró horas o dinero a un negocio real).",
-      "Tips rápidos sobre automatización y organización comercial.",
-      "Detrás de cámaras del código y cómo estructuramos un sistema desde cero.",
-      "No suelo consumir este tipo de contenido.",
-    ],
-  },
-  {
-    id: 12,
-    sectionNumber: "III",
-    section: "INTERESES Y CONTENIDO DE VALOR",
-    question: "12. Si documentamos el paso a paso de cómo estructuramos un proyecto, ¿te gustaría verlo?",
-    type: "single",
-    options: [
-      "Sí, me interesa ver cómo se hace.",
-      "No por ahora, gracias.",
-    ],
-  },
-
-  // SECCIÓN IV
+  // SECCIÓN IV: PERFIL DE LA EMPRESA Y LEGAL
   {
     id: 13,
     sectionNumber: "IV",
-    section: "DATOS DEL PERFIL (CIERRE Y LEGAL)",
+    section: "PERFIL DE LA EMPRESA Y LEGAL",
     question: "13. Nombre completo:",
     type: "text",
   },
   {
     id: 14,
     sectionNumber: "IV",
-    section: "DATOS DEL PERFIL (CIERRE Y LEGAL)",
-    question: "14. Rango de Edad:",
-    type: "age",
-    options: ["18-25", "26-35", "36-45", "+45"],
+    section: "PERFIL DE LA EMPRESA Y LEGAL",
+    question: "14. Nombre de tu empresa, negocio o proyecto en mente:",
+    type: "text",
   },
   {
     id: 15,
     sectionNumber: "IV",
-    section: "DATOS DEL PERFIL (CIERRE Y LEGAL)",
-    question: "15. Nombre de tu empresa, negocio o proyecto en mente (si aplica):",
-    type: "text",
+    section: "PERFIL DE LA EMPRESA Y LEGAL",
+    question: "15. ¿A qué sector o industria pertenece tu negocio o proyecto?",
+    type: "industry",
+    options: [
+      "Comercio y Ventas (Retail / E-commerce)",
+      "Servicios Profesionales y Consultoría",
+      "Logística, Transporte y Distribución",
+      "Manufactura y Producción",
+      "Salud, Estética y Bienestar",
+      "Gastronomía y Alimentos",
+      "Tecnología, Creativo y Startups",
+      "Otro Sector",
+    ],
   },
   {
     id: 16,
     sectionNumber: "IV",
-    section: "DATOS DEL PERFIL (CIERRE Y LEGAL)",
+    section: "PERFIL DE LA EMPRESA Y LEGAL",
     question: "16. ¿Cuál es tu rol principal actualmente?",
     type: "role",
     options: [
       "Dueño / Fundador de un negocio activo.",
-      "Emprendedor estructurando una nueva idea.",
       "Gerente / Director Operativo.",
+      "Emprendedor estructurando una nueva idea.",
       "Independiente / Freelancer / Empleado.",
     ],
   },
   {
     id: 17,
     sectionNumber: "IV",
-    section: "DATOS DEL PERFIL (CIERRE Y LEGAL)",
-    question: "17. Autorización de Tratamiento de Datos Personales (Obligatorio)",
+    section: "PERFIL DE LA EMPRESA Y LEGAL",
+    question: "17. Rango de Edad:",
+    type: "age",
+    options: ["18-25", "26-35", "36-45", "+45"],
+  },
+  {
+    id: 18,
+    sectionNumber: "IV",
+    section: "PERFIL DE LA EMPRESA Y LEGAL",
+    question: "18. Autorización de Tratamiento de Datos Personales (Obligatorio)",
     type: "legal",
     options: [
-      "Sí, autorizo el tratamiento de mis datos personales.",
+      "Sí, autorizo el tratamiento de mis datos personales según la política de privacidad.",
       "No autorizo.",
     ],
   },
@@ -224,13 +244,23 @@ export interface SurveySubmission {
   otherText?: string;
 }
 
+export interface MetricItem {
+  label: string;
+  count: number;
+  percentage: number;
+}
+
 export interface StatsBreakdown {
   totalResponses: number;
   customVsGeneric: { custom: number; generic: number; customCount: number; genericCount: number };
-  topBottlenecks: Array<{ label: string; count: number; percentage: number }>;
-  timeWillingToWait: Array<{ label: string; count: number; percentage: number }>;
-  paymentPreference: Array<{ label: string; count: number; percentage: number }>;
-  roleDistribution: Array<{ label: string; count: number; percentage: number }>;
+  topBottlenecks: MetricItem[];
+  currentTools: MetricItem[];
+  timeLostWeekly: MetricItem[];
+  willingnessToPay: MetricItem[];
+  paymentPreference: MetricItem[];
+  investmentBarriers: MetricItem[];
+  industryDistribution: MetricItem[];
+  roleDistribution: MetricItem[];
 }
 
 export const ZERO_STATS: StatsBreakdown = {
@@ -241,16 +271,45 @@ export const ZERO_STATS: StatsBreakdown = {
     { label: "La gestión manual de citas, clientes y ventas.", count: 0, percentage: 0 },
     { label: "El manejo de la facturación y la información financiera.", count: 0, percentage: 0 },
     { label: "La coordinación de un equipo de trabajo o tareas diarias.", count: 0, percentage: 0 },
-    { label: "Darle estructura y vida a una idea de negocio que tengo en mente.", count: 0, percentage: 0 },
+    { label: "Darle estructura técnica y vida a una idea de negocio en mente.", count: 0, percentage: 0 },
   ],
-  timeWillingToWait: [
-    { label: "Lo que sea necesario si el resultado resuelve mi problema por completo.", count: 0, percentage: 0 },
-    { label: "Entre 1 y 3 meses (Entiendo que la ingeniería de calidad toma tiempo).", count: 0, percentage: 0 },
-    { label: "Menos de 1 mes (Busco un Producto Mínimo Viable para probar rápido).", count: 0, percentage: 0 },
+  currentTools: [
+    { label: "Hojas de cálculo aisladas (Excel / Google Sheets).", count: 0, percentage: 0 },
+    { label: "Chats de WhatsApp y notas personales.", count: 0, percentage: 0 },
+    { label: "Software comercial genérico / ERP prefabricado.", count: 0, percentage: 0 },
+    { label: "Registro manual físico (Cuadernos, papel, carpetas).", count: 0, percentage: 0 },
+    { label: "Sistema propio desarrollado a la medida.", count: 0, percentage: 0 },
+  ],
+  timeLostWeekly: [
+    { label: "Menos de 5 horas a la semana.", count: 0, percentage: 0 },
+    { label: "Entre 5 y 15 horas a la semana.", count: 0, percentage: 0 },
+    { label: "Entre 15 y 30 horas a la semana.", count: 0, percentage: 0 },
+    { label: "Más de 30 horas a la semana.", count: 0, percentage: 0 },
+  ],
+  willingnessToPay: [
+    { label: "Menos de $2’000.000 COP (~$500 USD) - Automatización puntual o inicio.", count: 0, percentage: 0 },
+    { label: "Entre $2’000.000 y $5’000.000 COP (~$500 - $1.300 USD) - Módulo clave (CRM / Cotizador).", count: 0, percentage: 0 },
+    { label: "Entre $5’000.000 y $12’000.000 COP (~$1.300 - $3.000 USD) - Ecosistema integral (ERP a medida).", count: 0, percentage: 0 },
+    { label: "Más de $12’000.000 COP (> $3.000 USD) - Plataforma empresarial multiárea.", count: 0, percentage: 0 },
   ],
   paymentPreference: [
-    { label: "Un pago único por la creación + un costo mínimo mensual por mantenerlo en la nube.", count: 0, percentage: 0 },
-    { label: "Una suscripción mensual fija (SaaS) sin tener que pagar un gran costo inicial de desarrollo.", count: 0, percentage: 0 },
+    { label: "Un pago único por el desarrollo + un costo mínimo mensual por infraestructura en la nube.", count: 0, percentage: 0 },
+    { label: "Una suscripción mensual fija (SaaS recurrente) sin costo inicial de desarrollo.", count: 0, percentage: 0 },
+  ],
+  investmentBarriers: [
+    { label: "El presupuesto (siento que debe ser una inversión muy alta de golpe).", count: 0, percentage: 0 },
+    { label: "El tiempo (necesito empezar a vender mañana mismo).", count: 0, percentage: 0 },
+    { label: "El miedo a que el proceso sea muy complejo y no logre entenderlo.", count: 0, percentage: 0 },
+  ],
+  industryDistribution: [
+    { label: "Comercio y Ventas (Retail / E-commerce)", count: 0, percentage: 0 },
+    { label: "Servicios Profesionales y Consultoría", count: 0, percentage: 0 },
+    { label: "Logística, Transporte y Distribución", count: 0, percentage: 0 },
+    { label: "Manufactura y Producción", count: 0, percentage: 0 },
+    { label: "Salud, Estética y Bienestar", count: 0, percentage: 0 },
+    { label: "Gastronomía y Alimentos", count: 0, percentage: 0 },
+    { label: "Tecnología, Creativo y Startups", count: 0, percentage: 0 },
+    { label: "Otro Sector", count: 0, percentage: 0 },
   ],
   roleDistribution: [
     { label: "Dueño / Fundador de un negocio activo.", count: 0, percentage: 0 },
@@ -260,13 +319,19 @@ export const ZERO_STATS: StatsBreakdown = {
   ],
 };
 
+function formatPercentage(count: number, total: number): number {
+  if (total <= 0) return 0;
+  const raw = (count / total) * 100;
+  return Math.round(raw * 10) / 10;
+}
+
 export function computeRealStats(submissions: SurveySubmission[]): StatsBreakdown {
   const total = submissions.length;
   if (total === 0) {
     return ZERO_STATS;
   }
 
-  // 1. Custom vs Generic (Pregunta 4)
+  // 1. Custom vs Generic (Pregunta 5)
   let customCount = 0;
   let genericCount = 0;
 
@@ -276,23 +341,60 @@ export function computeRealStats(submissions: SurveySubmission[]): StatsBreakdow
     "La gestión manual de citas, clientes y ventas.": 0,
     "El manejo de la facturación y la información financiera.": 0,
     "La coordinación de un equipo de trabajo o tareas diarias.": 0,
-    "Darle estructura y vida a una idea de negocio que tengo en mente.": 0,
+    "Darle estructura técnica y vida a una idea de negocio en mente.": 0,
   };
 
-  // 3. Time Willing to wait (Pregunta 6)
-  const timeCounts: Record<string, number> = {
-    "Lo que sea necesario si el resultado resuelve mi problema por completo.": 0,
-    "Entre 1 y 3 meses (Entiendo que la ingeniería de calidad toma tiempo).": 0,
-    "Menos de 1 mes (Busco un Producto Mínimo Viable para probar rápido).": 0,
+  // 3. Current Tools (Pregunta 3)
+  const toolsCounts: Record<string, number> = {
+    "Hojas de cálculo aisladas (Excel / Google Sheets).": 0,
+    "Chats de WhatsApp y notas personales.": 0,
+    "Software comercial genérico / ERP prefabricado.": 0,
+    "Registro manual físico (Cuadernos, papel, carpetas).": 0,
+    "Sistema propio desarrollado a la medida.": 0,
   };
 
-  // 4. Payment preference (Pregunta 9)
+  // 4. Hours Lost (Pregunta 4)
+  const hoursCounts: Record<string, number> = {
+    "Menos de 5 horas a la semana.": 0,
+    "Entre 5 y 15 horas a la semana.": 0,
+    "Entre 15 y 30 horas a la semana.": 0,
+    "Más de 30 horas a la semana.": 0,
+  };
+
+  // 5. Willingness to Pay (Pregunta 11)
+  const wtpCounts: Record<string, number> = {
+    "Menos de $2’000.000 COP (~$500 USD) - Automatización puntual o inicio.": 0,
+    "Entre $2’000.000 y $5’000.000 COP (~$500 - $1.300 USD) - Módulo clave (CRM / Cotizador).": 0,
+    "Entre $5’000.000 y $12’000.000 COP (~$1.300 - $3.000 USD) - Ecosistema integral (ERP a medida).": 0,
+    "Más de $12’000.000 COP (> $3.000 USD) - Plataforma empresarial multiárea.": 0,
+  };
+
+  // 6. Payment Preference (Pregunta 10)
   const paymentCounts: Record<string, number> = {
-    "Un pago único por la creación + un costo mínimo mensual por mantenerlo en la nube.": 0,
-    "Una suscripción mensual fija (SaaS) sin tener que pagar un gran costo inicial de desarrollo.": 0,
+    "Un pago único por el desarrollo + un costo mínimo mensual por infraestructura en la nube.": 0,
+    "Una suscripción mensual fija (SaaS recurrente) sin costo inicial de desarrollo.": 0,
   };
 
-  // 5. Role distribution (Pregunta 16)
+  // 7. Barriers (Pregunta 12)
+  const barrierCounts: Record<string, number> = {
+    "El presupuesto (siento que debe ser una inversión muy alta de golpe).": 0,
+    "El tiempo (necesito empezar a vender mañana mismo).": 0,
+    "El miedo a que el proceso sea muy complejo y no logre entenderlo.": 0,
+  };
+
+  // 8. Industry (Pregunta 15)
+  const industryCounts: Record<string, number> = {
+    "Comercio y Ventas (Retail / E-commerce)": 0,
+    "Servicios Profesionales y Consultoría": 0,
+    "Logística, Transporte y Distribución": 0,
+    "Manufactura y Producción": 0,
+    "Salud, Estética y Bienestar": 0,
+    "Gastronomía y Alimentos": 0,
+    "Tecnología, Creativo y Startups": 0,
+    "Otro Sector": 0,
+  };
+
+  // 9. Role (Pregunta 16)
   const roleCounts: Record<string, number> = {
     "Dueño / Fundador de un negocio activo.": 0,
     "Gerente / Director Operativo.": 0,
@@ -301,62 +403,62 @@ export function computeRealStats(submissions: SurveySubmission[]): StatsBreakdow
   };
 
   for (const sub of submissions) {
-    // Q4
-    const q4 = sub.answers[4];
-    if (q4?.includes("100% a la medida")) customCount++;
-    else if (q4?.includes("rápido y genérico")) genericCount++;
+    // Q5 (Custom vs Generic)
+    const q5 = sub.answers[5];
+    if (q5?.includes("100% a la medida")) customCount++;
+    else if (q5?.includes("rápido y genérico")) genericCount++;
 
-    // Q1
+    // Q1 (Bottlenecks)
     const q1 = sub.answers[1];
     if (q1 && bottleneckCounts[q1] !== undefined) {
       bottleneckCounts[q1]++;
     }
 
-    // Q6
-    const q6 = sub.answers[6];
-    if (q6 && timeCounts[q6] !== undefined) {
-      timeCounts[q6]++;
+    // Q3 (Current Tools)
+    const q3 = sub.answers[3];
+    if (q3 && toolsCounts[q3] !== undefined) {
+      toolsCounts[q3]++;
     }
 
-    // Q9
-    const q9 = sub.answers[9];
-    if (q9 && paymentCounts[q9] !== undefined) {
-      paymentCounts[q9]++;
+    // Q4 (Hours Lost)
+    const q4 = sub.answers[4];
+    if (q4 && hoursCounts[q4] !== undefined) {
+      hoursCounts[q4]++;
     }
 
-    // Q16
+    // Q11 (Willingness to pay)
+    const q11 = sub.answers[11];
+    if (q11 && wtpCounts[q11] !== undefined) {
+      wtpCounts[q11]++;
+    }
+
+    // Q10 (Payment preference)
+    const q10 = sub.answers[10];
+    if (q10 && paymentCounts[q10] !== undefined) {
+      paymentCounts[q10]++;
+    }
+
+    // Q12 (Barriers)
+    const q12 = sub.answers[12];
+    if (q12 && barrierCounts[q12] !== undefined) {
+      barrierCounts[q12]++;
+    }
+
+    // Q15 (Industry)
+    const q15 = sub.answers[15];
+    if (q15 && industryCounts[q15] !== undefined) {
+      industryCounts[q15]++;
+    }
+
+    // Q16 (Role)
     const q16 = sub.answers[16];
     if (q16 && roleCounts[q16] !== undefined) {
       roleCounts[q16]++;
     }
   }
 
-  const customPerc = total > 0 ? Math.round((customCount / total) * 100) : 0;
-  const genericPerc = total > 0 ? Math.round((genericCount / total) * 100) : 0;
-
-  const topBottlenecks = Object.entries(bottleneckCounts).map(([label, count]) => ({
-    label,
-    count,
-    percentage: total > 0 ? Math.round((count / total) * 100) : 0,
-  }));
-
-  const timeWillingToWait = Object.entries(timeCounts).map(([label, count]) => ({
-    label,
-    count,
-    percentage: total > 0 ? Math.round((count / total) * 100) : 0,
-  }));
-
-  const paymentPreference = Object.entries(paymentCounts).map(([label, count]) => ({
-    label,
-    count,
-    percentage: total > 0 ? Math.round((count / total) * 100) : 0,
-  }));
-
-  const roleDistribution = Object.entries(roleCounts).map(([label, count]) => ({
-    label,
-    count,
-    percentage: total > 0 ? Math.round((count / total) * 100) : 0,
-  }));
+  const customPerc = formatPercentage(customCount, total);
+  const genericPerc = formatPercentage(genericCount, total);
 
   return {
     totalResponses: total,
@@ -366,9 +468,45 @@ export function computeRealStats(submissions: SurveySubmission[]): StatsBreakdow
       customCount,
       genericCount,
     },
-    topBottlenecks,
-    timeWillingToWait,
-    paymentPreference,
-    roleDistribution,
+    topBottlenecks: Object.entries(bottleneckCounts).map(([label, count]) => ({
+      label,
+      count,
+      percentage: formatPercentage(count, total),
+    })),
+    currentTools: Object.entries(toolsCounts).map(([label, count]) => ({
+      label,
+      count,
+      percentage: formatPercentage(count, total),
+    })),
+    timeLostWeekly: Object.entries(hoursCounts).map(([label, count]) => ({
+      label,
+      count,
+      percentage: formatPercentage(count, total),
+    })),
+    willingnessToPay: Object.entries(wtpCounts).map(([label, count]) => ({
+      label,
+      count,
+      percentage: formatPercentage(count, total),
+    })),
+    paymentPreference: Object.entries(paymentCounts).map(([label, count]) => ({
+      label,
+      count,
+      percentage: formatPercentage(count, total),
+    })),
+    investmentBarriers: Object.entries(barrierCounts).map(([label, count]) => ({
+      label,
+      count,
+      percentage: formatPercentage(count, total),
+    })),
+    industryDistribution: Object.entries(industryCounts).map(([label, count]) => ({
+      label,
+      count,
+      percentage: formatPercentage(count, total),
+    })),
+    roleDistribution: Object.entries(roleCounts).map(([label, count]) => ({
+      label,
+      count,
+      percentage: formatPercentage(count, total),
+    })),
   };
 }
