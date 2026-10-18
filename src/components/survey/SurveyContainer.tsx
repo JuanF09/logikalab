@@ -25,6 +25,10 @@ import {
   RotateCcw,
 } from "lucide-react";
 import { getWhatsAppUrl, SITE_CONFIG } from "@/lib/config";
+import {
+  saveSurveyToSupabase,
+  fetchSurveyFromSupabase,
+} from "@/lib/supabase";
 
 interface SurveyContainerProps {
   standalone?: boolean;
@@ -43,23 +47,35 @@ export const SurveyContainer: React.FC<SurveyContainerProps> = ({
   const [statsData, setStatsData] = useState<StatsBreakdown>(ZERO_STATS);
   const [copiedLink, setCopiedLink] = useState(false);
 
-  // Load real responses from localStorage
+  // Load real responses from Supabase (with localStorage fallback)
   useEffect(() => {
-    try {
-      const stored = localStorage.getItem("logika_lab_survey_responses");
-      if (stored) {
-        const parsed: SurveySubmission[] = JSON.parse(stored);
-        if (Array.isArray(parsed) && parsed.length > 0) {
-          setStatsData(computeRealStats(parsed));
-        } else {
-          setStatsData(ZERO_STATS);
-        }
-      } else {
-        setStatsData(ZERO_STATS);
+    async function loadData() {
+      // 1. Try Supabase cloud database first
+      const supabaseData = await fetchSurveyFromSupabase();
+      if (supabaseData.length > 0) {
+        setStatsData(computeRealStats(supabaseData));
+        return;
       }
-    } catch {
+
+      // 2. Fallback to localStorage if Supabase has 0 rows or is offline
+      try {
+        const stored = localStorage.getItem("logika_lab_survey_responses");
+        if (stored) {
+          const parsed: SurveySubmission[] = JSON.parse(stored);
+          if (Array.isArray(parsed) && parsed.length > 0) {
+            setStatsData(computeRealStats(parsed));
+            return;
+          }
+        }
+      } catch {
+        // Ignore localStorage error
+      }
+
+      // 3. Otherwise strictly ZERO_STATS (all 0s when no responses exist)
       setStatsData(ZERO_STATS);
     }
+
+    loadData();
   }, []);
 
   // Filter questions by active section
@@ -85,15 +101,21 @@ export const SurveyContainer: React.FC<SurveyContainerProps> = ({
     }
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
+    const submission: SurveySubmission = {
+      timestamp: new Date().toISOString(),
+      answers,
+      otherText,
+    };
+
+    // 1. Save to Supabase Cloud Database asynchronously
+    saveSurveyToSupabase(submission).catch(() => {});
+
+    // 2. Save to localStorage for instant client persistence
     try {
       const stored = localStorage.getItem("logika_lab_survey_responses") || "[]";
       const parsed: SurveySubmission[] = JSON.parse(stored);
-      parsed.push({
-        timestamp: new Date().toISOString(),
-        answers,
-        otherText,
-      });
+      parsed.push(submission);
       localStorage.setItem("logika_lab_survey_responses", JSON.stringify(parsed));
       setStatsData(computeRealStats(parsed));
     } catch {
