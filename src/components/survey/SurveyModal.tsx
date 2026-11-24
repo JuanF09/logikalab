@@ -38,14 +38,14 @@ export const SurveyModal: React.FC<SurveyModalProps> = ({ isOpen, onClose }) => 
       {/* Heavy Backdrop with blur */}
       <div
         onClick={onClose}
-        className="fixed inset-0 bg-[#01040F]/90 backdrop-blur-2xl transition-opacity animate-in fade-in duration-300"
+        className="fixed inset-0 bg-[#000000]/90 backdrop-blur-2xl transition-opacity animate-in fade-in duration-300"
       />
 
       {/* Ambient Blue Backlight */}
-      <div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[750px] h-[550px] bg-[#1154FF]/25 blur-[170px] rounded-full pointer-events-none" />
+      <div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[750px] h-[550px] bg-[#075FFF]/25 blur-[170px] rounded-full pointer-events-none" />
 
       {/* Main Modal Card */}
-      <div className="relative w-full max-w-4xl h-full sm:h-auto sm:max-h-[92vh] flex flex-col rounded-none sm:rounded-3xl border-0 sm:border-2 border-[#1154FF]/40 bg-gradient-to-b from-[#061442] via-[#030A24] to-[#01040F] shadow-[0_0_80px_rgba(17,84,255,0.45)] overflow-hidden z-10 text-white">
+      <div className="relative w-full max-w-4xl h-full sm:h-auto sm:max-h-[92vh] flex flex-col rounded-none sm:rounded-3xl border-0 sm:border-2 border-[#075FFF]/40 bg-gradient-to-b from-[#000000] via-[#000000] to-[#000000] shadow-[0_0_80px_rgba(7, 95, 255,0.45)] overflow-hidden z-10 text-white">
         <SurveyContainer onClose={onClose} />
       </div>
     </div>

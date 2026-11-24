@@ -1,0 +1,969 @@
+{
+  "N": 17,
+  "results": {
+    "1": {
+      "title": "Q1: Dolor Operativo Crítico",
+      "distribution": [
+        {
+          "label": "La coordinación de un equipo de trabajo o tareas diarias.",
+          "count": 6,
+          "percentage": "35.3"
+        },
+        {
+          "label": "El desorden en los inventarios, entregas o logística.",
+          "count": 3,
+          "percentage": "17.6"
+        },
+        {
+          "label": "El manejo de la facturación y la información financiera.",
+          "count": 3,
+          "percentage": "17.6"
+        },
+        {
+          "label": "Darle estructura técnica y vida a una idea de negocio en mente.",
+          "count": 3,
+          "percentage": "17.6"
+        },
+        {
+          "label": "La gestión manual de citas, clientes y ventas.",
+          "count": 2,
+          "percentage": "11.8"
+        }
+      ]
+    },
+    "2": {
+      "title": "Q2: Mayor Frustración Tecnológica",
+      "distribution": [
+        {
+          "label": "Nunca he invertido en desarrollo de software, apenas estoy empezando.",
+          "count": 10,
+          "percentage": "58.8"
+        },
+        {
+          "label": "Era tan complicado de usar que terminé volviendo al papel, Excel o WhatsApp.",
+          "count": 4,
+          "percentage": "23.5"
+        },
+        {
+          "label": "El sistema se quedó pequeño muy rápido y me limitó el crecimiento.",
+          "count": 2,
+          "percentage": "11.8"
+        },
+        {
+          "label": "Pagué por algo prefabricado que nunca funcionó como me prometieron.",
+          "count": 1,
+          "percentage": "5.9"
+        }
+      ]
+    },
+    "3": {
+      "title": "Q3: Herramientas Operativas Actuales",
+      "distribution": [
+        {
+          "label": "Hojas de cálculo aisladas (Excel / Google Sheets).",
+          "count": 8,
+          "percentage": "47.1"
+        },
+        {
+          "label": "Chats de WhatsApp y notas personales.",
+          "count": 5,
+          "percentage": "29.4"
+        },
+        {
+          "label": "Registro manual físico (Cuadernos, papel, carpetas).",
+          "count": 3,
+          "percentage": "17.6"
+        },
+        {
+          "label": "Sistema propio desarrollado a la medida.",
+          "count": 1,
+          "percentage": "5.9"
+        }
+      ]
+    },
+    "4": {
+      "title": "Q4: Horas Semanales Perdidas",
+      "distribution": [
+        {
+          "label": "Entre 5 y 15 horas a la semana.",
+          "count": 8,
+          "percentage": "47.1"
+        },
+        {
+          "label": "Menos de 5 horas a la semana.",
+          "count": 8,
+          "percentage": "47.1"
+        },
+        {
+          "label": "Entre 15 y 30 horas a la semana.",
+          "count": 1,
+          "percentage": "5.9"
+        }
+      ]
+    },
+    "5": {
+      "title": "Q5: Software a Medida vs Genérico",
+      "distribution": [
+        {
+          "label": "Algo 100% a la medida (que el sistema se adapte exactamente a mi operación real).",
+          "count": 13,
+          "percentage": "76.5"
+        },
+        {
+          "label": "Algo rápido y genérico (aunque tenga que adaptar mi forma de trabajar al sistema).",
+          "count": 4,
+          "percentage": "23.5"
+        }
+      ]
+    },
+    "6": {
+      "title": "Q6: Prioridad #1 en Software",
+      "distribution": [
+        {
+          "label": "Que la información (datos, pagos, clientes) sea 100% exacta, rápida y segura.",
+          "count": 10,
+          "percentage": "58.8"
+        },
+        {
+          "label": "Que sea extremadamente fácil e intuitivo de usar para cualquier persona (UX).",
+          "count": 4,
+          "percentage": "23.5"
+        },
+        {
+          "label": "Que el diseño visual sea espectacular y eleve el estatus de mi marca.",
+          "count": 3,
+          "percentage": "17.6"
+        }
+      ]
+    },
+    "7": {
+      "title": "Q7: Tiempo de Espera Dispuesto",
+      "distribution": [
+        {
+          "label": "Lo que sea necesario si el resultado resuelve mi problema por completo.",
+          "count": 8,
+          "percentage": "47.1"
+        },
+        {
+          "label": "Entre 1 y 3 meses (Entiendo que la ingeniería de calidad toma tiempo).",
+          "count": 6,
+          "percentage": "35.3"
+        },
+        {
+          "label": "Menos de 1 mes (Busco un Producto Mínimo Viable para probar rápido).",
+          "count": 3,
+          "percentage": "17.6"
+        }
+      ]
+    },
+    "8": {
+      "title": "Q8: Modalidad de Reportes/Avances",
+      "distribution": [
+        {
+          "label": "Reuniones semanales de 15 minutos en videollamada.",
+          "count": 10,
+          "percentage": "58.8"
+        },
+        {
+          "label": "Videos cortos por WhatsApp mostrando la pantalla y el progreso real.",
+          "count": 5,
+          "percentage": "29.4"
+        },
+        {
+          "label": "No me muestren el proceso técnico, solo avísenme cuando esté listo para probar.",
+          "count": 2,
+          "percentage": "11.8"
+        }
+      ]
+    },
+    "9": {
+      "title": "Q9: Tipo de Acompañamiento Post-Entrega",
+      "distribution": [
+        {
+          "label": "Soporte técnico mensual para resolver dudas, asegurar que nada falle y hacer ajustes.",
+          "count": 9,
+          "percentage": "52.9"
+        },
+        {
+          "label": "Un equipo permanente que me acompañe todo el año agregando nuevas funciones al crecer.",
+          "count": 7,
+          "percentage": "41.2"
+        },
+        {
+          "label": "Una capacitación inicial y mi equipo se encarga del resto.",
+          "count": 1,
+          "percentage": "5.9"
+        }
+      ]
+    },
+    "10": {
+      "title": "Q10: Modelo de Pago Preferido",
+      "distribution": [
+        {
+          "label": "Un pago único por el desarrollo + un costo mínimo mensual por infraestructura en la nube.",
+          "count": 9,
+          "percentage": "52.9"
+        },
+        {
+          "label": "Una suscripción mensual fija (SaaS recurrente) sin costo inicial de desarrollo.",
+          "count": 8,
+          "percentage": "47.1"
+        }
+      ]
+    },
+    "11": {
+      "title": "Q11: Rango de Inversión Considerado Razonable",
+      "distribution": [
+        {
+          "label": "Entre $2’000.000 y $5’000.000 COP (~$500 - $1.300 USD) - Módulo clave (CRM / Cotizador).",
+          "count": 8,
+          "percentage": "47.1"
+        },
+        {
+          "label": "Menos de $2’000.000 COP (~$500 USD) - Automatización puntual o inicio.",
+          "count": 7,
+          "percentage": "41.2"
+        },
+        {
+          "label": "Más de $12’000.000 COP (> $3.000 USD) - Plataforma empresarial multiárea.",
+          "count": 1,
+          "percentage": "5.9"
+        },
+        {
+          "label": "Entre $5’000.000 y $12’000.000 COP (~$1.300 - $3.000 USD) - Ecosistema integral (ERP a medida).",
+          "count": 1,
+          "percentage": "5.9"
+        }
+      ]
+    },
+    "12": {
+      "title": "Q12: Principal Freno/Objeción para Invertir",
+      "distribution": [
+        {
+          "label": "El presupuesto (siento que debe ser una inversión muy alta de golpe).",
+          "count": 12,
+          "percentage": "70.6"
+        },
+        {
+          "label": "El tiempo (necesito empezar a vender mañana mismo).",
+          "count": 3,
+          "percentage": "17.6"
+        },
+        {
+          "label": "El miedo a que el proceso sea muy complejo y no logre entenderlo.",
+          "count": 2,
+          "percentage": "11.8"
+        }
+      ]
+    },
+    "15": {
+      "title": "Q15: Sector o Industria",
+      "distribution": [
+        {
+          "label": "Otro Sector",
+          "count": 4,
+          "percentage": "23.5"
+        },
+        {
+          "label": "Comercio y Ventas (Retail / E-commerce)",
+          "count": 4,
+          "percentage": "23.5"
+        },
+        {
+          "label": "Tecnología, Creativo y Startups",
+          "count": 3,
+          "percentage": "17.6"
+        },
+        {
+          "label": "Servicios Profesionales y Consultoría",
+          "count": 3,
+          "percentage": "17.6"
+        },
+        {
+          "label": "Gastronomía y Alimentos",
+          "count": 3,
+          "percentage": "17.6"
+        }
+      ]
+    },
+    "16": {
+      "title": "Q16: Rol del Encuestado",
+      "distribution": [
+        {
+          "label": "Independiente / Freelancer / Empleado.",
+          "count": 7,
+          "percentage": "41.2"
+        },
+        {
+          "label": "Dueño / Fundador de un negocio activo.",
+          "count": 5,
+          "percentage": "29.4"
+        },
+        {
+          "label": "Emprendedor estructurando una nueva idea.",
+          "count": 4,
+          "percentage": "23.5"
+        },
+        {
+          "label": "Gerente / Director Operativo.",
+          "count": 1,
+          "percentage": "5.9"
+        }
+      ]
+    },
+    "17": {
+      "title": "Q17: Rango de Edad",
+      "distribution": [
+        {
+          "label": "18-25",
+          "count": 6,
+          "percentage": "35.3"
+        },
+        {
+          "label": "36-45",
+          "count": 5,
+          "percentage": "29.4"
+        },
+        {
+          "label": "+45",
+          "count": 3,
+          "percentage": "17.6"
+        },
+        {
+          "label": "26-35",
+          "count": 3,
+          "percentage": "17.6"
+        }
+      ]
+    },
+    "18": {
+      "title": "Q18: Autorización Habeas Data",
+      "distribution": [
+        {
+          "label": "Sí, autorizo el tratamiento de mis datos personales según la política de privacidad.",
+          "count": 17,
+          "percentage": "100.0"
+        }
+      ]
+    }
+  },
+  "toolVsHours": {
+    "Hojas de cálculo aisladas (Excel / Google Sheets).": {
+      "Entre 5 y 15 horas a la semana.": 5,
+      "Menos de 5 horas a la semana.": 3
+    },
+    "Chats de WhatsApp y notas personales.": {
+      "Menos de 5 horas a la semana.": 3,
+      "Entre 5 y 15 horas a la semana.": 2
+    },
+    "Registro manual físico (Cuadernos, papel, carpetas).": {
+      "Menos de 5 horas a la semana.": 1,
+      "Entre 5 y 15 horas a la semana.": 1,
+      "Entre 15 y 30 horas a la semana.": 1
+    },
+    "Sistema propio desarrollado a la medida.": {
+      "Menos de 5 horas a la semana.": 1
+    }
+  },
+  "roleVsBudget": {
+    "Emprendedor estructurando una nueva idea.": {
+      "Menos de $2’000.000 COP (~$500 USD) - Automatización puntual o inicio.": 2,
+      "Entre $2’000.000 y $5’000.000 COP (~$500 - $1.300 USD) - Módulo clave (CRM / Cotizador).": 1,
+      "Entre $5’000.000 y $12’000.000 COP (~$1.300 - $3.000 USD) - Ecosistema integral (ERP a medida).": 1
+    },
+    "Dueño / Fundador de un negocio activo.": {
+      "Menos de $2’000.000 COP (~$500 USD) - Automatización puntual o inicio.": 2,
+      "Entre $2’000.000 y $5’000.000 COP (~$500 - $1.300 USD) - Módulo clave (CRM / Cotizador).": 3
+    },
+    "Independiente / Freelancer / Empleado.": {
+      "Menos de $2’000.000 COP (~$500 USD) - Automatización puntual o inicio.": 3,
+      "Entre $2’000.000 y $5’000.000 COP (~$500 - $1.300 USD) - Módulo clave (CRM / Cotizador).": 3,
+      "Más de $12’000.000 COP (> $3.000 USD) - Plataforma empresarial multiárea.": 1
+    },
+    "Gerente / Director Operativo.": {
+      "Entre $2’000.000 y $5’000.000 COP (~$500 - $1.300 USD) - Módulo clave (CRM / Cotizador).": 1
+    }
+  },
+  "sectorVsPain": {
+    "Tecnología, Creativo y Startups": {
+      "El desorden en los inventarios, entregas o logística.": 2,
+      "El manejo de la facturación y la información financiera.": 1
+    },
+    "Otro Sector": {
+      "La coordinación de un equipo de trabajo o tareas diarias.": 2,
+      "Darle estructura técnica y vida a una idea de negocio en mente.": 1,
+      "La gestión manual de citas, clientes y ventas.": 1
+    },
+    "Servicios Profesionales y Consultoría": {
+      "La coordinación de un equipo de trabajo o tareas diarias.": 3
+    },
+    "Comercio y Ventas (Retail / E-commerce)": {
+      "El manejo de la facturación y la información financiera.": 2,
+      "La gestión manual de citas, clientes y ventas.": 1,
+      "El desorden en los inventarios, entregas o logística.": 1
+    },
+    "Gastronomía y Alimentos": {
+      "Darle estructura técnica y vida a una idea de negocio en mente.": 2,
+      "La coordinación de un equipo de trabajo o tareas diarias.": 1
+    }
+  },
+  "barrierVsPay": {
+    "El presupuesto (siento que debe ser una inversión muy alta de golpe).": {
+      "Un pago único por el desarrollo + un costo mínimo mensual por infraestructura en la nube.": 7,
+      "Una suscripción mensual fija (SaaS recurrente) sin costo inicial de desarrollo.": 5
+    },
+    "El miedo a que el proceso sea muy complejo y no logre entenderlo.": {
+      "Una suscripción mensual fija (SaaS recurrente) sin costo inicial de desarrollo.": 2
+    },
+    "El tiempo (necesito empezar a vender mañana mismo).": {
+      "Un pago único por el desarrollo + un costo mínimo mensual por infraestructura en la nube.": 2,
+      "Una suscripción mensual fija (SaaS recurrente) sin costo inicial de desarrollo.": 1
+    }
+  },
+  "respondents": [
+    {
+      "id": "09e00290-59bc-4008-a571-86f7ff921115",
+      "created_at": "2026-10-18T18:24:45.465517+00:00",
+      "respondent_name": "Juan David Figueroa",
+      "company_name": "Independiente",
+      "role": "Emprendedor estructurando una nueva idea.",
+      "age_range": "18-25",
+      "priority_problem": "El desorden en los inventarios, entregas o logística.",
+      "tech_preference": "Algo 100% a la medida (que el sistema se adapte exactamente a mi operación real).",
+      "answers": {
+        "1": "El desorden en los inventarios, entregas o logística.",
+        "2": "Era tan complicado de usar que terminé volviendo al papel, Excel o WhatsApp.",
+        "3": "Hojas de cálculo aisladas (Excel / Google Sheets).",
+        "4": "Entre 5 y 15 horas a la semana.",
+        "5": "Algo 100% a la medida (que el sistema se adapte exactamente a mi operación real).",
+        "6": "Que sea extremadamente fácil e intuitivo de usar para cualquier persona (UX).",
+        "7": "Entre 1 y 3 meses (Entiendo que la ingeniería de calidad toma tiempo).",
+        "8": "Reuniones semanales de 15 minutos en videollamada.",
+        "9": "Soporte técnico mensual para resolver dudas, asegurar que nada falle y hacer ajustes.",
+        "10": "Un pago único por el desarrollo + un costo mínimo mensual por infraestructura en la nube.",
+        "11": "Menos de $2’000.000 COP (~$500 USD) - Automatización puntual o inicio.",
+        "12": "El presupuesto (siento que debe ser una inversión muy alta de golpe).",
+        "13": "Juan David Figueroa",
+        "14": "Independiente",
+        "15": "Tecnología, Creativo y Startups",
+        "16": "Emprendedor estructurando una nueva idea.",
+        "17": "18-25",
+        "18": "Sí, autorizo el tratamiento de mis datos personales según la política de privacidad."
+      },
+      "other_text": "",
+      "habeas_data_authorized": true
+    },
+    {
+      "id": "c2cf211e-1351-4b68-88a2-5006279212bc",
+      "created_at": "2026-10-18T18:54:14.62832+00:00",
+      "respondent_name": "Beatriz elena jimenez perez",
+      "company_name": "decoracionsesamo@gmail.com",
+      "role": "Dueño / Fundador de un negocio activo.",
+      "age_range": "+45",
+      "priority_problem": "La coordinación de un equipo de trabajo o tareas diarias.",
+      "tech_preference": "Algo 100% a la medida (que el sistema se adapte exactamente a mi operación real).",
+      "answers": {
+        "1": "La coordinación de un equipo de trabajo o tareas diarias.",
+        "2": "Era tan complicado de usar que terminé volviendo al papel, Excel o WhatsApp.",
+        "3": "Chats de WhatsApp y notas personales.",
+        "4": "Menos de 5 horas a la semana.",
+        "5": "Algo 100% a la medida (que el sistema se adapte exactamente a mi operación real).",
+        "6": "Que el diseño visual sea espectacular y eleve el estatus de mi marca.",
+        "7": "Menos de 1 mes (Busco un Producto Mínimo Viable para probar rápido).",
+        "8": "Videos cortos por WhatsApp mostrando la pantalla y el progreso real.",
+        "9": "Un equipo permanente que me acompañe todo el año agregando nuevas funciones al crecer.",
+        "10": "Una suscripción mensual fija (SaaS recurrente) sin costo inicial de desarrollo.",
+        "11": "Menos de $2’000.000 COP (~$500 USD) - Automatización puntual o inicio.",
+        "12": "El miedo a que el proceso sea muy complejo y no logre entenderlo.",
+        "13": "Beatriz elena jimenez perez",
+        "14": "decoracionsesamo@gmail.com",
+        "15": "Otro Sector",
+        "16": "Dueño / Fundador de un negocio activo.",
+        "17": "+45",
+        "18": "Sí, autorizo el tratamiento de mis datos personales según la política de privacidad."
+      },
+      "other_text": "",
+      "habeas_data_authorized": true
+    },
+    {
+      "id": "29219225-3d66-406b-a6a0-7d4b1b2e3be6",
+      "created_at": "2026-10-18T19:23:11.55773+00:00",
+      "respondent_name": "Mauro Leandro Rios Churta",
+      "company_name": "MKYA",
+      "role": "Emprendedor estructurando una nueva idea.",
+      "age_range": "18-25",
+      "priority_problem": "El manejo de la facturación y la información financiera.",
+      "tech_preference": "Algo 100% a la medida (que el sistema se adapte exactamente a mi operación real).",
+      "answers": {
+        "1": "El manejo de la facturación y la información financiera.",
+        "2": "Nunca he invertido en desarrollo de software, apenas estoy empezando.",
+        "3": "Hojas de cálculo aisladas (Excel / Google Sheets).",
+        "4": "Entre 5 y 15 horas a la semana.",
+        "5": "Algo 100% a la medida (que el sistema se adapte exactamente a mi operación real).",
+        "6": "Que sea extremadamente fácil e intuitivo de usar para cualquier persona (UX).",
+        "7": "Lo que sea necesario si el resultado resuelve mi problema por completo.",
+        "8": "Reuniones semanales de 15 minutos en videollamada.",
+        "9": "Un equipo permanente que me acompañe todo el año agregando nuevas funciones al crecer.",
+        "10": "Un pago único por el desarrollo + un costo mínimo mensual por infraestructura en la nube.",
+        "11": "Entre $2’000.000 y $5’000.000 COP (~$500 - $1.300 USD) - Módulo clave (CRM / Cotizador).",
+        "12": "El presupuesto (siento que debe ser una inversión muy alta de golpe).",
+        "13": "Mauro Leandro Rios Churta",
+        "14": "MKYA",
+        "15": "Tecnología, Creativo y Startups",
+        "16": "Emprendedor estructurando una nueva idea.",
+        "17": "18-25",
+        "18": "Sí, autorizo el tratamiento de mis datos personales según la política de privacidad."
+      },
+      "other_text": "",
+      "habeas_data_authorized": true
+    },
+    {
+      "id": "77c5e053-ead7-4690-8119-6e48873e515d",
+      "created_at": "2026-10-18T19:28:15.562572+00:00",
+      "respondent_name": "LUIS CARLOS JIMENEZ",
+      "company_name": "Limpieza ",
+      "role": "Dueño / Fundador de un negocio activo.",
+      "age_range": "36-45",
+      "priority_problem": "Darle estructura técnica y vida a una idea de negocio en mente.",
+      "tech_preference": "Algo rápido y genérico (aunque tenga que adaptar mi forma de trabajar al sistema).",
+      "answers": {
+        "1": "Darle estructura técnica y vida a una idea de negocio en mente.",
+        "2": "Nunca he invertido en desarrollo de software, apenas estoy empezando.",
+        "3": "Registro manual físico (Cuadernos, papel, carpetas).",
+        "4": "Menos de 5 horas a la semana.",
+        "5": "Algo rápido y genérico (aunque tenga que adaptar mi forma de trabajar al sistema).",
+        "6": "Que el diseño visual sea espectacular y eleve el estatus de mi marca.",
+        "7": "Lo que sea necesario si el resultado resuelve mi problema por completo.",
+        "8": "Reuniones semanales de 15 minutos en videollamada.",
+        "9": "Un equipo permanente que me acompañe todo el año agregando nuevas funciones al crecer.",
+        "10": "Una suscripción mensual fija (SaaS recurrente) sin costo inicial de desarrollo.",
+        "11": "Entre $2’000.000 y $5’000.000 COP (~$500 - $1.300 USD) - Módulo clave (CRM / Cotizador).",
+        "12": "El miedo a que el proceso sea muy complejo y no logre entenderlo.",
+        "13": "LUIS CARLOS JIMENEZ",
+        "14": "Limpieza ",
+        "15": "Otro Sector",
+        "16": "Dueño / Fundador de un negocio activo.",
+        "17": "36-45",
+        "18": "Sí, autorizo el tratamiento de mis datos personales según la política de privacidad."
+      },
+      "other_text": "",
+      "habeas_data_authorized": true
+    },
+    {
+      "id": "48842fc0-9b40-4e6f-9f98-ffc348f13339",
+      "created_at": "2026-10-18T19:29:04.375125+00:00",
+      "respondent_name": "Nayda yenire García ",
+      "company_name": "Massa Group SAS ",
+      "role": "Independiente / Freelancer / Empleado.",
+      "age_range": "36-45",
+      "priority_problem": "La coordinación de un equipo de trabajo o tareas diarias.",
+      "tech_preference": "Algo 100% a la medida (que el sistema se adapte exactamente a mi operación real).",
+      "answers": {
+        "1": "La coordinación de un equipo de trabajo o tareas diarias.",
+        "2": "El sistema se quedó pequeño muy rápido y me limitó el crecimiento.",
+        "3": "Hojas de cálculo aisladas (Excel / Google Sheets).",
+        "4": "Entre 5 y 15 horas a la semana.",
+        "5": "Algo 100% a la medida (que el sistema se adapte exactamente a mi operación real).",
+        "6": "Que la información (datos, pagos, clientes) sea 100% exacta, rápida y segura.",
+        "7": "Menos de 1 mes (Busco un Producto Mínimo Viable para probar rápido).",
+        "8": "Videos cortos por WhatsApp mostrando la pantalla y el progreso real.",
+        "9": "Soporte técnico mensual para resolver dudas, asegurar que nada falle y hacer ajustes.",
+        "10": "Un pago único por el desarrollo + un costo mínimo mensual por infraestructura en la nube.",
+        "11": "Menos de $2’000.000 COP (~$500 USD) - Automatización puntual o inicio.",
+        "12": "El presupuesto (siento que debe ser una inversión muy alta de golpe).",
+        "13": "Nayda yenire García ",
+        "14": "Massa Group SAS ",
+        "15": "Servicios Profesionales y Consultoría",
+        "16": "Independiente / Freelancer / Empleado.",
+        "17": "36-45",
+        "18": "Sí, autorizo el tratamiento de mis datos personales según la política de privacidad."
+      },
+      "other_text": "",
+      "habeas_data_authorized": true
+    },
+    {
+      "id": "acad6702-f6b8-4a53-b980-7de1dcfd7351",
+      "created_at": "2026-10-18T19:33:28.49726+00:00",
+      "respondent_name": "Johana Rodríguez ",
+      "company_name": "Massa Group ",
+      "role": "Gerente / Director Operativo.",
+      "age_range": "26-35",
+      "priority_problem": "La coordinación de un equipo de trabajo o tareas diarias.",
+      "tech_preference": "Algo 100% a la medida (que el sistema se adapte exactamente a mi operación real).",
+      "answers": {
+        "1": "La coordinación de un equipo de trabajo o tareas diarias.",
+        "2": "Nunca he invertido en desarrollo de software, apenas estoy empezando.",
+        "3": "Hojas de cálculo aisladas (Excel / Google Sheets).",
+        "4": "Entre 5 y 15 horas a la semana.",
+        "5": "Algo 100% a la medida (que el sistema se adapte exactamente a mi operación real).",
+        "6": "Que la información (datos, pagos, clientes) sea 100% exacta, rápida y segura.",
+        "7": "Entre 1 y 3 meses (Entiendo que la ingeniería de calidad toma tiempo).",
+        "8": "Reuniones semanales de 15 minutos en videollamada.",
+        "9": "Soporte técnico mensual para resolver dudas, asegurar que nada falle y hacer ajustes.",
+        "10": "Una suscripción mensual fija (SaaS recurrente) sin costo inicial de desarrollo.",
+        "11": "Entre $2’000.000 y $5’000.000 COP (~$500 - $1.300 USD) - Módulo clave (CRM / Cotizador).",
+        "12": "El presupuesto (siento que debe ser una inversión muy alta de golpe).",
+        "13": "Johana Rodríguez ",
+        "14": "Massa Group ",
+        "15": "Otro Sector",
+        "16": "Gerente / Director Operativo.",
+        "17": "26-35",
+        "18": "Sí, autorizo el tratamiento de mis datos personales según la política de privacidad."
+      },
+      "other_text": "",
+      "habeas_data_authorized": true
+    },
+    {
+      "id": "940d0545-e14d-4e44-b503-c1491b296eb2",
+      "created_at": "2026-10-18T19:40:05.6749+00:00",
+      "respondent_name": "Carolina  Yañez ",
+      "company_name": "Comercialización  de  productos  de belleza ",
+      "role": "Emprendedor estructurando una nueva idea.",
+      "age_range": "36-45",
+      "priority_problem": "El manejo de la facturación y la información financiera.",
+      "tech_preference": "Algo rápido y genérico (aunque tenga que adaptar mi forma de trabajar al sistema).",
+      "answers": {
+        "1": "El manejo de la facturación y la información financiera.",
+        "2": "Nunca he invertido en desarrollo de software, apenas estoy empezando.",
+        "3": "Hojas de cálculo aisladas (Excel / Google Sheets).",
+        "4": "Menos de 5 horas a la semana.",
+        "5": "Algo rápido y genérico (aunque tenga que adaptar mi forma de trabajar al sistema).",
+        "6": "Que la información (datos, pagos, clientes) sea 100% exacta, rápida y segura.",
+        "7": "Lo que sea necesario si el resultado resuelve mi problema por completo.",
+        "8": "Videos cortos por WhatsApp mostrando la pantalla y el progreso real.",
+        "9": "Soporte técnico mensual para resolver dudas, asegurar que nada falle y hacer ajustes.",
+        "10": "Una suscripción mensual fija (SaaS recurrente) sin costo inicial de desarrollo.",
+        "11": "Menos de $2’000.000 COP (~$500 USD) - Automatización puntual o inicio.",
+        "12": "El presupuesto (siento que debe ser una inversión muy alta de golpe).",
+        "13": "Carolina  Yañez ",
+        "14": "Comercialización  de  productos  de belleza ",
+        "15": "Comercio y Ventas (Retail / E-commerce)",
+        "16": "Emprendedor estructurando una nueva idea.",
+        "17": "36-45",
+        "18": "Sí, autorizo el tratamiento de mis datos personales según la política de privacidad."
+      },
+      "other_text": "",
+      "habeas_data_authorized": true
+    },
+    {
+      "id": "d38c0917-b45d-4e93-b459-93faf2772a2e",
+      "created_at": "2026-10-18T19:45:47.359747+00:00",
+      "respondent_name": "Catalina Omaña ",
+      "company_name": "Independiente ",
+      "role": "Independiente / Freelancer / Empleado.",
+      "age_range": "18-25",
+      "priority_problem": "La coordinación de un equipo de trabajo o tareas diarias.",
+      "tech_preference": "Algo 100% a la medida (que el sistema se adapte exactamente a mi operación real).",
+      "answers": {
+        "1": "La coordinación de un equipo de trabajo o tareas diarias.",
+        "2": "El sistema se quedó pequeño muy rápido y me limitó el crecimiento.",
+        "3": "Chats de WhatsApp y notas personales.",
+        "4": "Entre 5 y 15 horas a la semana.",
+        "5": "Algo 100% a la medida (que el sistema se adapte exactamente a mi operación real).",
+        "6": "Que sea extremadamente fácil e intuitivo de usar para cualquier persona (UX).",
+        "7": "Lo que sea necesario si el resultado resuelve mi problema por completo.",
+        "8": "Reuniones semanales de 15 minutos en videollamada.",
+        "9": "Soporte técnico mensual para resolver dudas, asegurar que nada falle y hacer ajustes.",
+        "10": "Un pago único por el desarrollo + un costo mínimo mensual por infraestructura en la nube.",
+        "11": "Entre $2’000.000 y $5’000.000 COP (~$500 - $1.300 USD) - Módulo clave (CRM / Cotizador).",
+        "12": "El tiempo (necesito empezar a vender mañana mismo).",
+        "13": "Catalina Omaña ",
+        "14": "Independiente ",
+        "15": "Servicios Profesionales y Consultoría",
+        "16": "Independiente / Freelancer / Empleado.",
+        "17": "18-25",
+        "18": "Sí, autorizo el tratamiento de mis datos personales según la política de privacidad."
+      },
+      "other_text": "",
+      "habeas_data_authorized": true
+    },
+    {
+      "id": "f5038b52-0268-4d5e-978c-02956dc9f4dd",
+      "created_at": "2026-10-18T20:00:09.16435+00:00",
+      "respondent_name": "Miguel Angel Flórez Ramírez ",
+      "company_name": "Independiente ",
+      "role": "Independiente / Freelancer / Empleado.",
+      "age_range": "26-35",
+      "priority_problem": "La coordinación de un equipo de trabajo o tareas diarias.",
+      "tech_preference": "Algo 100% a la medida (que el sistema se adapte exactamente a mi operación real).",
+      "answers": {
+        "1": "La coordinación de un equipo de trabajo o tareas diarias.",
+        "2": "Pagué por algo prefabricado que nunca funcionó como me prometieron.",
+        "3": "Chats de WhatsApp y notas personales.",
+        "4": "Menos de 5 horas a la semana.",
+        "5": "Algo 100% a la medida (que el sistema se adapte exactamente a mi operación real).",
+        "6": "Que la información (datos, pagos, clientes) sea 100% exacta, rápida y segura.",
+        "7": "Lo que sea necesario si el resultado resuelve mi problema por completo.",
+        "8": "Reuniones semanales de 15 minutos en videollamada.",
+        "9": "Una capacitación inicial y mi equipo se encarga del resto.",
+        "10": "Un pago único por el desarrollo + un costo mínimo mensual por infraestructura en la nube.",
+        "11": "Entre $2’000.000 y $5’000.000 COP (~$500 - $1.300 USD) - Módulo clave (CRM / Cotizador).",
+        "12": "El tiempo (necesito empezar a vender mañana mismo).",
+        "13": "Miguel Angel Flórez Ramírez ",
+        "14": "Independiente ",
+        "15": "Servicios Profesionales y Consultoría",
+        "16": "Independiente / Freelancer / Empleado.",
+        "17": "26-35",
+        "18": "Sí, autorizo el tratamiento de mis datos personales según la política de privacidad."
+      },
+      "other_text": "",
+      "habeas_data_authorized": true
+    },
+    {
+      "id": "c674daf4-5f39-4924-b78b-893811544cef",
+      "created_at": "2026-10-18T20:56:11.713455+00:00",
+      "respondent_name": "Alba Lucía Figueroa Jiménez ",
+      "company_name": "DONDE YUL FOOD",
+      "role": "Dueño / Fundador de un negocio activo.",
+      "age_range": "36-45",
+      "priority_problem": "Darle estructura técnica y vida a una idea de negocio en mente.",
+      "tech_preference": "Algo 100% a la medida (que el sistema se adapte exactamente a mi operación real).",
+      "answers": {
+        "1": "Darle estructura técnica y vida a una idea de negocio en mente.",
+        "2": "Nunca he invertido en desarrollo de software, apenas estoy empezando.",
+        "3": "Chats de WhatsApp y notas personales.",
+        "4": "Menos de 5 horas a la semana.",
+        "5": "Algo 100% a la medida (que el sistema se adapte exactamente a mi operación real).",
+        "6": "Que el diseño visual sea espectacular y eleve el estatus de mi marca.",
+        "7": "Lo que sea necesario si el resultado resuelve mi problema por completo.",
+        "8": "Reuniones semanales de 15 minutos en videollamada.",
+        "9": "Un equipo permanente que me acompañe todo el año agregando nuevas funciones al crecer.",
+        "10": "Un pago único por el desarrollo + un costo mínimo mensual por infraestructura en la nube.",
+        "11": "Entre $2’000.000 y $5’000.000 COP (~$500 - $1.300 USD) - Módulo clave (CRM / Cotizador).",
+        "12": "El presupuesto (siento que debe ser una inversión muy alta de golpe).",
+        "13": "Alba Lucía Figueroa Jiménez ",
+        "14": "DONDE YUL FOOD",
+        "15": "Gastronomía y Alimentos",
+        "16": "Dueño / Fundador de un negocio activo.",
+        "17": "36-45",
+        "18": "Sí, autorizo el tratamiento de mis datos personales según la política de privacidad."
+      },
+      "other_text": "",
+      "habeas_data_authorized": true
+    },
+    {
+      "id": "d892d7b7-e7d5-49cc-8fbd-16496e2a4998",
+      "created_at": "2026-10-18T21:55:57.661117+00:00",
+      "respondent_name": "María José León Carvajal ",
+      "company_name": "Independiente",
+      "role": "Independiente / Freelancer / Empleado.",
+      "age_range": "18-25",
+      "priority_problem": "La gestión manual de citas, clientes y ventas.",
+      "tech_preference": "Algo 100% a la medida (que el sistema se adapte exactamente a mi operación real).",
+      "answers": {
+        "1": "La gestión manual de citas, clientes y ventas.",
+        "2": "Nunca he invertido en desarrollo de software, apenas estoy empezando.",
+        "3": "Registro manual físico (Cuadernos, papel, carpetas).",
+        "4": "Entre 5 y 15 horas a la semana.",
+        "5": "Algo 100% a la medida (que el sistema se adapte exactamente a mi operación real).",
+        "6": "Que sea extremadamente fácil e intuitivo de usar para cualquier persona (UX).",
+        "7": "Lo que sea necesario si el resultado resuelve mi problema por completo.",
+        "8": "Reuniones semanales de 15 minutos en videollamada.",
+        "9": "Soporte técnico mensual para resolver dudas, asegurar que nada falle y hacer ajustes.",
+        "10": "Una suscripción mensual fija (SaaS recurrente) sin costo inicial de desarrollo.",
+        "11": "Más de $12’000.000 COP (> $3.000 USD) - Plataforma empresarial multiárea.",
+        "12": "El presupuesto (siento que debe ser una inversión muy alta de golpe).",
+        "13": "María José León Carvajal ",
+        "14": "Independiente",
+        "15": "Otro Sector",
+        "16": "Independiente / Freelancer / Empleado.",
+        "17": "18-25",
+        "18": "Sí, autorizo el tratamiento de mis datos personales según la política de privacidad."
+      },
+      "other_text": "",
+      "habeas_data_authorized": true
+    },
+    {
+      "id": "369f9755-b0dd-4b72-889c-e85fe8e4ef8a",
+      "created_at": "2026-10-18T22:36:51.674537+00:00",
+      "respondent_name": "Juan Carlos Figueroa ",
+      "company_name": "Distrioriente Genesis",
+      "role": "Dueño / Fundador de un negocio activo.",
+      "age_range": "+45",
+      "priority_problem": "La gestión manual de citas, clientes y ventas.",
+      "tech_preference": "Algo 100% a la medida (que el sistema se adapte exactamente a mi operación real).",
+      "answers": {
+        "1": "La gestión manual de citas, clientes y ventas.",
+        "2": "Nunca he invertido en desarrollo de software, apenas estoy empezando.",
+        "3": "Registro manual físico (Cuadernos, papel, carpetas).",
+        "4": "Entre 15 y 30 horas a la semana.",
+        "5": "Algo 100% a la medida (que el sistema se adapte exactamente a mi operación real).",
+        "6": "Que la información (datos, pagos, clientes) sea 100% exacta, rápida y segura.",
+        "7": "Lo que sea necesario si el resultado resuelve mi problema por completo.",
+        "8": "Reuniones semanales de 15 minutos en videollamada.",
+        "9": "Un equipo permanente que me acompañe todo el año agregando nuevas funciones al crecer.",
+        "10": "Un pago único por el desarrollo + un costo mínimo mensual por infraestructura en la nube.",
+        "11": "Menos de $2’000.000 COP (~$500 USD) - Automatización puntual o inicio.",
+        "12": "El presupuesto (siento que debe ser una inversión muy alta de golpe).",
+        "13": "Juan Carlos Figueroa ",
+        "14": "Distrioriente Genesis",
+        "15": "Comercio y Ventas (Retail / E-commerce)",
+        "16": "Dueño / Fundador de un negocio activo.",
+        "17": "+45",
+        "18": "Sí, autorizo el tratamiento de mis datos personales según la política de privacidad."
+      },
+      "other_text": "",
+      "habeas_data_authorized": true
+    },
+    {
+      "id": "4398fda0-0445-4442-a155-c19c59e377db",
+      "created_at": "2026-10-19T01:17:15.101966+00:00",
+      "respondent_name": "Juan Steban Galindo Barrera ",
+      "company_name": "JuaneSport",
+      "role": "Emprendedor estructurando una nueva idea.",
+      "age_range": "36-45",
+      "priority_problem": "El manejo de la facturación y la información financiera.",
+      "tech_preference": "Algo 100% a la medida (que el sistema se adapte exactamente a mi operación real).",
+      "answers": {
+        "1": "El manejo de la facturación y la información financiera.",
+        "2": "Era tan complicado de usar que terminé volviendo al papel, Excel o WhatsApp.",
+        "3": "Hojas de cálculo aisladas (Excel / Google Sheets).",
+        "4": "Entre 5 y 15 horas a la semana.",
+        "5": "Algo 100% a la medida (que el sistema se adapte exactamente a mi operación real).",
+        "6": "Que la información (datos, pagos, clientes) sea 100% exacta, rápida y segura.",
+        "7": "Entre 1 y 3 meses (Entiendo que la ingeniería de calidad toma tiempo).",
+        "8": "No me muestren el proceso técnico, solo avísenme cuando esté listo para probar.",
+        "9": "Soporte técnico mensual para resolver dudas, asegurar que nada falle y hacer ajustes.",
+        "10": "Un pago único por el desarrollo + un costo mínimo mensual por infraestructura en la nube.",
+        "11": "Entre $5’000.000 y $12’000.000 COP (~$1.300 - $3.000 USD) - Ecosistema integral (ERP a medida).",
+        "12": "El presupuesto (siento que debe ser una inversión muy alta de golpe).",
+        "13": "Juan Steban Galindo Barrera ",
+        "14": "JuaneSport",
+        "15": "Comercio y Ventas (Retail / E-commerce)",
+        "16": "Emprendedor estructurando una nueva idea.",
+        "17": "36-45",
+        "18": "Sí, autorizo el tratamiento de mis datos personales según la política de privacidad."
+      },
+      "other_text": "",
+      "habeas_data_authorized": true
+    },
+    {
+      "id": "6145f576-bb70-4b3d-b169-1c0033c64f5d",
+      "created_at": "2026-10-19T01:17:48.612491+00:00",
+      "respondent_name": "Sebastian contreras ",
+      "company_name": "Distrioriente ",
+      "role": "Independiente / Freelancer / Empleado.",
+      "age_range": "18-25",
+      "priority_problem": "El desorden en los inventarios, entregas o logística.",
+      "tech_preference": "Algo rápido y genérico (aunque tenga que adaptar mi forma de trabajar al sistema).",
+      "answers": {
+        "1": "El desorden en los inventarios, entregas o logística.",
+        "2": "Era tan complicado de usar que terminé volviendo al papel, Excel o WhatsApp.",
+        "3": "Hojas de cálculo aisladas (Excel / Google Sheets).",
+        "4": "Menos de 5 horas a la semana.",
+        "5": "Algo rápido y genérico (aunque tenga que adaptar mi forma de trabajar al sistema).",
+        "6": "Que la información (datos, pagos, clientes) sea 100% exacta, rápida y segura.",
+        "7": "Menos de 1 mes (Busco un Producto Mínimo Viable para probar rápido).",
+        "8": "No me muestren el proceso técnico, solo avísenme cuando esté listo para probar.",
+        "9": "Un equipo permanente que me acompañe todo el año agregando nuevas funciones al crecer.",
+        "10": "Una suscripción mensual fija (SaaS recurrente) sin costo inicial de desarrollo.",
+        "11": "Entre $2’000.000 y $5’000.000 COP (~$500 - $1.300 USD) - Módulo clave (CRM / Cotizador).",
+        "12": "El tiempo (necesito empezar a vender mañana mismo).",
+        "13": "Sebastian contreras ",
+        "14": "Distrioriente ",
+        "15": "Comercio y Ventas (Retail / E-commerce)",
+        "16": "Independiente / Freelancer / Empleado.",
+        "17": "18-25",
+        "18": "Sí, autorizo el tratamiento de mis datos personales según la política de privacidad."
+      },
+      "other_text": "",
+      "habeas_data_authorized": true
+    },
+    {
+      "id": "10ebc4c1-36f5-43ac-98bb-b3368b409377",
+      "created_at": "2026-10-19T03:15:39.214654+00:00",
+      "respondent_name": "Maria Cándida Figueroa",
+      "company_name": "el Rinconcito del sabor",
+      "role": "Independiente / Freelancer / Empleado.",
+      "age_range": "+45",
+      "priority_problem": "Darle estructura técnica y vida a una idea de negocio en mente.",
+      "tech_preference": "Algo 100% a la medida (que el sistema se adapte exactamente a mi operación real).",
+      "answers": {
+        "1": "Darle estructura técnica y vida a una idea de negocio en mente.",
+        "2": "Nunca he invertido en desarrollo de software, apenas estoy empezando.",
+        "3": "Sistema propio desarrollado a la medida.",
+        "4": "Menos de 5 horas a la semana.",
+        "5": "Algo 100% a la medida (que el sistema se adapte exactamente a mi operación real).",
+        "6": "Que la información (datos, pagos, clientes) sea 100% exacta, rápida y segura.",
+        "7": "Entre 1 y 3 meses (Entiendo que la ingeniería de calidad toma tiempo).",
+        "8": "Videos cortos por WhatsApp mostrando la pantalla y el progreso real.",
+        "9": "Soporte técnico mensual para resolver dudas, asegurar que nada falle y hacer ajustes.",
+        "10": "Un pago único por el desarrollo + un costo mínimo mensual por infraestructura en la nube.",
+        "11": "Menos de $2’000.000 COP (~$500 USD) - Automatización puntual o inicio.",
+        "12": "El presupuesto (siento que debe ser una inversión muy alta de golpe).",
+        "13": "Maria Cándida Figueroa",
+        "14": "el Rinconcito del sabor",
+        "15": "Gastronomía y Alimentos",
+        "16": "Independiente / Freelancer / Empleado.",
+        "17": "+45",
+        "18": "Sí, autorizo el tratamiento de mis datos personales según la política de privacidad."
+      },
+      "other_text": "",
+      "habeas_data_authorized": true
+    },
+    {
+      "id": "690cfb3e-0d89-4c5f-bc3b-be0bc7ab0850",
+      "created_at": "2026-10-19T15:14:31.667063+00:00",
+      "respondent_name": "Jhaider Ortiz",
+      "company_name": "Leztor Studio ",
+      "role": "Dueño / Fundador de un negocio activo.",
+      "age_range": "18-25",
+      "priority_problem": "El desorden en los inventarios, entregas o logística.",
+      "tech_preference": "Algo 100% a la medida (que el sistema se adapte exactamente a mi operación real).",
+      "answers": {
+        "1": "El desorden en los inventarios, entregas o logística.",
+        "2": "Nunca he invertido en desarrollo de software, apenas estoy empezando.",
+        "3": "Hojas de cálculo aisladas (Excel / Google Sheets).",
+        "4": "Menos de 5 horas a la semana.",
+        "5": "Algo 100% a la medida (que el sistema se adapte exactamente a mi operación real).",
+        "6": "Que la información (datos, pagos, clientes) sea 100% exacta, rápida y segura.",
+        "7": "Entre 1 y 3 meses (Entiendo que la ingeniería de calidad toma tiempo).",
+        "8": "Videos cortos por WhatsApp mostrando la pantalla y el progreso real.",
+        "9": "Soporte técnico mensual para resolver dudas, asegurar que nada falle y hacer ajustes.",
+        "10": "Una suscripción mensual fija (SaaS recurrente) sin costo inicial de desarrollo.",
+        "11": "Entre $2’000.000 y $5’000.000 COP (~$500 - $1.300 USD) - Módulo clave (CRM / Cotizador).",
+        "12": "El presupuesto (siento que debe ser una inversión muy alta de golpe).",
+        "13": "Jhaider Ortiz",
+        "14": "Leztor Studio ",
+        "15": "Tecnología, Creativo y Startups",
+        "16": "Dueño / Fundador de un negocio activo.",
+        "17": "18-25",
+        "18": "Sí, autorizo el tratamiento de mis datos personales según la política de privacidad."
+      },
+      "other_text": "",
+      "habeas_data_authorized": true
+    },
+    {
+      "id": "cbe4c89a-4f96-460e-a80a-592c634fcd03",
+      "created_at": "2026-10-19T16:23:49.592191+00:00",
+      "respondent_name": "David Alexander Galindo ",
+      "company_name": "Sand king",
+      "role": "Independiente / Freelancer / Empleado.",
+      "age_range": "26-35",
+      "priority_problem": "La coordinación de un equipo de trabajo o tareas diarias.",
+      "tech_preference": "Algo rápido y genérico (aunque tenga que adaptar mi forma de trabajar al sistema).",
+      "answers": {
+        "1": "La coordinación de un equipo de trabajo o tareas diarias.",
+        "2": "Nunca he invertido en desarrollo de software, apenas estoy empezando.",
+        "3": "Chats de WhatsApp y notas personales.",
+        "4": "Entre 5 y 15 horas a la semana.",
+        "5": "Algo rápido y genérico (aunque tenga que adaptar mi forma de trabajar al sistema).",
+        "6": "Que la información (datos, pagos, clientes) sea 100% exacta, rápida y segura.",
+        "7": "Entre 1 y 3 meses (Entiendo que la ingeniería de calidad toma tiempo).",
+        "8": "Reuniones semanales de 15 minutos en videollamada.",
+        "9": "Un equipo permanente que me acompañe todo el año agregando nuevas funciones al crecer.",
+        "10": "Una suscripción mensual fija (SaaS recurrente) sin costo inicial de desarrollo.",
+        "11": "Menos de $2’000.000 COP (~$500 USD) - Automatización puntual o inicio.",
+        "12": "El presupuesto (siento que debe ser una inversión muy alta de golpe).",
+        "13": "David Alexander Galindo ",
+        "14": "Sand king",
+        "15": "Gastronomía y Alimentos",
+        "16": "Independiente / Freelancer / Empleado.",
+        "17": "26-35",
+        "18": "Sí, autorizo el tratamiento de mis datos personales según la política de privacidad."
+      },
+      "other_text": "",
+      "habeas_data_authorized": true
+    }
+  ]
+}

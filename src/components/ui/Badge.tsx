@@ -15,9 +15,9 @@ export const Badge: React.FC<BadgeProps> = ({
   className,
 }) => {
   const variantStyles = {
-    blue: "text-[#1154FF] border-[#1154FF]/30 bg-[#1154FF]/10",
-    neutral: "text-[#D9D9D9] border-white/15 bg-white/5",
-    subtle: "text-[#888899] border-white/10 bg-transparent",
+    blue: "text-[#075FFF] border-[#075FFF]/35 bg-[#075FFF]/10",
+    neutral: "text-[#B4B4B4] border-white/15 bg-white/5",
+    subtle: "text-[#B4B4B4] border-white/10 bg-transparent",
   };
 
   return (
@@ -30,9 +30,9 @@ export const Badge: React.FC<BadgeProps> = ({
     >
       {withBrackets ? (
         <>
-          <span className="text-[#1154FF] opacity-80 font-bold">&#123;</span>
-          <span className="px-1 text-white/90">{children}</span>
-          <span className="text-[#1154FF] opacity-80 font-bold">&#125;</span>
+          <span className="text-[#075FFF] opacity-90 font-bold">[</span>
+          <span className="px-1 text-white/95">{children}</span>
+          <span className="text-[#075FFF] opacity-90 font-bold">]</span>
         </>
       ) : (
         children

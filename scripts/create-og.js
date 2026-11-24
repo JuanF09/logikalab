@@ -1,28 +1,28 @@
 const fs = require('fs');
 const { PNG } = require('pngjs');
 
-// Simple, elegant 1200x630 OG image generation
+// Official 1200x630 OG image with new LOGIK LAB identity (#000000 & #075FFF)
 const width = 1200;
 const height = 630;
 const og = new PNG({ width, height });
 
-// Fill with pitch black #000000 and subtle dark gradient
+// Fill with pure pitch black #000000 and subtle #075FFF radial spotlight
 for (let y = 0; y < height; y++) {
   for (let x = 0; x < width; x++) {
     const idx = (width * y + x) << 2;
-    // Radial glow in the center top: #1154FF
     const dx = x - width / 2;
-    const dy = y - height * 0.45;
+    const dy = y - height * 0.5;
     const dist = Math.sqrt(dx * dx + dy * dy);
-    const glow = Math.max(0, 1 - dist / 550);
-    
-    // Grid lines every 60px
-    const isGrid = (x % 60 === 0 || y % 60 === 0) ? 1 : 0;
-    
-    const r = Math.round(17 * glow * 0.4 + (isGrid ? 8 : 0));
-    const g = Math.round(84 * glow * 0.4 + (isGrid ? 12 : 0));
-    const b = Math.round(255 * glow * 0.45 + (isGrid ? 25 : 0));
-    
+    const glow = Math.max(0, 1 - dist / 620);
+
+    // Subtle 64px modular grid (8px base multiple)
+    const isGrid = (x % 64 === 0 || y % 64 === 0) ? 1 : 0;
+
+    // #075FFF = RGB(7, 95, 255)
+    const r = Math.round(7 * glow * 0.25 + (isGrid ? 4 : 0));
+    const g = Math.round(95 * glow * 0.25 + (isGrid ? 10 : 0));
+    const b = Math.round(255 * glow * 0.28 + (isGrid ? 24 : 0));
+
     og.data[idx] = r;
     og.data[idx + 1] = g;
     og.data[idx + 2] = b;
@@ -30,12 +30,11 @@ for (let y = 0; y < height; y++) {
   }
 }
 
-// Overlay the logo in the center
-const logoData = fs.readFileSync('public/brand/logo.png');
+// Overlay the full signature logo (Firma Principal) in the center
+const logoData = fs.readFileSync('public/brand/logo-full.png');
 const logoPng = PNG.sync.read(logoData);
 
-// Scale logo to fit nicely in the center (around 700px width)
-const targetW = 740;
+const targetW = 760;
 const scale = targetW / logoPng.width;
 const targetH = Math.round(logoPng.height * scale);
 
@@ -63,4 +62,4 @@ for (let y = 0; y < targetH; y++) {
 }
 
 fs.writeFileSync('public/images/og-image.png', PNG.sync.write(og));
-console.log('OG Image created: 1200x630');
+console.log('OG Image created with new LOGIK LAB identity: 1200x630');

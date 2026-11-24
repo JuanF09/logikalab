@@ -31,12 +31,12 @@ export const SectionHeader: React.FC<SectionHeaderProps> = ({
         <Badge variant="blue">{tag}</Badge>
       </div>
 
-      <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-[1.15]">
+      <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[42px] font-extrabold tracking-tight text-white leading-[1.15]">
         {title}
       </h2>
 
       {description && (
-        <p className="mt-4 text-base sm:text-lg text-[#D9D9D9]/80 leading-relaxed font-normal">
+        <p className="mt-4 text-base sm:text-[18px] text-[#B4B4B4] leading-[1.5] font-normal">
           {description}
         </p>
       )}

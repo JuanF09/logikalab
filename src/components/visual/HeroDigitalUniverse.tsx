@@ -84,7 +84,7 @@ export const HeroDigitalUniverse: React.FC = () => {
         baseY: y,
         baseZ: z,
         size: Math.random() * 2.2 + 1.2,
-        color: isWhite ? "#FFFFFF" : isBlue ? "#1154FF" : "#4A85FF",
+        color: isWhite ? "#FFFFFF" : isBlue ? "#075FFF" : "#075FFF",
         glow: isBlue || isWhite,
         vx: (Math.random() - 0.5) * 0.3,
         vy: (Math.random() - 0.5) * 0.3,
@@ -265,7 +265,7 @@ export const HeroDigitalUniverse: React.FC = () => {
             ctx.lineTo(pB.sx, pB.sy);
 
             if (isBlueLink) {
-              ctx.strokeStyle = `rgba(17, 84, 255, ${alpha * 1.3})`;
+              ctx.strokeStyle = `rgba(7, 95, 255, ${alpha * 1.3})`;
               ctx.lineWidth = 1.1;
             } else {
               ctx.strokeStyle = `rgba(255, 255, 255, ${alpha * 0.6})`;
@@ -286,8 +286,8 @@ export const HeroDigitalUniverse: React.FC = () => {
         ctx.arc(p.sx, p.sy, r, 0, Math.PI * 2);
 
         if (p.particle.glow) {
-          ctx.fillStyle = `rgba(17, 84, 255, ${alpha})`;
-          ctx.shadowColor = "#1154FF";
+          ctx.fillStyle = `rgba(7, 95, 255, ${alpha})`;
+          ctx.shadowColor = "#075FFF";
           ctx.shadowBlur = 12 * p.scale;
         } else {
           ctx.fillStyle = `rgba(255, 255, 255, ${alpha * 0.85})`;
@@ -346,8 +346,8 @@ export const HeroDigitalUniverse: React.FC = () => {
         // Draw cube edges with electric blue glow
         ctx.save();
         ctx.lineWidth = 1.3;
-        ctx.strokeStyle = "rgba(17, 84, 255, 0.45)";
-        ctx.shadowColor = "#1154FF";
+        ctx.strokeStyle = "rgba(7, 95, 255, 0.45)";
+        ctx.shadowColor = "#075FFF";
         ctx.shadowBlur = 10;
 
         for (let e = 0; e < cubeEdges.length; e++) {
@@ -370,7 +370,7 @@ export const HeroDigitalUniverse: React.FC = () => {
           ctx.beginPath();
           ctx.arc(coreProj.sx, coreProj.sy, 3.5 * coreProj.scale, 0, Math.PI * 2);
           ctx.fillStyle = "#FFFFFF";
-          ctx.shadowColor = "#1154FF";
+          ctx.shadowColor = "#075FFF";
           ctx.shadowBlur = 14;
           ctx.fill();
           ctx.shadowBlur = 0;

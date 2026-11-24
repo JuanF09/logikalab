@@ -16,7 +16,7 @@ import { Footer } from "@/components/sections/Footer";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#01040F] text-white selection:bg-[#1154FF] selection:text-white flex flex-col relative">
+    <main className="min-h-screen bg-[#000000] text-white selection:bg-[#075FFF] selection:text-white flex flex-col relative">
       {/* Scroll Progress Bar at the top */}
       <ScrollProgress />
 
@@ -29,7 +29,7 @@ export default function Home() {
       {/* 02. Hero with Interactive Living Network Canvas & Parallax */}
       <Hero />
 
-      {/* 03. Official Brand & Motion Cinema Showcase */}
+      {/* 03. Official Brand & Visual Identity System Showcase */}
       <BrandShowcase />
 
       {/* 04. Leadership: Juan David Figueroa Jiménez (CEO & Ingeniero Multimedia) */}
@@ -44,7 +44,7 @@ export default function Home() {
       {/* 07. Bento Grid: What We Build */}
       <WhatWeBuild />
 
-      {/* 08. Why LOGIKA LAB: Adaptability & Scalability */}
+      {/* 08. Why LOGIK LAB: Adaptability & Scalability */}
       <WhyLogika />
 
       {/* 09. 4-Phase Method Timeline */}

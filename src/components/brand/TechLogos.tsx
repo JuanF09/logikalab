@@ -25,7 +25,7 @@ export const NextjsLogo: React.FC<LogoProps> = ({ className = "w-7 h-7" }) => (
       <circle cx="90" cy="90" r="90" fill="black" />
     </mask>
     <g mask="url(#mask0_nextjs)">
-      <circle cx="90" cy="90" r="90" fill="#000000" stroke="#1154FF" strokeWidth="6" />
+      <circle cx="90" cy="90" r="90" fill="#000000" stroke="#075FFF" strokeWidth="6" />
       <path
         d="M149.508 157.52L69.142 54H54V125.97H66.1136V69.3836L139.999 164.845C143.333 162.614 146.509 160.165 149.508 157.52Z"
         fill="url(#paint0_linear_nextjs)"

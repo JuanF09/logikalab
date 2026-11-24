@@ -1,15 +1,23 @@
 import type { Metadata, Viewport } from "next";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import { SITE_CONFIG } from "@/lib/config";
 
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800", "900"],
+  variable: "--font-inter",
+  display: "swap",
+});
+
 export const viewport: Viewport = {
-  themeColor: "#01040F",
+  themeColor: "#000000",
   width: "device-width",
   initialScale: 1,
 };
 
 export const metadata: Metadata = {
-  title: "LOGIKA LAB — Software Engineering | Ecosistemas a la Medida",
+  title: "LOGIK LAB — Software Engineering | Ecosistemas a la Medida",
   description:
     "Firma de ingeniería de software y estudio de producto digital en Cúcuta, Colombia. Construimos ecosistemas tecnológicos escalables, seguros y 100% a la medida para empresas consolidadas.",
   metadataBase: new URL(SITE_CONFIG.url),
@@ -23,34 +31,34 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/brand/isotype.png", sizes: "32x32", type: "image/png" },
-      { url: "/brand/isotype.png", sizes: "192x192", type: "image/png" },
+      { url: "/favicon.png", sizes: "32x32", type: "image/png" },
+      { url: "/icon.png", sizes: "192x192", type: "image/png" },
     ],
     apple: [
-      { url: "/brand/isotype.png", sizes: "180x180", type: "image/png" },
+      { url: "/icon.png", sizes: "180x180", type: "image/png" },
     ],
-    shortcut: "/brand/isotype.png",
+    shortcut: "/favicon.png",
   },
   openGraph: {
     type: "website",
     locale: "es_CO",
     url: SITE_CONFIG.url,
     siteName: SITE_CONFIG.fullTitle,
-    title: "LOGIKA LAB — Software Engineering | Ecosistemas a la Medida",
+    title: "LOGIK LAB — Software Engineering | Ecosistemas a la Medida",
     description:
-      "Tu operación, convertida en un sistema a tu medida. Ingeniería de software full-stack sin plantillas ni ataduras.",
+      "La tecnología sigue tu lógica. Ingeniería de software full-stack sin plantillas ni ataduras.",
     images: [
       {
         url: "/images/og-image.png",
         width: 1200,
         height: 630,
-        alt: "LOGIKA LAB — Software Engineering",
+        alt: "LOGIK LAB — Software Engineering",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "LOGIKA LAB — Software Engineering",
+    title: "LOGIK LAB — Software Engineering",
     description:
       "Ecosistemas tecnológicos escalables, seguros y 100% a la medida para empresas consolidadas.",
     images: ["/images/og-image.png"],
@@ -79,7 +87,7 @@ export default function RootLayout({
     name: SITE_CONFIG.brandName,
     alternateName: SITE_CONFIG.fullTitle,
     url: SITE_CONFIG.url,
-    logo: `${SITE_CONFIG.url}/brand/logo.png`,
+    logo: `${SITE_CONFIG.url}/brand/logo-full.png`,
     image: `${SITE_CONFIG.url}/images/og-image.png`,
     description: SITE_CONFIG.description,
     telephone: "+573144899142",
@@ -115,14 +123,14 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="es-CO" className="scroll-smooth dark">
+    <html lang="es-CO" className={`scroll-smooth dark ${inter.variable}`}>
       <head>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="bg-[#01040F] text-white selection:bg-[#1154FF] selection:text-white antialiased">
+      <body className="bg-[#000000] text-white font-sans selection:bg-[#075FFF] selection:text-white antialiased">
         {children}
       </body>
     </html>

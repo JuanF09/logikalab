@@ -11,7 +11,7 @@ const supabaseKey =
   "sb_publishable_7R77vYaFzxAfEyS2dGpm4A_IR6STn4U";
 
 /**
- * Cliente oficial de Supabase para LOGIKA LAB
+ * Cliente oficial de Supabase para LOGIK LAB
  */
 export const supabase = createClient(supabaseUrl, supabaseKey);
 

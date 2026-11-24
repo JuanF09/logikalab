@@ -1,11 +1,11 @@
 # REFERENCIAS.md — Guía Visual y Directrices de Inspiración
 
-Este documento establece los parámetros de extracción estética para las referencias visuales de **LOGIKA LAB**. Cada referencia se analiza quirúrgicamente: se extrae únicamente lo que potencia el rigor técnico y se prohíbe explícitamente lo que desvíe la identidad de marca.
+Este documento establece los parámetros de extracción estética para las referencias visuales de **LOGIK LAB**. Cada referencia se analiza quirúrgicamente: se extrae únicamente lo que potencia el rigor técnico y se prohíbe explícitamente lo que desvíe la identidad de marca.
 
 ---
 
 ## Jerarquía de Reglas (Resolución de Conflictos)
-1. **La identidad de marca de `.impeccable.md` manda siempre**: No se alteran colores (`#1154FF` acento, `#01040F` fondo, `#FFFFFF` titulares, `#D9D9D9` cuerpo) ni tipografía (`Open Sauce Sans`) bajo ninguna recomendación externa.
+1. **La identidad de marca de `.impeccable.md` manda siempre**: No se alteran colores (`#075FFF` Azul LOGIK, `#000000` Negro absoluto, `#FFFFFF` Blanco, `#B4B4B4` Gris descriptor) ni tipografía (`Inter` / `Inter Display`) bajo ninguna recomendación externa.
 2. **Impeccable**: Define lo que **NO** se debe hacer (anti-patrones, clichés de IA, bordes genéricos, sombras sucias, modales invasivos).
 3. **Taste Skill**: Gobierna la **calidad visual, la arquitectura de componentes de doble bisel (doppelrand), el espaciado y la cinemática de movimiento**.
 4. **UI/UX Pro Max**: Se consulta exclusivamente para **patrones de conversión B2B, contraste accesible (WCAG AA), navegación por teclado y ergonomía táctil (44x44px)**. Se descartan sus paletas cromáticas y tipografías sugeridas.
@@ -37,7 +37,7 @@ Este documento establece los parámetros de extracción estética para las refer
 
 ### 3. Resend / Raycast (Elegancia Minimalista para Desarrolladores)
 - **QUÉ SE TOMA**:
-  - El contraste absoluto entre negro profundo y blanco puro, con un único color de acento vibrante (`#1154FF`).
+  - El contraste absoluto entre negro profundo (`#000000`) y blanco puro (`#FFFFFF`), con un único color de acento vibrante (`#075FFF`).
   - Tarjetas con arquitectura de doble contenedor (cáscara exterior pulida + núcleo interior con relieve sutil).
   - Botones con píldora contenedora de icono interno para acentuar el dinamismo de acción.
 - **QUÉ NO SE TOMA**:

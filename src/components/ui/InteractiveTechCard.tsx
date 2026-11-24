@@ -96,13 +96,13 @@ export const InteractiveTechCard: React.FC<InteractiveTechCardProps> = ({
             : "perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0px) scale3d(1, 1, 1)",
           transition: isHovered ? "transform 0.1s ease-out" : "transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1)",
         }}
-        className="relative h-full p-5 sm:p-7 rounded-2xl border-2 transition-colors duration-300 flex flex-col justify-between overflow-hidden cursor-pointer select-none group bg-gradient-to-b from-[#061442]/90 via-[#030924]/95 to-[#01040F]"
+        className="relative h-full p-5 sm:p-7 rounded-2xl border-2 transition-colors duration-300 flex flex-col justify-between overflow-hidden cursor-pointer select-none group bg-gradient-to-b from-[#000000]/90 via-[#000000]/95 to-[#000000]"
       >
         {/* Border Glow with Brand Color on Hover */}
         <div
           className="absolute inset-0 rounded-2xl pointer-events-none transition-opacity duration-500"
           style={{
-            borderColor: isHovered ? tech.brandColor : "rgba(17, 84, 255, 0.25)",
+            borderColor: isHovered ? tech.brandColor : "rgba(7, 95, 255, 0.25)",
             borderWidth: isHovered ? "2px" : "1px",
             boxShadow: isHovered ? `0 0 35px ${tech.glowColor}` : "none",
           }}
@@ -155,7 +155,7 @@ export const InteractiveTechCard: React.FC<InteractiveTechCardProps> = ({
                     style={{ backgroundColor: tech.brandColor }}
                   />
                 </span>
-                <span className="text-[#D9D9D9] font-bold tracking-wider">
+                <span className="text-[#B4B4B4] font-bold tracking-wider">
                   {tech.spec}
                 </span>
               </div>
@@ -168,13 +168,13 @@ export const InteractiveTechCard: React.FC<InteractiveTechCardProps> = ({
 
             <div
               className="text-xs font-mono font-bold mt-1 mb-3 transition-colors"
-              style={{ color: isHovered ? tech.brandColor : "#6095FF" }}
+              style={{ color: isHovered ? tech.brandColor : "#075FFF" }}
             >
               // {tech.category}
             </div>
 
             {/* Description */}
-            <p className="text-xs sm:text-sm text-[#D9D9D9]/80 leading-relaxed font-normal">
+            <p className="text-xs sm:text-sm text-[#B4B4B4]/80 leading-relaxed font-normal">
               {tech.desc}
             </p>
           </div>
@@ -182,8 +182,8 @@ export const InteractiveTechCard: React.FC<InteractiveTechCardProps> = ({
           {/* Bottom Interactive Visualizer Bar */}
           <div className="mt-6 pt-4 border-t border-white/10 flex items-center justify-between font-mono text-[11px]">
             {/* Telemetry Tag */}
-            <div className="flex items-center gap-1.5 text-[#D9D9D9]/90">
-              <Activity className="w-3.5 h-3.5 text-[#1154FF]" />
+            <div className="flex items-center gap-1.5 text-[#B4B4B4]/90">
+              <Activity className="w-3.5 h-3.5 text-[#075FFF]" />
               <span className="truncate">{tech.telemetry}</span>
             </div>
 

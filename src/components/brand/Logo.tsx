@@ -5,26 +5,30 @@ interface LogoProps {
   className?: string;
   height?: number;
   priority?: boolean;
+  variant?: "short" | "full";
 }
 
 /**
- * LOGIKA LAB Official Logotipo
- * Utiliza el activo oficial extraído directamente del manual de identidad de marca,
- * adaptado a modo oscuro con transparencia alfa limpia.
+ * LOGIK LAB Official Logotipo (Manual de Identidad Visual v1.0 / 2026)
+ * - variant="short": Logotipo abreviado (Logik) — 1024 x 295 (~3.47 : 1) para cabeceras y barra de navegación.
+ * - variant="full": Firma principal (Logik SOFTWARE ENGINEERING LAB) — 754 x 254 (~2.97 : 1) para portadas y cierres.
  */
 export const Logo: React.FC<LogoProps> = ({
   className = "",
-  height = 36,
+  height = 34,
   priority = true,
+  variant = "short",
 }) => {
-  // Proporción original del activo extraído: 1642 x 447 (~ 3.67 : 1)
-  const width = Math.round(height * (1642 / 447));
+  const isFull = variant === "full";
+  const src = isFull ? "/brand/logo-full.png" : "/brand/logo.png";
+  const ratio = isFull ? 754 / 254 : 1024 / 295;
+  const width = Math.round(height * ratio);
 
   return (
     <div className={`relative inline-flex items-center select-none ${className}`}>
       <Image
-        src="/brand/logo.png"
-        alt="LOGIKA LAB — Software Engineering"
+        src={src}
+        alt="LOGIK LAB — Software Engineering"
         width={width}
         height={height}
         priority={priority}

@@ -1,15 +1,16 @@
 /**
  * ==============================================================================
- * LOGIKA LAB — Software Engineering
+ * LOGIK LAB — Software Engineering
  * ARCHIVO CENTRAL DE CONFIGURACIÓN Y PUNTOS DE CONTACTO
  * ==============================================================================
  */
 
 export const SITE_CONFIG = {
-  // Datos Generales de la Firma
-  brandName: "LOGIKA LAB",
+  // Datos Generales de la Firma (Manual de Identidad Visual v1.0 / 2026)
+  brandName: "LOGIK LAB",
+  shortBrandName: "LOGIK",
   tagline: "Software Engineering",
-  fullTitle: "LOGIKA LAB — Software Engineering",
+  fullTitle: "LOGIK LAB — Software Engineering",
   description:
     "Firma de ingeniería de software y estudio de producto digital. Construimos ecosistemas tecnológicos escalables, seguros y 100% a la medida para empresas consolidadas.",
   url: "https://logikalab.com",
@@ -38,7 +39,7 @@ export const SITE_CONFIG = {
     whatsappNumber: "573144899142",
     whatsappDisplay: "+57 314 489 9142",
     whatsappMessage:
-      "Hola Juan David, me comunico desde la web de LOGIKA LAB para agendar un diagnóstico técnico sobre la operación de mi empresa.",
+      "Hola Juan David, me comunico desde la web de LOGIK LAB para agendar un diagnóstico técnico sobre la operación de mi empresa.",
     email: "logikalab@gmail.com",
     meetingUrl: "https://wa.me/573144899142?text=Hola%20Juan%20David,%20quisiera%20agendar%20un%20diagn%C3%B3stico%20t%C3%A9cnico",
   },
@@ -72,7 +73,7 @@ export function getWhatsAppUrl(customMessage?: string): string {
 export function getMailtoUrl(subject?: string): string {
   const email = SITE_CONFIG.contact.email;
   const encodedSubject = encodeURIComponent(
-    subject || "Solicitud de Diagnóstico Operativo — LOGIKA LAB"
+    subject || "Solicitud de Diagnóstico Operativo — LOGIK LAB"
   );
   return `mailto:${email}?subject=${encodedSubject}`;
 }

@@ -12,18 +12,18 @@ export const Founder: React.FC = () => {
   const { founder, location } = SITE_CONFIG;
 
   return (
-    <section id="fundador" className="py-24 sm:py-32 relative overflow-hidden bg-[#01040F]">
+    <section id="fundador" className="py-24 sm:py-32 relative overflow-hidden bg-[#000000]">
       {/* Top laser beam border separating from BrandShowcase */}
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#1154FF] to-transparent shadow-[0_0_20px_#1154FF]" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#075FFF] to-transparent shadow-[0_0_20px_#075FFF]" />
 
       {/* Background radial blue glow */}
-      <div className="absolute top-1/2 left-1/3 -translate-y-1/2 w-[700px] h-[500px] bg-[#1154FF]/20 blur-[150px] rounded-full pointer-events-none" />
+      <div className="absolute top-1/2 left-1/3 -translate-y-1/2 w-[700px] h-[500px] bg-[#075FFF]/20 blur-[150px] rounded-full pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <SectionHeader
           tag="LIDERAZGO &bull; CEO"
           title="Ingeniería multimedia y arquitectura directa."
-          description="En LOGIKA LAB hablas directamente con su fundador. Sin intermediarios comerciales ni llamadas perdidas."
+          description="En LOGIK LAB hablas directamente con su fundador. Sin intermediarios comerciales ni llamadas perdidas."
         />
 
         <motion.div
@@ -31,18 +31,18 @@ export const Founder: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="p-5 sm:p-10 lg:p-14 rounded-2xl sm:rounded-3xl border border-[#1154FF]/40 bg-gradient-to-br from-[#061442]/90 via-[#030A24]/95 to-[#01040F] max-w-5xl mx-auto shadow-[0_0_60px_-10px_rgba(17,84,255,0.4)] relative overflow-hidden"
+          className="p-5 sm:p-10 lg:p-14 rounded-2xl sm:rounded-3xl border border-[#075FFF]/40 bg-gradient-to-br from-[#000000]/90 via-[#000000]/95 to-[#000000] max-w-5xl mx-auto shadow-[0_0_60px_-10px_rgba(7, 95, 255,0.4)] relative overflow-hidden"
         >
           {/* Subtle corner light beam */}
-          <div className="absolute top-0 right-0 w-80 h-80 bg-gradient-to-bl from-[#1154FF]/30 to-transparent pointer-events-none" />
+          <div className="absolute top-0 right-0 w-80 h-80 bg-gradient-to-bl from-[#075FFF]/30 to-transparent pointer-events-none" />
 
           <div className="flex flex-col md:flex-row items-center gap-8 sm:gap-10 lg:gap-14">
             {/* Real Founder Photo with electric blue aura */}
             <div className="relative shrink-0 group">
               {/* Pulsing blue aura behind the portrait */}
-              <div className="absolute -inset-2 bg-gradient-to-r from-[#1154FF] to-[#3B75FF] rounded-2xl blur-xl opacity-60 group-hover:opacity-100 transition-opacity duration-500 animate-pulse-glow" />
+              <div className="absolute -inset-2 bg-gradient-to-r from-[#075FFF] to-[#075FFF] rounded-2xl blur-xl opacity-60 group-hover:opacity-100 transition-opacity duration-500 animate-pulse-glow" />
 
-              <div className="relative w-44 h-60 xs:w-56 xs:h-72 sm:w-64 sm:h-80 rounded-2xl overflow-hidden border-2 border-[#1154FF] bg-[#020719] shadow-2xl">
+              <div className="relative w-44 h-60 xs:w-56 xs:h-72 sm:w-64 sm:h-80 rounded-2xl overflow-hidden border-2 border-[#075FFF] bg-[#000000] shadow-2xl">
                 <Image
                   src={founder.photo}
                   alt={founder.name}
@@ -52,17 +52,17 @@ export const Founder: React.FC = () => {
                   sizes="(max-width: 768px) 250px, 320px"
                 />
                 {/* Gradient overlay at bottom of photo for seamless look */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#020719] via-transparent to-transparent opacity-50" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#000000] via-transparent to-transparent opacity-50" />
                 
                 {/* Verified badge pill over photo */}
-                <div className="absolute bottom-3 left-3 right-3 py-1 px-2.5 rounded-lg bg-[#01040F]/90 backdrop-blur-md border border-[#1154FF]/50 flex items-center justify-between text-[11px] font-mono">
-                  <span className="text-[#1154FF] font-bold">VERIFIED</span>
+                <div className="absolute bottom-3 left-3 right-3 py-1 px-2.5 rounded-lg bg-[#000000]/90 backdrop-blur-md border border-[#075FFF]/50 flex items-center justify-between text-[11px] font-mono">
+                  <span className="text-[#075FFF] font-bold">VERIFIED</span>
                   <span className="text-white font-medium">CEO</span>
                 </div>
               </div>
 
-              <div className="mt-3 sm:mt-4 flex items-center justify-center gap-1.5 text-xs text-[#D9D9D9]/80 font-mono">
-                <MapPin className="w-3.5 h-3.5 text-[#1154FF]" />
+              <div className="mt-3 sm:mt-4 flex items-center justify-center gap-1.5 text-xs text-[#B4B4B4]/80 font-mono">
+                <MapPin className="w-3.5 h-3.5 text-[#075FFF]" />
                 <span>{location.city}, {location.country}</span>
               </div>
             </div>
@@ -71,10 +71,10 @@ export const Founder: React.FC = () => {
             <div className="flex-1 text-center md:text-left">
               {/* Badges Bar */}
               <div className="flex flex-wrap items-center justify-center md:justify-start gap-2 sm:gap-2.5 mb-3">
-                <span className="text-[11px] sm:text-xs font-mono px-3 py-1 rounded-full bg-[#1154FF] text-white font-bold tracking-wider shadow-[0_0_15px_rgba(17,84,255,0.7)]">
+                <span className="text-[11px] sm:text-xs font-mono px-3 py-1 rounded-full bg-[#075FFF] text-white font-bold tracking-wider shadow-[0_0_15px_rgba(7, 95, 255,0.7)]">
                   CEO &amp; FUNDADOR
                 </span>
-                <span className="text-[11px] sm:text-xs font-mono px-3 py-1 rounded-full bg-[#1154FF]/20 text-[#6095FF] border border-[#1154FF]/40 font-semibold tracking-wider">
+                <span className="text-[11px] sm:text-xs font-mono px-3 py-1 rounded-full bg-[#075FFF]/20 text-[#075FFF] border border-[#075FFF]/40 font-semibold tracking-wider">
                   {founder.profession.toUpperCase()}
                 </span>
               </div>
@@ -85,12 +85,12 @@ export const Founder: React.FC = () => {
               </h3>
 
               {/* Quote / Punchy Statement */}
-              <blockquote className="my-4 sm:my-5 border-l-2 border-[#1154FF] pl-4 py-1 text-sm sm:text-base md:text-lg text-white font-medium leading-snug bg-[#1154FF]/10 rounded-r-xl text-left">
+              <blockquote className="my-4 sm:my-5 border-l-2 border-[#075FFF] pl-4 py-1 text-sm sm:text-base md:text-lg text-white font-medium leading-snug bg-[#075FFF]/10 rounded-r-xl text-left">
                 &ldquo;{founder.quote}&rdquo;
               </blockquote>
 
-              <p className="text-xs sm:text-base text-[#D9D9D9]/85 leading-relaxed font-normal mb-6 sm:mb-8 max-w-xl">
-                Lidero el diseño técnico y la ejecución de cada ecosistema en LOGIKA LAB.
+              <p className="text-xs sm:text-base text-[#B4B4B4]/85 leading-relaxed font-normal mb-6 sm:mb-8 max-w-xl">
+                Lidero el diseño técnico y la ejecución de cada ecosistema en LOGIK LAB.
                 Combinamos arquitectura de software moderna con experiencia interactiva para
                 que tu empresa opere en piloto automático y multiplique su rentabilidad.
               </p>
@@ -109,8 +109,8 @@ export const Founder: React.FC = () => {
                   Hablar con Juan David por WhatsApp
                 </Button>
 
-                <div className="flex items-center gap-2 text-xs font-mono text-[#D9D9D9]/70">
-                  <Terminal className="w-4 h-4 text-[#1154FF]" />
+                <div className="flex items-center gap-2 text-xs font-mono text-[#B4B4B4]/70">
+                  <Terminal className="w-4 h-4 text-[#075FFF]" />
                   <span>Respuesta técnica directa</span>
                 </div>
               </div>
@@ -126,32 +126,32 @@ export const Founder: React.FC = () => {
           transition={{ duration: 0.5, delay: 0.15 }}
           className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 max-w-5xl mx-auto mt-6 sm:mt-8"
         >
-          <div className="p-5 sm:p-6 rounded-2xl border border-[#1154FF]/30 bg-[#040C2B]/80 hover:border-[#1154FF] hover:shadow-[0_0_30px_rgba(17,84,255,0.3)] transition-all">
-            <div className="text-xs font-mono text-[#1154FF] font-bold uppercase tracking-wider mb-2">
+          <div className="p-5 sm:p-6 rounded-2xl border border-[#075FFF]/30 bg-[#000000]/80 hover:border-[#075FFF] hover:shadow-[0_0_30px_rgba(7, 95, 255,0.3)] transition-all">
+            <div className="text-xs font-mono text-[#075FFF] font-bold uppercase tracking-wider mb-2">
               // ATENCIÓN EJECUTIVA 1 A 1
             </div>
             <div className="text-base font-bold text-white mb-1">Sin Intermediarios</div>
-            <p className="text-xs text-[#D9D9D9]/80 leading-relaxed">
+            <p className="text-xs text-[#B4B4B4]/80 leading-relaxed">
               Diagnóstico, arquitectura y decisiones técnicas conversadas directamente con el fundador.
             </p>
           </div>
 
-          <div className="p-6 rounded-2xl border border-[#1154FF]/30 bg-[#040C2B]/80 hover:border-[#1154FF] hover:shadow-[0_0_30px_rgba(17,84,255,0.3)] transition-all">
-            <div className="text-xs font-mono text-[#1154FF] font-bold uppercase tracking-wider mb-2">
+          <div className="p-6 rounded-2xl border border-[#075FFF]/30 bg-[#000000]/80 hover:border-[#075FFF] hover:shadow-[0_0_30px_rgba(7, 95, 255,0.3)] transition-all">
+            <div className="text-xs font-mono text-[#075FFF] font-bold uppercase tracking-wider mb-2">
               // PERFIL DE INGENIERÍA
             </div>
             <div className="text-base font-bold text-white mb-1">Ingeniería Multimedia</div>
-            <p className="text-xs text-[#D9D9D9]/80 leading-relaxed">
+            <p className="text-xs text-[#B4B4B4]/80 leading-relaxed">
               Fusión de bases de datos relacionales robustas, rendimiento cloud y UX/UI interactivo de alta gama.
             </p>
           </div>
 
-          <div className="p-6 rounded-2xl border border-[#1154FF]/30 bg-[#040C2B]/80 hover:border-[#1154FF] hover:shadow-[0_0_30px_rgba(17,84,255,0.3)] transition-all">
-            <div className="text-xs font-mono text-[#1154FF] font-bold uppercase tracking-wider mb-2">
+          <div className="p-6 rounded-2xl border border-[#075FFF]/30 bg-[#000000]/80 hover:border-[#075FFF] hover:shadow-[0_0_30px_rgba(7, 95, 255,0.3)] transition-all">
+            <div className="text-xs font-mono text-[#075FFF] font-bold uppercase tracking-wider mb-2">
               // ALCANCE &amp; UBICACIÓN
             </div>
             <div className="text-base font-bold text-white mb-1">Cúcuta &bull; Cobertura Global</div>
-            <p className="text-xs text-[#D9D9D9]/80 leading-relaxed">
+            <p className="text-xs text-[#B4B4B4]/80 leading-relaxed">
               Ingeniería de software desde Norte de Santander para empresas líderes en Colombia y el exterior.
             </p>
           </div>

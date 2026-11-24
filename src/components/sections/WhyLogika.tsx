@@ -8,16 +8,16 @@ import { motion } from "framer-motion";
 
 export const WhyLogika: React.FC = () => {
   return (
-    <section id="por-que-logika" className="py-24 sm:py-32 relative bg-[#01040F] overflow-hidden">
+    <section id="por-que-logika" className="py-24 sm:py-32 relative bg-[#000000] overflow-hidden">
       {/* Background radial blue glow */}
-      <div className="absolute top-1/2 right-10 w-[700px] h-[500px] bg-[#1154FF]/20 blur-[160px] rounded-full pointer-events-none" />
+      <div className="absolute top-1/2 right-10 w-[700px] h-[500px] bg-[#075FFF]/20 blur-[160px] rounded-full pointer-events-none" />
 
       {/* Blue neon divider */}
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#1154FF]/60 to-transparent shadow-[0_0_15px_#1154FF]" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#075FFF]/60 to-transparent shadow-[0_0_15px_#075FFF]" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <SectionHeader
-          tag="POR QUÉ LOGIKA LAB"
+          tag="POR QUÉ LOGIK LAB"
           title="Tu ventaja técnica, no una plantilla de suscripción."
           description="Las empresas líderes no operan con herramientas genéricas que cualquier competidor alquila por $29 al mes."
         />
@@ -30,12 +30,12 @@ export const WhyLogika: React.FC = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <CardSpotlight className="p-5 sm:p-8 md:p-10 h-full border-[#1154FF]/40 bg-gradient-to-b from-[#061442]/80 via-[#030A24]/90 to-[#01040F] hover:border-[#1154FF] shadow-[0_0_40px_-5px_rgba(17,84,255,0.3)]">
+            <CardSpotlight className="p-5 sm:p-8 md:p-10 h-full border-[#075FFF]/40 bg-gradient-to-b from-[#000000]/80 via-[#000000]/90 to-[#000000] hover:border-[#075FFF] shadow-[0_0_40px_-5px_rgba(7, 95, 255,0.3)]">
               <div className="flex items-center justify-between mb-6">
-                <div className="p-3 sm:p-3.5 rounded-xl bg-[#1154FF] text-white shadow-[0_0_20px_#1154FF]">
+                <div className="p-3 sm:p-3.5 rounded-xl bg-[#075FFF] text-white shadow-[0_0_20px_#075FFF]">
                   <Compass className="w-6 h-6 sm:w-7 sm:h-7" />
                 </div>
-                <span className="font-mono text-xs text-[#1154FF] font-bold tracking-widest uppercase">
+                <span className="font-mono text-xs text-[#075FFF] font-bold tracking-widest uppercase">
                   // PILAR 01
                 </span>
               </div>
@@ -44,13 +44,13 @@ export const WhyLogika: React.FC = () => {
                 Adaptabilidad Absoluta
               </h3>
 
-              <p className="text-sm sm:text-base text-[#D9D9D9]/85 leading-relaxed font-normal mb-6">
+              <p className="text-sm sm:text-base text-[#B4B4B4]/85 leading-relaxed font-normal mb-6">
                 Agnósticos a la industria. Modelamos la matemática y los flujos exactos de tu
                 empresa sin obligarte a cambiar lo que ya funciona.
               </p>
 
-              <div className="pt-4 border-t border-[#1154FF]/20 flex items-center gap-2 text-xs font-mono text-[#6095FF]">
-                <Network className="w-4 h-4 text-[#1154FF]" />
+              <div className="pt-4 border-t border-[#075FFF]/20 flex items-center gap-2 text-xs font-mono text-[#075FFF]">
+                <Network className="w-4 h-4 text-[#075FFF]" />
                 <span>Flujos propios &bull; Lógica a tu medida</span>
               </div>
             </CardSpotlight>
@@ -62,12 +62,12 @@ export const WhyLogika: React.FC = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.15 }}
           >
-            <CardSpotlight className="p-5 sm:p-8 md:p-10 h-full border-[#1154FF]/40 bg-gradient-to-b from-[#061442]/80 via-[#030A24]/90 to-[#01040F] hover:border-[#1154FF] shadow-[0_0_40px_-5px_rgba(17,84,255,0.3)]">
+            <CardSpotlight className="p-5 sm:p-8 md:p-10 h-full border-[#075FFF]/40 bg-gradient-to-b from-[#000000]/80 via-[#000000]/90 to-[#000000] hover:border-[#075FFF] shadow-[0_0_40px_-5px_rgba(7, 95, 255,0.3)]">
               <div className="flex items-center justify-between mb-6">
-                <div className="p-3 sm:p-3.5 rounded-xl bg-[#1154FF] text-white shadow-[0_0_20px_#1154FF]">
+                <div className="p-3 sm:p-3.5 rounded-xl bg-[#075FFF] text-white shadow-[0_0_20px_#075FFF]">
                   <TrendingUp className="w-6 h-6 sm:w-7 sm:h-7" />
                 </div>
-                <span className="font-mono text-xs text-[#1154FF] font-bold tracking-widest uppercase">
+                <span className="font-mono text-xs text-[#075FFF] font-bold tracking-widest uppercase">
                   // PILAR 02
                 </span>
               </div>
@@ -76,13 +76,13 @@ export const WhyLogika: React.FC = () => {
                 Escalabilidad Nativa
               </h3>
 
-              <p className="text-sm sm:text-base text-[#D9D9D9]/85 leading-relaxed font-normal mb-6">
+              <p className="text-sm sm:text-base text-[#B4B4B4]/85 leading-relaxed font-normal mb-6">
                 Bases relacionales normalizadas para soportar 10x transacciones sin
                 degradar velocidad ni requerir reescrituras técnicas costosas.
               </p>
 
-              <div className="pt-4 border-t border-[#1154FF]/20 flex items-center gap-2 text-xs font-mono text-[#6095FF]">
-                <HardDrive className="w-4 h-4 text-[#1154FF]" />
+              <div className="pt-4 border-t border-[#075FFF]/20 flex items-center gap-2 text-xs font-mono text-[#075FFF]">
+                <HardDrive className="w-4 h-4 text-[#075FFF]" />
                 <span>PostgreSQL &bull; Concurrencia elástica</span>
               </div>
             </CardSpotlight>
@@ -95,34 +95,34 @@ export const WhyLogika: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="grid grid-cols-1 sm:grid-cols-3 gap-6 p-5 sm:p-8 md:p-10 rounded-2xl border-2 border-[#1154FF]/40 bg-gradient-to-r from-[#061442] via-[#040C2B] to-[#061442] shadow-[0_0_50px_-5px_rgba(17,84,255,0.3)]"
+          className="grid grid-cols-1 sm:grid-cols-3 gap-6 p-5 sm:p-8 md:p-10 rounded-2xl border-2 border-[#075FFF]/40 bg-gradient-to-r from-[#000000] via-[#000000] to-[#000000] shadow-[0_0_50px_-5px_rgba(7, 95, 255,0.3)]"
         >
           <div className="pb-4 sm:pb-0">
             <div className="text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tightest mb-1.5 sm:mb-2">
               100%
             </div>
             <div className="text-base font-bold text-white mb-0.5 sm:mb-1">A la Medida</div>
-            <div className="text-xs text-[#D9D9D9]/75 font-mono">
+            <div className="text-xs text-[#B4B4B4]/75 font-mono">
               Cero plantillas predeterminadas.
             </div>
           </div>
 
-          <div className="pt-4 sm:pt-0 sm:border-l border-t sm:border-t-0 border-[#1154FF]/30 sm:pl-8">
+          <div className="pt-4 sm:pt-0 sm:border-l border-t sm:border-t-0 border-[#075FFF]/30 sm:pl-8">
             <div className="text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tightest mb-1.5 sm:mb-2">
               0
             </div>
             <div className="text-base font-bold text-white mb-0.5 sm:mb-1">Vendor Lock-In</div>
-            <div className="text-xs text-[#D9D9D9]/75 font-mono">
+            <div className="text-xs text-[#B4B4B4]/75 font-mono">
               Dueño total de tu código y datos.
             </div>
           </div>
 
-          <div className="pt-4 sm:pt-0 sm:border-l border-t sm:border-t-0 border-[#1154FF]/30 sm:pl-8">
-            <div className="text-3xl sm:text-4xl md:text-5xl font-black text-[#1154FF] tracking-tightest mb-1.5 sm:mb-2 filter drop-shadow-[0_0_20px_#1154FF]">
+          <div className="pt-4 sm:pt-0 sm:border-l border-t sm:border-t-0 border-[#075FFF]/30 sm:pl-8">
+            <div className="text-3xl sm:text-4xl md:text-5xl font-black text-[#075FFF] tracking-tightest mb-1.5 sm:mb-2 filter drop-shadow-[0_0_20px_#075FFF]">
               99.9%
             </div>
             <div className="text-base font-bold text-white mb-0.5 sm:mb-1">SLA Cloud</div>
-            <div className="text-xs text-[#D9D9D9]/75 font-mono">
+            <div className="text-xs text-[#B4B4B4]/75 font-mono">
               Disponibilidad edge con Supabase &amp; Vercel.
             </div>
           </div>

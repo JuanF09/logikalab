@@ -8,12 +8,12 @@ import { motion } from "framer-motion";
 
 export const Solution: React.FC = () => {
   return (
-    <section id="solucion" className="py-24 sm:py-32 relative bg-[#01040F] overflow-hidden">
+    <section id="solucion" className="py-24 sm:py-32 relative bg-[#000000] overflow-hidden">
       {/* Background radial blue glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[600px] bg-[#1154FF]/25 blur-[170px] rounded-full pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[600px] bg-[#075FFF]/25 blur-[170px] rounded-full pointer-events-none" />
 
       {/* Blue neon divider */}
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#1154FF]/60 to-transparent shadow-[0_0_15px_#1154FF]" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#075FFF]/60 to-transparent shadow-[0_0_15px_#075FFF]" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <SectionHeader
@@ -28,50 +28,50 @@ export const Solution: React.FC = () => {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mb-16 relative rounded-3xl overflow-hidden border-2 border-[#1154FF]/50 bg-[#040C2B] shadow-[0_0_60px_-10px_rgba(17,84,255,0.45)]"
+          className="mb-16 relative rounded-3xl overflow-hidden border-2 border-[#075FFF]/50 bg-[#000000] shadow-[0_0_60px_-10px_rgba(7, 95, 255,0.45)]"
         >
           <div className="relative aspect-[16/9] w-full max-h-[500px]">
             <Image
               src="/images/solution-architecture.jpg"
-              alt="Arquitectura del ecosistema digital diseñado por LOGIKA LAB"
+              alt="Arquitectura del ecosistema digital diseñado por LOGIK LAB"
               fill
               loading="lazy"
               className="object-cover object-center filter saturate-150 contrast-115"
               sizes="(max-width: 1200px) 100vw, 1200px"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#040C2B] via-transparent to-transparent opacity-75" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#000000] via-transparent to-transparent opacity-75" />
           </div>
 
           {/* Quick Architecture Bar */}
-          <div className="p-4 sm:p-8 bg-gradient-to-r from-[#061442] via-[#040C2B] to-[#061442] border-t border-[#1154FF]/40 grid grid-cols-1 xs:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
+          <div className="p-4 sm:p-8 bg-gradient-to-r from-[#000000] via-[#000000] to-[#000000] border-t border-[#075FFF]/40 grid grid-cols-1 xs:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
             <div className="flex items-center gap-3">
-              <Database className="w-5 h-5 text-[#1154FF] shrink-0" />
+              <Database className="w-5 h-5 text-[#075FFF] shrink-0" />
               <div>
-                <div className="text-[10px] sm:text-[11px] font-mono text-[#6095FF] uppercase font-bold">BASE DE DATOS</div>
+                <div className="text-[10px] sm:text-[11px] font-mono text-[#075FFF] uppercase font-bold">BASE DE DATOS</div>
                 <div className="text-xs sm:text-sm font-bold text-white">PostgreSQL &bull; Supabase</div>
               </div>
             </div>
 
             <div className="flex items-center gap-3">
-              <Zap className="w-5 h-5 text-[#1154FF] shrink-0" />
+              <Zap className="w-5 h-5 text-[#075FFF] shrink-0" />
               <div>
-                <div className="text-[10px] sm:text-[11px] font-mono text-[#6095FF] uppercase font-bold">RENDIMIENTO</div>
+                <div className="text-[10px] sm:text-[11px] font-mono text-[#075FFF] uppercase font-bold">RENDIMIENTO</div>
                 <div className="text-xs sm:text-sm font-bold text-white">&lt; 100ms Respuesta</div>
               </div>
             </div>
 
             <div className="flex items-center gap-3">
-              <ShieldCheck className="w-5 h-5 text-[#1154FF] shrink-0" />
+              <ShieldCheck className="w-5 h-5 text-[#075FFF] shrink-0" />
               <div>
-                <div className="text-[10px] sm:text-[11px] font-mono text-[#6095FF] uppercase font-bold">SEGURIDAD</div>
+                <div className="text-[10px] sm:text-[11px] font-mono text-[#075FFF] uppercase font-bold">SEGURIDAD</div>
                 <div className="text-xs sm:text-sm font-bold text-white">Cifrado &amp; Respaldo</div>
               </div>
             </div>
 
             <div className="flex items-center gap-3">
-              <Cpu className="w-5 h-5 text-[#1154FF] shrink-0" />
+              <Cpu className="w-5 h-5 text-[#075FFF] shrink-0" />
               <div>
-                <div className="text-[10px] sm:text-[11px] font-mono text-[#6095FF] uppercase font-bold">DESPLIEGUE</div>
+                <div className="text-[10px] sm:text-[11px] font-mono text-[#075FFF] uppercase font-bold">DESPLIEGUE</div>
                 <div className="text-xs sm:text-sm font-bold text-white">Vercel Edge Cloud</div>
               </div>
             </div>
@@ -105,7 +105,7 @@ export const Solution: React.FC = () => {
                 "El dueño vive apagando incendios diarios.",
                 "Temor constante a perder información crítica.",
               ].map((text, idx) => (
-                <li key={idx} className="flex items-center gap-3 text-xs sm:text-sm text-[#D9D9D9]/80 font-medium">
+                <li key={idx} className="flex items-center gap-3 text-xs sm:text-sm text-[#B4B4B4]/80 font-medium">
                   <div className="p-1 rounded-full bg-red-500/15 text-red-400 shrink-0">
                     <X className="w-3.5 h-3.5" />
                   </div>
@@ -121,15 +121,15 @@ export const Solution: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="p-5 sm:p-8 md:p-10 rounded-2xl border-2 border-[#1154FF] bg-gradient-to-br from-[#07174A]/90 via-[#040C2B]/95 to-[#01040F] relative overflow-hidden shadow-[0_0_50px_rgba(17,84,255,0.4)]"
+            className="p-5 sm:p-8 md:p-10 rounded-2xl border-2 border-[#075FFF] bg-gradient-to-br from-[#000000]/90 via-[#000000]/95 to-[#000000] relative overflow-hidden shadow-[0_0_50px_rgba(7, 95, 255,0.4)]"
           >
-            <div className="absolute top-0 left-0 right-0 h-1 bg-[#1154FF] shadow-[0_0_15px_#1154FF]" />
+            <div className="absolute top-0 left-0 right-0 h-1 bg-[#075FFF] shadow-[0_0_15px_#075FFF]" />
 
-            <div className="flex items-center justify-between mb-5 sm:mb-6 pb-3 sm:pb-4 border-b border-[#1154FF]/30">
-              <span className="font-mono text-xs text-[#1154FF] font-bold tracking-widest uppercase">
-                // DESPUÉS &bull; LOGIKA LAB
+            <div className="flex items-center justify-between mb-5 sm:mb-6 pb-3 sm:pb-4 border-b border-[#075FFF]/30">
+              <span className="font-mono text-xs text-[#075FFF] font-bold tracking-widest uppercase">
+                // DESPUÉS &bull; LOGIK LAB
               </span>
-              <span className="text-xs px-3 py-1 rounded-full bg-[#1154FF] text-white font-mono font-bold shadow-[0_0_10px_#1154FF]">
+              <span className="text-xs px-3 py-1 rounded-full bg-[#075FFF] text-white font-mono font-bold shadow-[0_0_10px_#075FFF]">
                 100% A LA MEDIDA
               </span>
             </div>
@@ -143,7 +143,7 @@ export const Solution: React.FC = () => {
                 "Operación predecible y libertad para escalar.",
               ].map((text, idx) => (
                 <li key={idx} className="flex items-center gap-3 text-sm text-white font-semibold">
-                  <div className="p-1 rounded-full bg-[#1154FF] text-white shrink-0 shadow-[0_0_8px_#1154FF]">
+                  <div className="p-1 rounded-full bg-[#075FFF] text-white shrink-0 shadow-[0_0_8px_#075FFF]">
                     <Check className="w-3.5 h-3.5" />
                   </div>
                   <span>{text}</span>

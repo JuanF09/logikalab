@@ -4,20 +4,20 @@ import Image from "next/image";
 interface IsotypeProps {
   className?: string;
   size?: number;
-  withBrackets?: boolean;
+  withFrame?: boolean;
 }
 
 /**
- * LOGIKA LAB Official Isotipo: { K } LAB
+ * LOGIK LAB Official Isotipo Autónomo (Manual de Identidad Visual v1.0 / 2026)
+ * Dos elementos separados: barra vertical blanca y ángulo azul (#075FFF) de vértice izquierdo.
  */
 export const Isotype: React.FC<IsotypeProps> = ({
   className = "",
   size = 48,
-  withBrackets = true,
+  withFrame = false,
 }) => {
-  const src = withBrackets ? "/brand/isotype.png" : "/brand/isotype-clean.png";
-  // Proporción aproximada
-  const width = withBrackets ? Math.round(size * (983 / 775)) : Math.round(size * (593 / 747));
+  const src = withFrame ? "/brand/isotype-black.png" : "/brand/isotype.png";
+  const width = withFrame ? Math.round(size * (2048 / 1152)) : size;
 
   return (
     <div
@@ -26,7 +26,7 @@ export const Isotype: React.FC<IsotypeProps> = ({
     >
       <Image
         src={src}
-        alt="LOGIKA LAB Isotipo"
+        alt="LOGIK LAB Isotipo Autónomo"
         width={width}
         height={size}
         className="h-full w-auto object-contain"

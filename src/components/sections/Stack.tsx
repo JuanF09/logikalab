@@ -100,12 +100,12 @@ const TECHNOLOGIES: TechItem[] = [
 
 export const Stack: React.FC = () => {
   return (
-    <section id="stack" className="py-24 sm:py-32 relative bg-[#01040F] overflow-hidden">
+    <section id="stack" className="py-24 sm:py-32 relative bg-[#000000] overflow-hidden">
       {/* Background radial blue glow */}
-      <div className="absolute top-1/2 left-1/3 -translate-y-1/2 w-[750px] h-[550px] bg-[#1154FF]/20 blur-[170px] rounded-full pointer-events-none" />
+      <div className="absolute top-1/2 left-1/3 -translate-y-1/2 w-[750px] h-[550px] bg-[#075FFF]/20 blur-[170px] rounded-full pointer-events-none" />
 
       {/* Blue neon divider */}
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#1154FF]/60 to-transparent shadow-[0_0_15px_#1154FF]" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#075FFF]/60 to-transparent shadow-[0_0_15px_#075FFF]" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <SectionHeader
@@ -115,15 +115,15 @@ export const Stack: React.FC = () => {
         />
 
         {/* Status Callout Bar */}
-        <div className="flex flex-wrap items-center justify-between gap-3 p-4 mb-8 rounded-2xl border border-[#1154FF]/30 bg-[#061442]/50 font-mono text-xs">
+        <div className="flex flex-wrap items-center justify-between gap-3 p-4 mb-8 rounded-2xl border border-[#075FFF]/30 bg-[#000000]/50 font-mono text-xs">
           <div className="flex items-center gap-2">
-            <span className="w-2.5 h-2.5 rounded-full bg-[#1154FF] animate-ping" />
+            <span className="w-2.5 h-2.5 rounded-full bg-[#075FFF] animate-ping" />
             <span className="text-white font-bold tracking-wider">
               ECOSISTEMA NATIVO // 8 NÚCLEOS TECNOLÓGICOS ACTIVOS
             </span>
           </div>
-          <div className="flex items-center gap-2 text-[#D9D9D9]/80">
-            <Terminal className="w-3.5 h-3.5 text-[#1154FF]" />
+          <div className="flex items-center gap-2 text-[#B4B4B4]/80">
+            <Terminal className="w-3.5 h-3.5 text-[#075FFF]" />
             <span>Toca o pasa el cursor sobre cada tarjeta para activar la telemetría 3D</span>
           </div>
         </div>

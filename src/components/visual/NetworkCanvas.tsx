@@ -118,7 +118,7 @@ export const NetworkCanvas: React.FC = () => {
             ctx.moveTo(nodeA.x, nodeA.y);
             ctx.lineTo(nodeB.x, nodeB.y);
             ctx.strokeStyle = isBlueConn
-              ? `rgba(17, 84, 255, ${alpha * 1.5})`
+              ? `rgba(7, 95, 255, ${alpha * 1.5})`
               : `rgba(255, 255, 255, ${alpha * 0.7})`;
             ctx.lineWidth = isBlueConn ? 1 : 0.6;
             ctx.stroke();
@@ -130,8 +130,8 @@ export const NetworkCanvas: React.FC = () => {
         ctx.arc(nodeA.x, nodeA.y, nodeA.radius, 0, Math.PI * 2);
 
         if (nodeA.highlighted) {
-          ctx.fillStyle = "#1154FF";
-          ctx.shadowColor = "#1154FF";
+          ctx.fillStyle = "#075FFF";
+          ctx.shadowColor = "#075FFF";
           ctx.shadowBlur = 8;
         } else {
           ctx.fillStyle = "rgba(255, 255, 255, 0.75)";
