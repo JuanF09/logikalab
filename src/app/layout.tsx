@@ -1,14 +1,6 @@
 import type { Metadata, Viewport } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import { SITE_CONFIG } from "@/lib/config";
-
-const inter = Inter({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800", "900"],
-  variable: "--font-inter",
-  display: "swap",
-});
 
 export const viewport: Viewport = {
   themeColor: "#000000",
@@ -123,7 +115,7 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="es-CO" className={`scroll-smooth dark ${inter.variable}`}>
+    <html lang="es-CO" className="scroll-smooth dark">
       <head>
         <script
           type="application/ld+json"
